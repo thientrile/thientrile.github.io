@@ -2,14 +2,16 @@ body{
 	margin: 0px;
 	background: #fff;
 	font-family: "MyriadPro-Regular", Arial, sans-serif;
-	max-width: 100%;
+	min-width: 1536px;
 	height: auto;
 	overflow-x:hidden;
+	width: 1536px;
 }
 
 #header{
 	
-	
+	margin: 0px;
+
 	
 	width: 100vw;
 	height: 130px;
@@ -22,14 +24,15 @@ body{
 	left: 300px;
 }
 #header nav{
-	display: flex;
-
+	min-width: 1536px;
+	display: flemax-width: 1536px;x;
 
 	
 	
 }	
 #header #main-menu {
 	display: flex;
+
 	width: 100%;
 	margin: 80px 0px 0px 400px;
 	/* position: fixed;
@@ -76,7 +79,7 @@ body{
 	height: 30px;	
 	border-top-left-radius: 100px;
 	border-bottom-left-radius: 100px;
-	border: 1px dashed #70a1ff;
+	border:none;
 	text-align: center;
 }
 #search input[type=submit]{
@@ -134,69 +137,68 @@ body{
 .banner{
 	display: flex;
 	
-	width: 1536px;
+	width: 100%;
 	height: 400px;
-	/* margin: 0px auto; */
+	margin: 0px auto;
 
 }
 .banner img{
+	min-width: 1536px;
 	width: 100%;
 	height: 100%;
 }
 /* sub-img */
 #banner-img{
-	width: 76.1%;
-    margin: 0px auto;
- 	position: relative;
+	min-width: 1536px;
+	width: 100%;
+    
  	height: auto;
-
+ 	
 }
-#banner-img ul{
-	list-style-type: none;
+#banner-img div{
+	min-width: 1000px;
+	/* max-height: 760px; */
+	width: 64.9%;
+	height: auto;
+	margin: 0 auto;
+	
+	padding: 0px;
 }
-
 #banner-img img{
-	max-width: 100%;
-	vertical-align: middle;
-	border: 0;
-	margin: 5px 5px;
+	margin: 6px;
 }
-#banner-img a
-{
-	float: left;
-	margin-bottom: 10px;	
-	/* margin: 0px; */
-}
+
+
 #banner-img img#img_1
 {
-	width: 350px;
-}
-#banner-img #img_2
-{
-	width: 720px;
-	height: auto;
-}
-#banner-img #img_3{
-	width: 720px;
-	/* position: absolute; */
-
-
-}
-#banner-img #img_4{
 	
-	width: 350px;
-	position: absolute;
-	left: 40px;
-	top: 400px;
+	max-height: 340px;
+}
+#banner-img img#img_2
+{
+	
+	max-height: 340px;
+}
+#banner-img img#img_3{
+	
+	max-height: 340px;
+}
+
+
+
+#banner-img img#img_4{
+	height: 340px;
+	
 
 }
 .hot{
-	width: 76.1%;
-    margin: 0px auto;
- 	position: relative;
- 	
+	min-width: 1536px;
+	width: 100%;    
  	height: auto;
-
+    margin: 10px auto;
+ 	
+ 	
+ 	
 }
 .hot h3{
 	margin-top:20px ;
@@ -205,59 +207,75 @@ body{
 	font-weight: 500;
 
 }
-.hot ul{
-	list-style-type: none;
+.hot div.sp{
+	min-width: 1000px;
+	/* max-height: 760px; */
+	width: 64.9%;
+	height: auto;
+	margin: 10px auto;
+	
+	padding: 0px;
 	display: flex;
-	margin: 0px 15px;
+	
+	/* margin: 0px 15px; */
 
 }
-.hot li{
-	padding: 0px;
-	margin: 0px;
+.hot div.sp div{
+
+	max-width: 240px;
+	width: 240px;
+	margin: 0px auto;
+
 }
-.hot li a{
+
+.hot div a{
 	display: block;
 	/* border: 1px solid red; */
-	margin: 0px 15px 10px;
+	/* margin: 0px 15px 10px; */
 	text-decoration: none;
 	text-align: center;
 	width: 240px;
 	height: 350px;
 }
-.hot li img{
+.hot div img{
 	width: 240px;
 	height: auto;
 	background: #cfcfcf;
 }
-.hot li:first-child img{
-	width: 219px;
-}
-.hot li:hover a{
+
+.hot div:hover >a{
 	box-shadow: 1px 1px  1px 1px #262929;
 }
-.hot li a span.title{
+.hot div a span.title{
 	color: black;
 }
-.hot li a span{
+.hot div a span{
 	color: red;
 }
-.hot li a p.title span{
+.hot div a p.title span{
 	color: black;
 }
-.hot li a p.title:hover  span
+.hot div a p.title:hover  span
 {
 	color: red;
 	font-weight: 900;
 }
 /* san phẩm mới  */
 .new{
-	width: 76.1%;
+	width: 1170px;
     margin: 0px auto;
  	/* position: relative; */
  	
  	height: auto;
 
 
+}
+#baby-banner .banner img{
+	display: flex;
+	
+	width: 1536px;
+	height: 400px;
+	margin: 0px auto;
 }
 .new h3{
 	margin-top:20px ;
@@ -319,12 +337,11 @@ body{
 /* footer */
 #foorter	{
 	clear: left;
-	width: 100%;
+	min-width: 1536px;
+	width: 1536px;
 	height: 300px;
-	border: 1px solid red;
+	
 	text-align: center;
-
-
 }
 #foorter #foorlogo{
 	position: relative;
