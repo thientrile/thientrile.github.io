@@ -4,12 +4,12 @@ body{
 	font-family: "MyriadPro-Regular", Arial, sans-serif;
 	max-width: 100%;
 	height: auto;
+	overflow-x:hidden;
 }
 
 #header{
 	
-	margin: 0px;
-
+	
 	
 	width: 100vw;
 	height: 130px;
@@ -23,6 +23,7 @@ body{
 }
 #header nav{
 	display: flex;
+
 
 	
 	
@@ -133,9 +134,9 @@ body{
 .banner{
 	display: flex;
 	
-	width: 100%;
+	width: 1536px;
 	height: 400px;
-	margin: 0px auto;
+	/* margin: 0px auto; */
 
 }
 .banner img{
@@ -144,7 +145,7 @@ body{
 }
 /* sub-img */
 #banner-img{
-	width: 1170px;
+	width: 76.1%;
     margin: 0px auto;
  	position: relative;
  	height: auto;
@@ -190,7 +191,7 @@ body{
 
 }
 .hot{
-	width: 1170px;
+	width: 76.1%;
     margin: 0px auto;
  	position: relative;
  	
@@ -250,7 +251,7 @@ body{
 }
 /* san phẩm mới  */
 .new{
-	width: 1170px;
+	width: 76.1%;
     margin: 0px auto;
  	/* position: relative; */
  	
@@ -322,6 +323,7 @@ body{
 	height: 300px;
 	border: 1px solid red;
 	text-align: center;
+
 
 }
 #foorter #foorlogo{
