@@ -191,6 +191,11 @@ body{
 	
 
 }
+#banner-img a:hover img{
+	box-shadow: 1px 1px 1px 1px #838383;
+	transition: 0.5s;
+
+}
 .hot{
 	min-width: 1536px;
 	width: 100%;    
