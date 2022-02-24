@@ -6,6 +6,7 @@ body{
 	height: auto;
 	overflow-x:hidden;
 	width: 1536px;
+	/* max-width: 1536px; */
 }
 
 #header{
@@ -14,8 +15,9 @@ body{
 
 	
 	width: 100vw;
-	height: 130px;
-	background: #fff;
+
+	height: auto;
+	
 }
 /* css main-menu */
 #logo{
@@ -35,9 +37,7 @@ body{
 
 	width: 100%;
 	margin: 80px 0px 0px 400px;
-	/* position: fixed;
-	top: 10px;
-	left: 500px; */
+	
 	list-style-type: none;
 	
 
@@ -45,8 +45,7 @@ body{
 #header nav li a{
 	
 
-	/* margin: 80px 20px;
-	width: 100vh; */
+	
 	display: block;
 	padding: 0px 20px;
 	text-decoration:none;
@@ -66,7 +65,7 @@ body{
 #search{
 	
 	display: flex;
-	/* float: left; */
+	
 	display: none;
 	box-shadow: 1px 1px  1px 1px #262929;
 	background: #fff;
@@ -107,9 +106,7 @@ body{
 	background: #fff;
 	padding: 0px 0px;
 	width: 230px;
-	list-style-type: none;
-	/* border: 1px solid #262929;
-	border-top:none ; */
+	list-style-type: none;	
 	box-shadow: 1px 1px  1px 1px #262929;
 	display: none;
 
@@ -125,8 +122,7 @@ body{
 }
 #main-menu ul.sub-menu a{
 	padding: 8px 30px;
-	/* text-transform:uppercase ;
-	font-size: 15px; */
+	
 
 }
 #main-menu ul.sub-menu li:hover >a{
@@ -157,7 +153,7 @@ body{
 }
 #banner-img div{
 	min-width: 1000px;
-	/* max-height: 760px; */
+	
 	width: 64.9%;
 	height: auto;
 	margin: 0 auto;
@@ -166,31 +162,10 @@ body{
 }
 #banner-img img{
 	margin: 6px;
-}
-
-
-#banner-img img#img_1
-{
-	
-	max-height: 340px;
-}
-#banner-img img#img_2
-{
-	
-	max-height: 340px;
-}
-#banner-img img#img_3{
-	
 	max-height: 340px;
 }
 
 
-
-#banner-img img#img_4{
-	height: 340px;
-	
-
-}
 #banner-img a:hover img{
 	box-shadow: 1px 1px 1px 1px #838383;
 	transition: 0.5s;
@@ -214,7 +189,7 @@ body{
 }
 .hot div.sp{
 	min-width: 1000px;
-	/* max-height: 760px; */
+	
 	width: 64.9%;
 	height: auto;
 	margin: 10px auto;
@@ -235,8 +210,7 @@ body{
 
 .hot div a{
 	display: block;
-	/* border: 1px solid red; */
-	/* margin: 0px 15px 10px; */
+	
 	text-decoration: none;
 	text-align: center;
 	width: 240px;
@@ -269,7 +243,7 @@ body{
 .new{
 	width: 1170px;
     margin: 0px auto;
- 	/* position: relative; */
+ 	
  	
  	height: auto;
 
@@ -292,21 +266,16 @@ body{
 .new ul{
 	width: 1170px;
 	list-style-type: none;
-	/* display: flex; */
 	
-	/* display: flex; */
 	margin: 0px 15px;
 
 }
 .new li{
 	float: left;
-	/* width: 240px; */
 	padding: 0px;
-	/* margin: 0px; */
 }
 .new li a{
 	display: block;
-	/* border: 1px solid red; */
 	margin: 0px 15px 10px;
 	text-decoration: none;
 	text-align: center;
@@ -318,9 +287,7 @@ body{
 	height: auto;
 	background: #cfcfcf;
 }
-/* .new li:first-child img{
-	width: 219px;
-} */
+
 .new li:hover a{
 	box-shadow: 1px 1px  1px 1px #262929;
 }
