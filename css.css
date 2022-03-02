@@ -27,7 +27,7 @@ body{
 }
 #header nav{
 	min-width: 1536px;
-	display: flemax-width: 1536px;x;
+	display: flemax-width: 1536px;
 
 	
 	
@@ -37,6 +37,9 @@ body{
 
 	width: 100%;
 	margin: 80px 0px 0px 400px;
+	/* position:fixed ; */
+	/* background: #fff; */
+
 	
 	list-style-type: none;
 	
@@ -312,6 +315,8 @@ body{
 	min-width: 1536px;
 	width: 1536px;
 	height: 300px;
+	/* position: fixed;
+	bottom: 0; */
 	
 	text-align: center;
 }
