@@ -22,8 +22,12 @@ body{
 /* css main-menu */
 #logo{
 	position: absolute;
-	top: 70px;
+	top: 60px;
 	left: 300px;
+
+}
+#logo img{
+	width: 40%;
 }
 #header nav{
 	min-width: 1536px;
@@ -323,6 +327,9 @@ body{
 #foorter #foorlogo{
 	position: relative;
 	top: 40px;
+}
+#foorter #foorlogo img{
+	width: 20%;
 }
 #foorter nav.foor-menu ul{
 	display: flex;

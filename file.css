@@ -11,7 +11,7 @@ body{
 }
 #header nav{
 	position: relative;
-	left: 15%;
+	left: 5%;
 	width: 70%;
 	height: 86px;
 	background-color: #fff;
@@ -21,6 +21,10 @@ body{
 #header nav #logo{
 	height: 28px;
 
+}
+
+#logo img{
+	width: 40%;
 }
 #header nav #logo img{
 	margin: 30px 0px 10px 50px;
@@ -256,6 +260,10 @@ ul{
 #foorter #foorlogo{
 	position: relative;
 	top: 40px;
+}
+
+#foorter #foorlogo img{
+	width: 20%;
 }
 #foorter nav.foor-menu ul{
 	display: flex;
