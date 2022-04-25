@@ -446,6 +446,8 @@ html{
 	min-height: 200px;
 	position: relative;
 	animation:modalFaceIn ease .5s;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -458,7 +460,8 @@ header.modal-header{
 	align-items: center;
 	justify-content: center;
 	font-size: 30px;
-	color: #fff;
+	color: rgb(255, 255, 255);
+	
 }
 header.modal-header i{
 	margin-right: 16px;

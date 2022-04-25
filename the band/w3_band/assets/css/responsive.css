@@ -16,9 +16,7 @@
        padding:15px;
        font-size: 16px;
    }
-   .contact-submit-btn{
-       font-size:16px;
-   }
+   
    #footer .social-icons{
 	font-size:48px;
 
@@ -34,6 +32,21 @@
     #footer .copyright a{
         padding: 12px 0;
         display: inline-block;
+    }
+    /* modal */
+    .modal-body .modal-lable {
+        font-size:20px;
+    }
+        
+    .modal-cantainer .modal-input{
+        font-size:16px;
+        padding:14px;
+    }
+    #buy-tickets{
+        font-size:20px;
+    }
+    .modal-footer{
+        font-size:20px;
     }
 
 }
@@ -91,15 +104,9 @@
         border-radius: 10px;
     
     }
-}
-/* #footer .social-icons{
- font-size:8.8vw;
-
- 
- 
- } */
     .btn{
         width: 100%;
+        font-size:16px
     }
     .place-list{
         margin-top: 16px;
@@ -107,6 +114,29 @@
     .s-mt-8{
         margin-top: 8px;
     }
+    /* modal */
+    .modal-body .modal-lable {
+        font-size:20px;
+    }
+        
+    .modal-cantainer .modal-input{
+        font-size:16px;
+        padding:14px;
+    }
+    #buy-tickets{
+        font-size:20px;
+    }
+    .modal-footer{
+        font-size:20px;
+    }
+}
+/* #footer .social-icons{
+ font-size:8.8vw;
+
+ 
+ 
+ } */
+    
 
    
-}
+
