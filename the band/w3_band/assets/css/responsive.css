@@ -86,6 +86,9 @@
         border-radius: 10px;
     
     }
+    .btn{
+        width: 100%;
+    }
     .place-list{
         margin-top: 16px;
     }
