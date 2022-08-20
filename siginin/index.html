@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap-grid.min.css" integrity="sha512-LLxZHu50SXdFJdAzHmDJAoLaozhTB4BYZPoN+xdTRjiPmPhI+1mEJXdoHHiDWmd/jj/9x10pkd8mYGG9sqfPPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Input Field Text and Gradient Border Animation </title>
+</head>
+<body>
+   
+        <div class="main">
+            <div class="container" style="border: 1px solid rgb(255, 255, 255); padding: 1em;background-color:dimgrey; border-radius: 5px;box-shadow: 0 10px 20px #fff;">
+                <h2 id="title">Register</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="inputBox">
+                                <input id="fristname" type="text" required="required">
+                                <span class="fristname checked"></span>
+                                <span class="placeholder">
+                                    Frist Name
+                                </span >
+                                <i class="border-bottom"></i>
+                            </div>
+                            <div class="validation" id="checkfristname">
+                                <ul>
+                                    <li id="check-fristname">Invalid frist name
+                                    </li>      
+                                 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="box">
+                        <div class="inputBox">
+                            <input id="lastname" type="text" required="required">
+                            <span class="lastname checked"></span>
+                            <span class="placeholder">
+                                Last Name
+                            </span >
+                            <i class="border-bottom"></i>
+                        </div>
+                        <div class="validation" id="checklastname">
+                            <ul>
+                                <li id="check-lastname">Invalid last name
+                                </li>      
+                             
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="box">
+                        <div class="inputBox">
+                            <input id="userName" type="text" required="required">
+                            <span class="username checked"></span>
+                            <span class="placeholder">
+                                Username
+                            </span >
+                            <i class="border-bottom"></i>
+                        </div>
+                        <div class="validation" id="checkusername">
+                            <ul>
+                                <li id="check-username">Invalid username
+                                </li>      
+                             
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="box">
+                            <div class="inputBox">
+                                <input id="email" type="text" required="required">
+                                <span class="email checked"></span>
+                                
+                                <span class="placeholder">
+                                    Email
+                                </span class="placeholder">
+                                <i class="border-bottom"></i>
+                            </div>
+                            <div class="validation" id="checkemail">
+                                <ul>
+                                    <li id="check-mail">Invalid Email Address
+                                    </li>
+                                    
+                                    
+                                    
+                                </ul>
+                        </div>
+                        </div>
+                    </div>
+                
+               
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                    <div class="box">
+                        <div class="inputBox">
+                            <input id="phone" type="tel" required="required">
+                            <span class="phone checked"></span>
+                            <span class="placeholder">
+                                Phone Number
+                            </span >
+                            <i class="border-bottom"></i>
+                        </div>
+                        <div class="validation" id="checkphone">
+                            <ul>
+                                <li id="check-phone">invalid phone number
+                                </li>             
+                            </ul>
+                    </div>
+                    </div>
+                    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box">
+                        <div class="inputBox">
+                            <input id="password" type="password" class="pswrd" required="required" >
+                            <span class="pass checked"></span>
+                            <span class="toggle-btn" id="togle-pass"></i></span>
+                            <span class="placeholder">
+                                Password
+                            </span >
+
+                            <i class="border-bottom"></i>
+                        </div>
+                        <div class="validation " id="checkedpass">
+                            <ul>
+                                <li id="lower">At least one lowercase character
+                                </li>
+                                <li id="upper">At least one uppercase character
+                                </li>
+                                <li id="number">At least one number
+
+                                </li>
+                                <li id="special">At least one special characte
+                                </li>
+                                <li id="length">At least 8 characters
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="box">
+                        <div class="inputBox">
+                            <input id="re-password" type="password"  required="required">
+                            <span class="repass checked"></span>
+                            <span class="toggle-btn"id="togle-repass"></i></span>
+
+                            <span class="placeholder">
+                                Enter the password
+                            </span >
+                            <i class="border-bottom"></i>
+                        </div>
+                        <div class="validation " id="checkedrepass">
+                            <ul>
+                                <li id="repass">The entered password does not match
+                                </li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-log">
+                        Log in
+                    </button>                       
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-sign">
+                        Sign in
+                    </button> 
+                </div>
+                </div>
+                </div>
+        </div>
+    <script src="./script.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+</html>
