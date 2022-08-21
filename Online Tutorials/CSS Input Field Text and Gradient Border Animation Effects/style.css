@@ -15,7 +15,15 @@ body{
     
     
     
-    background:rgb(94, 94, 94);
+    background:#E0FFFF;
+}
+.container{
+    border: 1px solid rgb(255, 255, 255); 
+    padding: 1em;
+    /* background-color:rgb(105, 105, 105);  */
+    background: #2196f3;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px #fff;
 }
 .main{
     margin-top: 300px;
@@ -50,7 +58,9 @@ body{
     position: absolute;
     left: 0;
     padding:10px 0 5px;
-    color: rgba(255,255,255,0.5);
+    /* color: rgba(255,255,255,0.5); */
+    color: rgba(255,255,255,1);
+
     text-transform: uppercase;
     pointer-events:none;
     letter-spacing: .1em;
@@ -60,9 +70,11 @@ body{
 /* khi có giá trị nhập vào thì element .placeholder sẽ thay đổi */
 .inputBox input:valid ~.placeholder,
     .inputBox input:focus ~.placeholder{
-    color:#2196f3;
-    transform: translateY(-16px);
+    /* color:#2196f3; */
+    color:#333;
+    transform: translateY(-16px) translateX(3px);
     font-size:0.65em;
+    font-weight: 600;
     text-transform: capitalize;
 }
 .inputBox .border-bottom{
