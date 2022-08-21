@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background: linear-gradient(45deg, #8460ed,#ff1252);
+}
+.menu{
+    position: relative;
+    width:600px;
+    height:600px;
+    /* background-color: aqua; */
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.menu li{
+    position: absolute;
+    left:0;
+    list-style: none;
+   
+    transform-origin: 300px ;
+    /* bằng 50% độ dài chiều cao và rộng của menu */
+    transform: rotate(0deg) translateX(280px);
+    /* translateX=transform-origin-50% kích thước của thẻ a */
+    transition: 2s;
+    transition-delay: calc(0.1*var(--i));
+    
+}
+
+.menu.active li{
+    transform: rotate(calc(360deg / var(--sl) * var(--i)));
+}
+.menu li a{
+    width:40px;
+    height:40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 50%;
+    transform: rotate(calc(-360deg / var( --sl) * var(--i)));
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: #ff1252;
+}
+.menu .toggle{
+    position: absolute;
+    width:60px;
+    height:60px;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0px 4px rgb(0, 0, 0,0.1);
+    font-size: 2em;
+    transition: 1.25s;
+}
+.menu.active .toggle{
+    transition: 1.25s;
+    transform: rotate(315deg);
+
+}
