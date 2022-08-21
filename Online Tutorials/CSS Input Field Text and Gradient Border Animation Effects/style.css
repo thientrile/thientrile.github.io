@@ -1,8 +1,21 @@
+
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* josefin-sans-regular - latin */
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/josefin-sans-v25-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/josefin-sans-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/josefin-sans-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/josefin-sans-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/josefin-sans-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/josefin-sans-v25-latin-regular.svg#JosefinSans') format('svg'); /* Legacy iOS */
+
 }
 body{
     
@@ -11,30 +24,35 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    gap: 30px;
+    /* gap: 30px; */
     
     
     
-    background:#E0FFFF;
+    background:#f0f2f5;
 }
-.container{
-    border: 1px solid rgb(255, 255, 255); 
-    padding: 1em;
-    /* background-color:rgb(105, 105, 105);  */
-    background: #2196f3;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px #fff;
-}
+
 .main{
     margin-top: 300px;
-    height: 500px;  
-    width: 530px;
+    width: 30rem;
+    /* height: 500px;   */
+    /* width: 530px; */
+    background:#fff;
     margin: auto;
+    border-radius: 8px;
+    box-shadow:0px 2px 4px 0px #000000;
+    border: 1px solid rgb(255, 255, 255); 
+}
+.container{
+    padding: 1em;
+    /* background-color:rgb(105, 105, 105);  */
+  
 }
 #title{
     text-align: center;
-    color:white;
-    letter-spacing: .2em;
+    color:rgb(0, 0, 0);
+    letter-spacing: .1em;
+    font-weight: 800;
+    font-size: 2em;
 }
 
 .inputBox{
@@ -44,9 +62,10 @@ body{
 
 }
 .inputBox input{
+    max-width: 530px;
     width: 100%;
     background: transparent;
-    color:#fff;
+    color:rgb(0, 0, 0);
     border: none;
     outline: none;
     box-shadow: none;
@@ -59,12 +78,15 @@ body{
     left: 0;
     padding:10px 0 5px;
     /* color: rgba(255,255,255,0.5); */
-    color: rgba(255,255,255,1);
+    color: rgba(116, 116, 116, 0.511);
 
     /* text-transform: uppercase; */
     pointer-events:none;
     letter-spacing: .1em;
     transition: 0.5s ease-in-out;
+    background: none !important;
+    opacity: 1;
+
 
 }
 /* khi có giá trị nhập vào thì element .placeholder sẽ thay đổi */
@@ -83,7 +105,7 @@ body{
     height: 2px;
     left: 0;
     bottom: 0;
-    background:#fff;
+    background:rgba(116, 116, 116, 0.511);
     overflow: hidden;
 }
 .inputBox input:valid ~.border-bottom::before,
@@ -121,7 +143,7 @@ body{
 }
 span.checked{
     position: absolute;
-    top:8px;
+    top:3px;
     right: 30px;
     width: 34px;
     height: 34px;
@@ -135,7 +157,7 @@ span.checked{
 span.checked.true::before{
     content: '\f00c';
     font-family: 'fontawesome';
-    color: chartreuse;
+    color: rgb(0, 255, 4);
     font-size: 16px;
 
 }
@@ -148,7 +170,7 @@ span.checked.false::before
 }
 .box .inputBox  span.toggle-btn{
     position: absolute;
-    top:8px;
+    top:3px;
     right: 2px;
     width: 34px;
     height: 34px;
@@ -183,6 +205,7 @@ span.checked.false::before
     z-index: 1000000;
     transition        : all .3s ease;
     -webkit-transition: all .3s ease;
+    
 }
 
 .validation ul{
@@ -190,6 +213,8 @@ span.checked.false::before
     display:flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 0;
+
 
 }
 .validation ul li{
@@ -209,37 +234,36 @@ span.checked.false::before
 }
 .validation ul li.valid::before{
     content:'\f00c';
-    color:rgb(255, 255, 255);
+    color:rgb(0, 255, 4);
 }
-@media (max-width: 992px) {
-    .main{
-        width: 100%;
-    }
-}
+
 .btn{
    
-    padding: 5px 3px;
-    width: 100%;
+    padding: 0 16px;
+    line-height: 48px;
+    width: 80%;
     font-size: 20px;
     font-weight: 600px;
     color:#fff;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.4s ease-in-out;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    
+
+    
 }
-.btn.btn-sign{
-    background-color: rgb(11, 94, 215);
-}
-.btn.btn-log{
-    background-color: rgb(49, 210, 242);
-}
-.btn:active{
-    /* box-shadow: 1px 1px 1px #3333; */
-   opacity: .1;
-}
-.btn:hover{
-   box-shadow: 0 1px 1px #fff;
+
+@media (max-width:768px) {
+    #signin > div:nth-child(2) > div:nth-child(2){
+        margin-top: 20px;
+    }
+    #signin > div:nth-child(6) > div:nth-child(2){
+        margin-top: 20px;
+    }
 }

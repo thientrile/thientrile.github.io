@@ -1,59 +1,71 @@
 //checked frist name
-var kt=[0,0,0,0,0,0,0]
+var kt=[]
+for(let i=0; i<document.querySelectorAll('input').length;i++)
+{
+    kt.push(0);
+}
 var boolean=false;
-var fristName=document.getElementById("fristname");
-fristName.addEventListener("input",function(){
-    let validation =document.querySelector("#checkfristname");
-    let valid = document.querySelector("#check-fristname")
-    let checked=document.querySelector(" span.fristname.checked");
-    let data=fristName.value;
-    if(data.length>0){
-        valid.classList.add('valid');
-        valid.classList.remove('invalid');  
-        kt[0]=1
-        checked.classList.add('true');
-         checked.classList.remove('false');
-        setTimeout(()=>{validation.style.display="none"; },500); 
-    }
-    else
-    {
-        valid.classList.remove('valid');
-        kt[0]=0;
+if(document.getElementById("fristname")){
+    var fristName=document.getElementById("fristname");
+    fristName.addEventListener("input",function(){
+        let validation =document.querySelector("#checkfristname");
+        let valid = document.querySelector("#check-fristname")
+        let checked=document.querySelector(" span.fristname.checked");
+        let data=fristName.value;
+        if(data.length>0){
+            valid.classList.add('valid');
+            valid.classList.remove('invalid');  
+            kt[0]=1
+            checked.classList.add('true');
+            checked.classList.remove('false');
+            setTimeout(()=>{validation.style.display="none"; },500); 
+        }
+        else
+        {
+            valid.classList.remove('valid');
+            kt[0]=0;
 
-        validation.style.display="block";
-        checked.classList.remove('true');
-        checked.classList.add('false');
-    }
-    
-})
+            validation.style.display="flex";
+            checked.classList.remove('true');
+            checked.classList.add('false');
+        }
+        
+    })
+}
+
 // checked last name
-var lastName=document.getElementById("lastname");
-lastName.addEventListener("input",function(){
-    let validation =document.querySelector("#checklastname");
-    let valid = document.querySelector("#check-lastname")
-    let checked=document.querySelector(" span.lastname.checked");
-    let data=lastName.value;
-    if(data.length>0){
-        valid.classList.add('valid');
-        kt[1]=1        
-        checked.classList.add('true');
-         checked.classList.remove('false');
-        setTimeout(()=>{validation.style.display="none"; },500); 
-    }
-    else
-    {
-        valid.classList.remove('valid');
-        kt[1]=0;
+if(document.getElementById("lastname"))
+{
+    var lastName=document.getElementById("lastname");
+    lastName.addEventListener("input",function(){
+        let validation =document.querySelector("#checklastname");
+        let valid = document.querySelector("#check-lastname")
+        let checked=document.querySelector(" span.lastname.checked");
+        let data=lastName.value;
+        if(data.length>0){
+            valid.classList.add('valid');
+            kt[1]=1        
+            checked.classList.add('true');
+            checked.classList.remove('false');
+            setTimeout(()=>{validation.style.display="none"; },500); 
+        }
+        else
+        {
+            valid.classList.remove('valid');
+            kt[1]=0;
 
-        validation.style.display="block";
-        checked.classList.remove('true');
-        checked.classList.add('false');
-    }
-    
-})
+            validation.style.display="flex";
+            checked.classList.remove('true');
+            checked.classList.add('false');
+        }
+        
+    })
+}
+
 
 //checked userName 
-var userName=document.getElementById("userName");
+if(document.getElementById("userName"))
+{var userName=document.getElementById("userName");
 userName.addEventListener("input",function(){
     let validation =document.querySelector("#checkusername");
     let valid = document.querySelector("#check-username")
@@ -71,14 +83,17 @@ userName.addEventListener("input",function(){
         valid.classList.remove('valid');
         kt[2]=0;
 
-        validation.style.display="block";
+        validation.style.display="flex";
         checked.classList.remove('true');
         checked.classList.add('false');
     }
     
-})
+})}
+
 //checked Email
-var email=document.querySelector("#email")
+if(document.querySelector("#email"))
+{
+    var email=document.querySelector("#email")
 email.addEventListener("input",function(){
     let validation =document.querySelector("#checkemail");
     let valid = document.querySelector("#check-mail")
@@ -98,7 +113,7 @@ email.addEventListener("input",function(){
         valid.classList.remove('valid');
         kt[3]=0;
 
-        validation.style.display="block";
+        validation.style.display="flex";
         checked.classList.remove('true');
         checked.classList.add('false');
         
@@ -107,8 +122,11 @@ email.addEventListener("input",function(){
 
     }
 })
+}
 // checked phone
-var phone =document.getElementById('phone');
+if(document.getElementById('phone'))
+{
+    var phone =document.getElementById('phone');
 phone.addEventListener('input',function(){
     let validation =document.querySelector("#checkphone");
     let valid=document.querySelector("#check-phone")
@@ -127,15 +145,19 @@ phone.addEventListener('input',function(){
         valid.classList.remove('valid');
         kt[4]=0;
 
-        validation.style.display="block";
+        validation.style.display="flex";
         checked.classList.remove('true');
         checked.classList.add('false');
     }    
         
 })
+}
+
 
 //hidden visible password
-var password=document.querySelector("#password")
+if(document.querySelector("#password"))
+{
+    var password=document.querySelector("#password")
 let togglePass=document.querySelector("#togle-pass")
 togglePass.onclick=function(){
     if(password.type==='password'){
@@ -148,33 +170,6 @@ togglePass.onclick=function(){
         togglePass.classList.remove('hidden')
     }
 }
-var repassword= document.querySelector("#re-password");
-let toggleRepass=document.querySelector("#togle-repass")
-toggleRepass.onclick=function(){
-    if(repassword.type==='password'){
-        repassword.setAttribute('type','text')
-       toggleRepass.classList.add('hidden')
-    }
-    else
-    {
-        repassword.setAttribute('type','password')
-       toggleRepass.classList.remove('hidden')
-
-
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-//điều kiện khi nhập pass words
 password.addEventListener('input',function(){
     let lowerCase=document.getElementById('lower')
     let upperCase=document.getElementById('upper');
@@ -247,50 +242,118 @@ password.addEventListener('input',function(){
     else
     {
         kt[5]=0;
-        validation.style.display="block"; 
+        validation.style.display="flex"; 
         checked.classList.remove('true');
         checked.classList.add('false');
     }
 })
-//RE PASSWORD CHECK
-var repassword= document.querySelector("#re-password");
-repassword.addEventListener("input",function(){
-    let validation=document.querySelector("#checkedrepass")
-    let checked=document.querySelector("span.repass.checked")
-    let repass=document.getElementById('repass');
-    let data=this.value;
-    let pass=document.getElementById('password').value;
-    console.log(pass);
-    if(pass===data){
-        repass.classList.add('valid');
-        checked.classList.add('true');
-         checked.classList.remove('false');
-        setTimeout(()=>{validation.style.display="none"; },500); 
-        kt[6]=1;
-        
-    }
-    else
-    {
-        repass.classList.remove('valid');
-        kt[6]=0;
-
-        validation.style.display="block";
-        checked.classList.remove('true');
-        checked.classList.add('false');
-    }
+}
+if(document.querySelector("#re-password"))
+{
+    var repassword= document.querySelector("#re-password");    
     
-});
-let signBtn=document.querySelector('.btn-sign');
-signBtn.onclick=function(){
+    let toggleRepass=document.querySelector("#togle-repass")
+    toggleRepass.onclick=function(){
+        if(repassword.type==='password'){
+            repassword.setAttribute('type','text')
+           toggleRepass.classList.add('hidden')
+        }
+        else
+        {
+            repassword.setAttribute('type','password')
+           toggleRepass.classList.remove('hidden')
+    
+    
+        }
+    }    
+    repassword.addEventListener("input",function(){
+        let validation=document.querySelector("#checkedrepass")
+        let checked=document.querySelector("span.repass.checked")
+        let repass=document.getElementById('repass');
+        let data=this.value;
+        let pass=document.getElementById('password').value;       
+        if(pass===data){
+            repass.classList.add('valid');
+            checked.classList.add('true');
+            checked.classList.remove('false');
+            setTimeout(()=>{validation.style.display="none"; },500); 
+            kt[6]=1;
+            
+        }
+        else
+        {
+            repass.classList.remove('valid');
+            kt[6]=0;
+
+            validation.style.display="flex";
+            checked.classList.remove('true');
+            checked.classList.add('false');
+        }
+        
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//điều kiện khi nhập pass words
+
+//RE PASSWORD CHECK
+if(document.getElementById('signin'))
+{
+
+    var form=document.getElementById('signin')
+}
+else
+{
+    form=document.getElementById('login')
+}
+if(document.querySelector('#btn-sign'))
+{
+    let signBtn=document.querySelector('#btn-sign');
+    signBtn.onclick=function(){
+        if(document.title=="Login")
+        {
+            window.location="signin.html";
+        }
+        else
+        {
+            checkedIf()
+        }
+    }
+}
+if(document.querySelector('#btn-login'))
+{
+    let loginBtn=document.querySelector('#btn-login');
+    loginBtn.onclick=function(){
+        checkedIf()
+    }    
+}
+
+function checkedIf(){
     let validation=document.querySelectorAll('.validation')
     let checked=document.querySelectorAll('.checked');
     for(let i=0;i<kt.length;i++){
         if(kt[i]==0)
         {
-        validation[i].style.display="block"; 
+        validation[i].style.display="flex"; 
         checked[i].classList.remove('true');
         checked[i].classList.add('false');
         }
+        else{
+            d++;
+        }
+    }
+    if(d==kt.length){
+        form.submit();
     }
 }
 
