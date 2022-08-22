@@ -28,7 +28,9 @@ body{
     
     
     
-    background:#f0f2f5;
+    /* background:#f0f2f5; */
+    background-color: #222;
+
 }
 
 .main{
@@ -37,6 +39,7 @@ body{
     /* height: 500px;   */
     /* width: 530px; */
     background:#fff;
+    /* background-color: #222; */
     margin: auto;
     border-radius: 8px;
     box-shadow:0px 2px 4px 0px #000000;
@@ -56,7 +59,7 @@ body{
 }
 
 .inputBox{
-    
+    /*  */
     position: relative;
     width: 100%;
 
@@ -195,9 +198,9 @@ span.checked.false::before
 .validation{
     /* position: absolute;
     top:20px; */
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     background:rgba(0, 0, 0, 0.342);
-    padding: 10px;
+    padding: 10px 0;
     margin-top:30px;
     border-radius: 8px;
     box-shadow: 0 15px 25px rgba(0,0,0,0.12);
