@@ -341,6 +341,7 @@ if(document.querySelector('#btn-login'))
 function checkedIf(){
     let validation=document.querySelectorAll('.validation')
     let checked=document.querySelectorAll('.checked');
+    let d=0;
     for(let i=0;i<kt.length;i++){
         if(kt[i]==0)
         {
@@ -351,7 +352,9 @@ function checkedIf(){
         else{
             d++;
         }
+        console.log(kt[i]);
     }
+    
     if(d==kt.length){
         form.submit();
     }
@@ -360,3 +363,8 @@ function checkedIf(){
 
 
 
+let boxs=document.querySelectorAll('.box');
+for( box of boxs)
+{
+    console.log(box);
+}

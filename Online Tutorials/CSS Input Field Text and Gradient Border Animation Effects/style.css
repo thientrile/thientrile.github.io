@@ -38,7 +38,7 @@ body{
     width: 30rem;
     /* height: 500px;   */
     /* width: 530px; */
-    background:#fff;
+    background:rgba(255, 255, 255, 0.975);
     /* background-color: #222; */
     margin: auto;
     border-radius: 8px;
@@ -96,7 +96,7 @@ body{
 .inputBox input:valid ~.placeholder,
     .inputBox input:focus ~.placeholder{
     /* color:#2196f3; */
-    color:#333;
+    color:rgb(5, 43, 255);
     transform: translateY(-16px) translateX(3px);
     font-size:0.65em;
     font-weight: 600;
