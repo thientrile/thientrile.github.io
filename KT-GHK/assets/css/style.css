@@ -1,0 +1,191 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Aleo";
+	background: #fff;
+}
+#main {
+	width: 100%;
+	min-height: 100vh;
+}
+/* header */
+#main .header {
+	position: relative;
+}
+/* heading nav */
+#main .header a.navbar-brand {
+	font-size: 1.5em;
+	overflow: hidden;
+	margin: 0;
+	line-height: 1em;
+	display: inline-block;
+	vertical-align: middle;
+}
+#main .header a.navbar-brand img {
+	width: 30%;
+}
+#main .header .navbar-nav .nav-link {
+	font-size: 0.75em;
+	color: #fff;
+	font-weight: 800;
+	position: relative;
+	margin-right: 10px;
+}
+#main .header .navbar-nav .nav-link.active::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background: rgb(52, 183, 174);
+	transition: width 0.5 ease-in-out;
+}
+#main .header .navbar-nav .nav-link:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.heading-icon {
+	color: #fff;
+	position: relative;
+}
+.heading-icon:hover {
+	color: #fff;
+}
+.heading-icon i {
+	font-size: 1.2em;
+}
+.heading-icon span {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	text-align: center;
+	top: -1em;
+	right: -1em;
+	background-color: red;
+	font-size: 10px;
+	border-radius: 50%;
+}
+/* Carousel */
+.carousel {
+	/* width: 100%; */
+	max-height: 600px;
+	overflow: hidden;
+}
+.carousel-indicators {
+	opacity: 1;
+}
+.carousel-indicators [data-bs-target] {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	position: relative;
+	background: transparent;
+	text-indent: 0;
+}
+.carousel-indicators button::before {
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	right: 0;
+	content: "\f111";
+	font-family: "Font Awesome 5 Free";
+	color: #fff;
+	background: rgba(136, 136, 136, 0.1);
+	z-index: 1000;
+	font-size: 16px;
+}
+.carousel-indicators button:hover::before,
+.carousel-indicators button.active::before {
+	content: "\f192";
+	opacity: 1;
+}
+.carousel-item {
+	position: relative;
+}
+.carousel-item img:nth-child(1) {
+	max-width: 100%;
+	height: 40rem;
+	vertical-align: top;
+	object-fit: cover;
+	aspect-ratio: 25/9;
+}
+
+.carousel-item img:nth-child(2) {
+	position: absolute;
+}
+.carousel-item.active img:nth-child(2) {
+	bottom: -27%;
+	transform-origin: 50% 50%;
+	transform: rotate(282deg);
+	left: 28%;
+	animation: pencil 1s;
+}
+@keyframes pencil {
+	from {
+		left: 100%;
+		transform: rotate(0);
+	}
+	to {
+		left: 28%;
+		transform: rotate(282deg);
+	}
+}
+.carousel-caption {
+	margin-bottom: 8%;
+}
+.carousel-caption .title {
+	font-size: 4em;
+	font-weight: 800;
+	margin-bottom: 0;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+.carousel-caption .title > .text {
+	display: inline-block;
+	margin: 0;
+	position: relative;
+	display: inline-block;
+	transform-origin: 50% 50%;
+
+	opacity: 1;
+	transform: rotate(-30deg) translate(0px, 200%);
+	color: rgb(255, 255, 255);
+	transition: all 1s;
+	transition-delay: var(--i);
+}
+.carousel-item.active .carousel-caption .title .text {
+	transform: rotate(0);
+	transform: translate(0, 0);
+}
+@keyframes textfade {
+	from {
+		transform: translate(0, 100%);
+	}
+	to {
+		transform: translate(0);
+	}
+}
+
+.carousel-caption .note {
+	font-size: 1.5em;
+	margin: 2em 0;
+	font-weight: 300;
+}
+.carousel-caption .btn {
+	font-size: 1.2em;
+	padding: 0.7em 1em;
+	color: #fff;
+	font-weight: 600;
+	--animate-delay: 2s;
+	background: rgb(52, 183, 174);
+}
+.carousel-caption .btn:hover {
+	background: #000;
+	color: #fff;
+}
