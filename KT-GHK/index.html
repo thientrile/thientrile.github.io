@@ -25,8 +25,8 @@
 	</head>
 	<body ng-app="myapp">
 		<div id="main">
-			<div class="header">
-				<nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+			<div id="header" class="header" ng-controller="Heading">
+				<nav id="nav-menu" class="navbar navbar-expand-sm navbar-dark fixed-top">
 					<div class="container">
 						<a class="navbar-brand" href="javascript:void(0)"
 							><img src="./assets/img/heading/logo/dgw-logo-grey.png" alt=""
@@ -38,7 +38,7 @@
 							data-bs-target="#mynavbar">
 							<span class="navbar-toggler-icon"></span>
 						</button>
-						<div class="collapse navbar-collapse justify-content-center" id="mynavbar">
+						<div class="collapse navbar-collapse" id="mynavbar">
 							<ul class="navbar-nav me-auto">
 								<li class="nav-item">
 									<a class="nav-link active" href="javascript:void(0)"> HOME</a>
@@ -61,11 +61,15 @@
 					</div>
 				</nav>
 				<!-- Carousel -->
-				<div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
+				<div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 					<!-- Indicators/dots -->
 					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-						<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+						<button
+							type="button"
+							data-bs-target="#header-carousel"
+							data-bs-slide-to="0"
+							class="active"></button>
+						<button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1"></button>
 					</div>
 					<!-- The slideshow/carousel -->
 					<div class="carousel-inner">
@@ -130,10 +134,18 @@
 							</div>
 						</div>
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#header-carousel"
+						data-bs-slide="prev">
 						<!-- <span class="carousel-control-prev-icon"></span> -->
 					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#header-carousel"
+						data-bs-slide="next">
 						<!-- <span class="carousel-control-next-icon"></span> -->
 					</button>
 				</div>
@@ -150,5 +162,7 @@
 			</div>
 			<div class="footer"></div>
 		</div>
+		<script src="./assets/js/script.js"></script>
+		<script src="./assets/js/angular.js"></script>
 	</body>
 </html>
