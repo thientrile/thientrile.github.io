@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+	<header>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-		<link href="https://fonts.googleapis.com/css?family=Aleo" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 		<link
@@ -21,11 +21,10 @@
 			referrerpolicy="no-referrer"></script>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<link rel="stylesheet" href="./assets/css/Responsive.css" />
-		<title>DGWORK</title>
-	</head>
+	</header>
 	<body ng-app="myapp">
 		<div id="main">
-			<div id="header" class="header" ng-controller="Heading">
+			<div id="header" ng-controller="Heading">
 				<nav id="nav-menu" class="navbar navbar-expand-sm navbar-dark fixed-top">
 					<div class="container">
 						<a class="navbar-brand" href="javascript:void(0)"
@@ -40,14 +39,60 @@
 						</button>
 						<div class="collapse navbar-collapse" id="mynavbar">
 							<ul class="navbar-nav me-auto">
-								<li class="nav-item">
-									<a class="nav-link active" href="javascript:void(0)"> HOME</a>
+								<li class="nav-item dropdown">
+									<a
+										class="nav-link active"
+										href="javascript:void(0)"
+										role="button"
+										data-bs-toggle="dropdown">
+										HOME
+									</a>
+
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">Link</a></li>
+										<li><a class="dropdown-item" href="#">Another link</a></li>
+										<li><a class="dropdown-item" href="#">A third link</a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a
+										class="nav-link"
+										href="javascript:void(0)"
+										role="button"
+										data-bs-toggle="dropdown">
+										SHOP
+									</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">Link</a></li>
+										<li><a class="dropdown-item" href="#">Another link</a></li>
+										<li><a class="dropdown-item" href="#">A third link</a></li>
+									</ul>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="javascript:void(0)">SHOP</a>
+									<a class="nav-link" href="javascript:void(0)">Pricing</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="javascript:void(0)">ABOUT</a>
+									<a class="nav-link" href="javascript:void(0)"> ABOUT </a>
+								</li>
+								<li class="nav-item dropdown">
+									<a
+										class="nav-link"
+										href="javascript:void(0)"
+										role="button"
+										data-bs-toggle="dropdown">
+										Blog
+									</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">Link</a></li>
+										<li><a class="dropdown-item" href="#">Another link</a></li>
+										<li><a class="dropdown-item" href="#">A third link</a></li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="javascript:void(0)">Contact</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="javascript:void(0)">Purchase Theme!</a>
 								</li>
 							</ul>
 							<div class="d-flex">
@@ -60,16 +105,18 @@
 						</div>
 					</div>
 				</nav>
+			</div>
+			<div id="body">
 				<!-- Carousel -->
-				<div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+				<div id="top-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 					<!-- Indicators/dots -->
 					<div class="carousel-indicators">
 						<button
 							type="button"
-							data-bs-target="#header-carousel"
+							data-bs-target="#top-carousel"
 							data-bs-slide-to="0"
 							class="active"></button>
-						<button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1"></button>
+						<button type="button" data-bs-target="#top-carousel" data-bs-slide-to="1"></button>
 					</div>
 					<!-- The slideshow/carousel -->
 					<div class="carousel-inner">
@@ -137,26 +184,261 @@
 					<button
 						class="carousel-control-prev"
 						type="button"
-						data-bs-target="#header-carousel"
-						data-bs-slide="prev">
-						<!-- <span class="carousel-control-prev-icon"></span> -->
-					</button>
+						data-bs-target="#top-carousel"
+						data-bs-slide="prev"></button>
 					<button
 						class="carousel-control-next"
 						type="button"
-						data-bs-target="#header-carousel"
-						data-bs-slide="next">
-						<!-- <span class="carousel-control-next-icon"></span> -->
-					</button>
+						data-bs-target="#top-carousel"
+						data-bs-slide="next"></button>
 				</div>
-			</div>
-			<div class="body">
-				<div class="container">
-					<div class="row">
-						<div class="col-mb-3"></div>
-						<div class="col-mb-3"></div>
-						<div class="col-mb-3"></div>
-						<div class="col-mb-3"></div>
+				<div class="follow pt-5">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 text-center">
+								<span class="point animate__fadeIn" data-duration="2000" data-val="5000">0</span>
+								<p class="point-note">Happy Users</p>
+							</div>
+							<div class="col-md-3 text-center">
+								<span class="point animate__fadeIn" data-duration="1" data-val="40">0</span>
+								<p class="point-note">Products</p>
+							</div>
+							<div class="col-md-3 text-center">
+								<span class="point animate__fadeIn" data-duration="2000" data-val="9500">0</span>
+								<p class="point-note">Subscribers</p>
+							</div>
+							<div class="col-md-3 text-center">
+								<span class="point animate__fadeIn" data-duration="1" data-val="678">0</span>
+								<p class="point-note">Tutorials</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="creative mt-5 mb-5 pt-5 pb-5">
+					<div class="container">
+						<h2 class="heading-title animate__animated animate__fadeInUp">CREATIVE PRODUCTS</h2>
+						<h3 class="heading-sub animate__animated animate__fadeInUp">Create Amazing Digital Works</h3>
+						<nav class="nav-filters">
+							<ul>
+								<li><a href="#">audio</a></li>
+								<li><a href="#">graphics</a></li>
+								<li><a href="#">themes</a></li>
+								<li><a href="#">video</a></li>
+							</ul>
+						</nav>
+						<div class="row">
+							<div class="col-lg-4 col-md-6">
+								<div class="card">
+									<div class="creative-img-cover">
+										<img
+											class="card-img-top"
+											src="./assets/img/body/creative/dgwork-product-mockup-3.jpg"
+											alt="Card image"
+											style="width: 100%" />
+										<div class="creative-icon">
+											<span style="--bg: #fff; --color: #34b7ae">
+												<i class="fa-solid fa-plus"></i>
+											</span>
+											<span style="--bg: #34b7ae; --color: #fff"
+												><i class="fa-solid fa-cart-shopping"></i>
+											</span>
+										</div>
+									</div>
+
+									<div class="card-body">
+										<a href="#" class="heading-note">Audio</a>
+										<h5 class="card-title">Custom Template #2</h5>
+										<p class="card-text card-price">$12.00</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6">
+								<div class="card">
+									<div class="creative-img-cover">
+										<img
+											class="card-img-top"
+											src="./assets/img/body/creative/video_thumbnail.jpg"
+											alt="Card image"
+											style="width: 100%" />
+										<div class="creative-icon">
+											<span style="--bg: #fff; --color: #34b7ae">
+												<i class="fa-solid fa-plus"></i>
+											</span>
+											<span style="--bg: #34b7ae; --color: #fff"
+												><i class="fa-solid fa-cart-shopping"></i>
+											</span>
+										</div>
+									</div>
+
+									<div class="card-body">
+										<a href="#" class="heading-note">videos</a>
+										<h5 class="card-title">Custom Template #2</h5>
+										<p class="card-text card-price">$0.00</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6">
+								<div class="card">
+									<div class="creative-img-cover">
+										<img
+											class="card-img-top"
+											src="./assets/img/body/creative/dgwork-product-citynews.jpg"
+											alt="Card image" />
+										<div class="creative-icon">
+											<span style="--bg: #fff; --color: #34b7ae">
+												<i class="fa-solid fa-plus"></i>
+											</span>
+											<span style="--bg: #34b7ae; --color: #fff"
+												><i class="fa-solid fa-cart-shopping"></i>
+											</span>
+										</div>
+									</div>
+
+									<div class="card-body">
+										<a href="#" class="heading-note">themes</a>
+										<h5 class="card-title">CityNews Theme</h5>
+										<p class="card-text card-price">$49.00 – $2,450.00</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-4 col-md-6">
+								<div class="card">
+									<div class="creative-img-cover">
+										<img
+											class="card-img-top"
+											src="./assets/img/body/creative/dgwork-product-surfer.jpg"
+											style="width: 100%" />
+										<div class="creative-icon">
+											<span style="--bg: #fff; --color: #34b7ae">
+												<i class="fa-solid fa-plus"></i>
+											</span>
+											<span style="--bg: #34b7ae; --color: #fff"
+												><i class="fa-solid fa-cart-shopping"></i>
+											</span>
+										</div>
+									</div>
+
+									<div class="card-body">
+										<a href="#" class="heading-note">videos</a>
+										<h4 class="card-title">Custom Template #3</h4>
+										<p class="card-text card-price">$0.00</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6">
+								<div class="card">
+									<div class="creative-img-cover">
+										<img
+											class="card-img-top"
+											src="./assets/img/body/creative/dgwork-product-iphone-book.jpg"
+											alt="Card image"
+											style="width: 100%" />
+										<div class="creative-icon">
+											<span style="--bg: #fff; --color: #34b7ae">
+												<i class="fa-solid fa-plus"></i>
+											</span>
+											<span style="--bg: #34b7ae; --color: #fff"
+												><i class="fa-solid fa-cart-shopping"></i>
+											</span>
+										</div>
+									</div>
+
+									<div class="card-body">
+										<a href="#" class="heading-note">Graphics</a>
+										<h4 class="card-title">Brandminute Mockups</h4>
+										<p class="card-text card-price">$0.00</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6">
+								<div class="card">
+									<div class="creative-img-cover">
+										<img
+											class="card-img-top"
+											src="./assets/img/body/creative/dgwork-product-mockup-2.jpg"
+											alt="Card image"
+											style="width: 100%" />
+										<div class="creative-icon">
+											<span style="--bg: #fff; --color: #34b7ae">
+												<i class="fa-solid fa-plus"></i>
+											</span>
+											<span style="--bg: #34b7ae; --color: #fff"
+												><i class="fa-solid fa-cart-shopping"></i>
+											</span>
+										</div>
+									</div>
+
+									<div class="card-body">
+										<a href="#" class="heading-note">Graphics, Themes</a>
+										<h4 class="card-title">Standard Product Template</h4>
+										<p class="card-text card-price">$39.00</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="products pt-5 pb-5">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 p-5">
+								<h2>We Delivery You</h2>
+								<div class="heading-title">AMAZING PRODUCTS</div>
+								<p class="mt-3">
+									Donec vel dapibus massa. Nulla gravida euismod lorem, tempus hendrerit est porta eu.
+									Aenean tortor enim, cursus eget euismod vel, euismod in eros.
+								</p>
+								<button class="btn mt-5">All Products</button>
+							</div>
+							<div class="col-lg-6 col-md-6">
+								<img class="products-img" src="./assets/img/body/products/dgworks-browers.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="choose mt-5 mb-5 pt-5 pb-5 bg-dark">
+					<div class="container">
+						<h2 class="heading-title animate__animated animate__fadeInUp text-white">WHY CHOOSE US</h2>
+						<h3 class="heading-sub animate__animated animate__fadeInUp text-white fst-italic">
+							We keep to create value for you
+						</h3>
+						<div class="row mt-5">
+							<div class="col-lg-4 col-md-4">
+								<div class="card text-center" style="background: transparent; border: none">
+									<div class="card-img-top"><i aria-hidden="true" class="fas fa-desktop"></i></div>
+									<div class="card-body text-white">
+										<h4 class="card-title">John Doe</h4>
+										<p class="card-text">
+											Some example text some example text. John Doe is an architect and engineer
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<div class="card text-center" style="background: transparent; border: none">
+									<div class="card-img-top"><i aria-hidden="true" class="fas fa-code"></i></div>
+									<div class="card-body text-white">
+										<h4 class="card-title">John Doe</h4>
+										<p class="card-text">
+											Some example text some example text. John Doe is an architect and engineer
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<div class="card text-center" style="background: transparent; border: none">
+									<div class="card-img-top"><i aria-hidden="true" class="far fa-comments"></i></div>
+									<div class="card-body text-white">
+										<h4 class="card-title">John Doe</h4>
+										<p class="card-text">
+											Some example text some example text. John Doe is an architect and engineer
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
