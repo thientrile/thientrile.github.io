@@ -113,11 +113,11 @@
 							</div>
 						</div>
 						<div class="d-flex">
-							<a href="#" id="user-login" class="heading-icon me-4"><i class="fa-solid fa-user"></i></a>
-							<a href="#" class="heading-icon me-4"
+							<!-- <a href="#" id="user-login" class="heading-icon me-4"><i class="fa-solid fa-user"></i></a> -->
+							<!-- <a href="#" class="heading-icon me-4"
 								><i class="fa-solid fa-cart-shopping"></i>
 								<span ng-bind="data.length">0</span>
-							</a>
+							</a> -->
 							<button style="background: transparent; border: none" class="heading-icon me-4">
 								<i
 									class="fa-solid fa-magnifying-glass"
@@ -157,17 +157,17 @@
 							<ul class="nav nav-tabs" role="tablist">
 								<li class="nav-item">
 									<a class="nav-link active" data-bs-toggle="tab" href="#download"
-										><i class="fa-solid fa-download me-2"></i>Dowload</a
+										><i class="fa-solid fa-download me-2"></i>Add</a
 									>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" data-bs-toggle="tab" href="#bill-history"
-										><i class="fa-solid fa-file me-2"></i>Billing History</a
+										><i class="fa-solid fa-file me-2"></i>Edit</a
 									>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" data-bs-toggle="tab" href="#edit-profile"
-										><i class="fa-solid fa-user me-2"></i>Edit Profile</a
+										><i class="fa-solid fa-user me-2"></i>Remove</a
 									>
 								</li>
 							</ul>
@@ -181,26 +181,307 @@
 						<div class="tab-content bg-white">
 							<div id="download" class="container tab-pane active">
 								<br />
-								<h3>Dowload</h3>
+								<h3
+									style="cursor: pointer; color: red"
+									data-bs-toggle="modal"
+									data-bs-target="#myModal">
+									<i
+										style="border: 1px solid blue; border-radius: 50%"
+										class="p-3 fa-solid fa-plus"></i>
+								</h3>
+								
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua.
+									<div class="creative">
+										<div class="container ">
+											<div class="row">
+												<div class="col-lg-4 col-md-6">
+													<div class="card">
+														<div class="creative-img-cover">
+															<img
+																class="card-img-top"
+																src="./assets/img/body/creative/dgwork-product-mockup-3.jpg"
+																alt="Card image"
+																style="width: 100%" />
+															<div class="creative-icon">
+																<span class="plus" style="--bg: #fff; --color: #34b7ae">
+																	<i class="fa-solid fa-plus"></i>
+																</span>
+																<span
+																	class="cart"
+																	data-bs-toggle="modal"
+																	data-bs-target="#buy-modal"
+																	style="--bg: #34b7ae; --color: #fff"
+																	><i class="fa-solid fa-cart-shopping"></i>
+																</span>
+															</div>
+														</div>
+					
+														<div class="card-body">
+															<a href="#" class="heading-note">Audio</a>
+															<h5 class="card-title">Custom Template #2</h5>
+															<p class="card-text card-price">$12.00</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-6">
+													<div class="card">
+														<div class="creative-img-cover">
+															<img
+																class="card-img-top"
+																src="./assets/img/body/creative/video_thumbnail.jpg"
+																alt="Card image"
+																style="width: 100%" />
+															<div class="creative-icon">
+																<span class="plus" style="--bg: #fff; --color: #34b7ae">
+																	<i class="fa-solid fa-plus"></i>
+																</span>
+																<span
+																	class="cart"
+																	data-bs-toggle="modal"
+																	data-bs-target="#buy-modal"
+																	style="--bg: #34b7ae; --color: #fff"
+																	><i class="fa-solid fa-cart-shopping"></i>
+																</span>
+															</div>
+														</div>
+					
+														<div class="card-body">
+															<a href="#" class="heading-note">videos</a>
+															<h5 class="card-title">Custom Template #2</h5>
+															<p class="card-text card-price">$0.00</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-6">
+													<div class="card">
+														<div class="creative-img-cover">
+															<img
+																class="card-img-top"
+																src="./assets/img/body/creative/dgwork-product-citynews.jpg"
+																alt="Card image" />
+															<div class="creative-icon">
+																<span class="plus" style="--bg: #fff; --color: #34b7ae">
+																	<i class="fa-solid fa-plus"></i>
+																</span>
+																<span
+																	class="cart"
+																	data-bs-toggle="modal"
+																	data-bs-target="#buy-modal"
+																	style="--bg: #34b7ae; --color: #fff"
+																	><i class="fa-solid fa-cart-shopping"></i>
+																</span>
+															</div>
+														</div>
+					
+														<div class="card-body">
+															<a href="#" class="heading-note">themes</a>
+															<h5 class="card-title">CityNews Theme</h5>
+															<p class="card-text card-price">$49.00 – $2,450.00</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
 								</p>
 							</div>
 							<div id="bill-history" class="container tab-pane fade">
 								<br />
-								<h3>Bill</h3>
+								
 								<p>
-									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-									ex ea commodo consequat.
+									<div class="creative">
+										<div class="container ">
+											<div class="row">
+												<div class="col-lg-4 col-md-6">
+													<div class="card">
+														<div class="creative-img-cover">
+															<img
+																class="card-img-top"
+																src="./assets/img/body/creative/dgwork-product-mockup-3.jpg"
+																alt="Card image"
+																style="width: 100%" />
+															<div class="creative-icon">
+																<!-- <span class="plus" style="--bg: #fff; --color: #34b7ae">
+																	<i class="fa-solid fa-plus"></i>
+																</span> -->
+																<span
+																	class="cart"
+																	data-bs-toggle="modal"
+																	data-bs-target="#myModal"
+																	style="--bg: #34b7ae; --color: #fff"
+																	><i class="fa-solid fa-pen-to-square"></i>
+																</span>
+															</div>
+														</div>
+					
+														<div class="card-body">
+															<a href="#" class="heading-note">Audio</a>
+															<h5 class="card-title">Custom Template #2</h5>
+															<p class="card-text card-price">$12.00</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-6">
+													<div class="card">
+														<div class="creative-img-cover">
+															<img
+																class="card-img-top"
+																src="./assets/img/body/creative/video_thumbnail.jpg"
+																alt="Card image"
+																style="width: 100%" />
+															<div class="creative-icon">
+																<!-- <span class="plus" style="--bg: #fff; --color: #34b7ae">
+																	<i class="fa-solid fa-plus"></i>
+																</span> -->
+																<span
+																	class="cart"
+																	data-bs-toggle="modal"
+																	data-bs-target="#myModal"
+																	style="--bg: #34b7ae; --color: #fff"
+																	><i class="fa-solid fa-pen-to-square"></i>
+																</span>
+															</div>
+														</div>
+					
+														<div class="card-body">
+															<a href="#" class="heading-note">videos</a>
+															<h5 class="card-title">Custom Template #2</h5>
+															<p class="card-text card-price">$0.00</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-6">
+													<div class="card">
+														<div class="creative-img-cover">
+															<img
+																class="card-img-top"
+																src="./assets/img/body/creative/dgwork-product-citynews.jpg"
+																alt="Card image" />
+															<div class="creative-icon">
+																<!-- <span class="plus" style="--bg: #fff; --color: #34b7ae">
+																	<i class="fa-solid fa-plus"></i>
+																</span> -->
+																<span
+																	class="cart"
+																	data-bs-toggle="modal"
+																	data-bs-target="#myModal"
+																	style="--bg: #34b7ae; --color: #fff"
+																	><i class="fa-solid fa-pen-to-square"></i>
+																</span>
+															</div>
+														</div>
+					
+														<div class="card-body">
+															<a href="#" class="heading-note">themes</a>
+															<h5 class="card-title">CityNews Theme</h5>
+															<p class="card-text card-price">$49.00 – $2,450.00</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
 								</p>
 							</div>
 							<div id="edit-profile" class="container tab-pane fade">
 								<br />
-								<h3>Profile</h3>
+								
 								<p>
-									Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-									doloremque laudantium, totam rem aperiam.
+									<div class="creative">
+										<div class="container ">
+											<div class="row">
+												<div class="col-lg-4 col-md-6">
+													<div class="card">
+														<div class="creative-img-cover">
+															<img
+																class="card-img-top"
+																src="./assets/img/body/creative/dgwork-product-mockup-3.jpg"
+																alt="Card image"
+																style="width: 100%" />
+															<div class="creative-icon">
+																<!-- <span class="plus" style="--bg: #fff; --color: #34b7ae">
+																	<i class="fa-solid fa-plus"></i>
+																</span> -->
+																<span
+																	class="cart"
+																	data-bs-toggle="modal"
+																	data-bs-target="#myModal"
+																	style="--bg: #34b7ae; --color: #fff"
+																	><i class="fa-solid fa-trash"></i>
+																</span>
+															</div>
+														</div>
+					
+														<div class="card-body">
+															<a href="#" class="heading-note">Audio</a>
+															<h5 class="card-title">Custom Template #2</h5>
+															<p class="card-text card-price">$12.00</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-6">
+													<div class="card">
+														<div class="creative-img-cover">
+															<img
+																class="card-img-top"
+																src="./assets/img/body/creative/video_thumbnail.jpg"
+																alt="Card image"
+																style="width: 100%" />
+															<div class="creative-icon">
+																<!-- <span class="plus" style="--bg: #fff; --color: #34b7ae">
+																	<i class="fa-solid fa-plus"></i>
+																</span> -->
+																<span
+																	class="cart"
+																	data-bs-toggle="modal"
+																	data-bs-target="#myModal"
+																	style="--bg: #34b7ae; --color: #fff"
+																	><i class="fa-solid fa-trash"></i>
+																</span>
+															</div>
+														</div>
+					
+														<div class="card-body">
+															<a href="#" class="heading-note">videos</a>
+															<h5 class="card-title">Custom Template #2</h5>
+															<p class="card-text card-price">$0.00</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-6">
+													<div class="card">
+														<div class="creative-img-cover">
+															<img
+																class="card-img-top"
+																src="./assets/img/body/creative/dgwork-product-citynews.jpg"
+																alt="Card image" />
+															<div class="creative-icon">
+																<!-- <span class="plus" style="--bg: #fff; --color: #34b7ae">
+																	<i class="fa-solid fa-plus"></i>
+																</span> -->
+																<span
+																	class="cart"
+																	data-bs-toggle="modal"
+																	data-bs-target="#myModal"
+																	style="--bg: #34b7ae; --color: #fff"
+																	><i class="fa-solid fa-trash"></i>
+																</span>
+															</div>
+														</div>
+					
+														<div class="card-body">
+															<a href="#" class="heading-note">themes</a>
+															<h5 class="card-title">CityNews Theme</h5>
+															<p class="card-text card-price">$49.00 – $2,450.00</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
 								</p>
 							</div>
 						</div>
@@ -315,6 +596,25 @@
 									placeholder="Start typing and press Enter to search" />
 							</form>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog  modal-dialog-centered">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title"></h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body">Modal body..</div>
+
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						
 					</div>
 				</div>
 			</div>
