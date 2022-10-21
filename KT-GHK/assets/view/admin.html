@@ -1,0 +1,135 @@
+<div class="img-top"
+					style="
+						background: url('./assets/img/pro/seamless-gold-rhombus-grid-pattern-black-background_53876-97589.jpg');
+					">
+					<div class="container">
+						<h1
+							class="ps-5 heading-title animate__animated animate__fadeInUp text-white text-start name-account" ng-show="checkcookies">
+							Account
+						</h1>
+						<h1
+							class="ps-5 heading-title animate__animated animate__fadeInUp text-white text-start name-account" ng-repeat=" i in cookies">
+							{{i.fullname}}
+						</h1>
+						<h3 class="heading-sub animate__animated animate__fadeInUp text-start ps-5"ng-hide="checkcookies">ADMIN</h3>
+					</div>
+				</div>
+				<!-- user-select-menu -->
+				<div id="user">
+					<div class="container translate-top">
+						<div class="user-menu" >
+							<ul class="nav nav-tabs" role="tablist" ng-hide="checkcookies">
+								<li class="nav-item">
+									<a class="nav-link active" data-bs-toggle="tab" href="#download"
+										><i class="fa-solid fa-download me-2"></i>product editing</a
+									>
+								</li>
+								<!-- <li class="nav-item">
+									<a class="nav-link" data-bs-toggle="tab" href="#bill-history"
+										><i class="fa-solid fa-file me-2"></i>Human Resource Management</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" data-bs-toggle="tab" href="#edit-profile"
+										><i class="fa-solid fa-file me-2"></i>Customer management</a
+									>
+								</li> -->
+								
+							</ul>
+							<div class="btn-group">
+								<button  class="btn btn-danger me-2 p-2" ng-click="btnlogout()" ng-hide="checkcookies">
+									Log out<i class="fa-solid fa-right-from-bracket ms-2"></i>
+								</button>
+								<a href="#!/login" class="btn btn-success me-2 p-2" ng-show="checkcookies">
+									Login
+								</a>
+							</div>
+						</div>
+						<!-- Tab panes -->
+						
+						<div class="tab-content bg-white"ng-hide="checkcookies">
+						<div id="download" class="container tab-pane active">
+								<button	class="btn btn-dark"type="button"data-bs-toggle="offcanvas"data-bs-target="#filter"style="position: absolute; top: 80px; left: 0; z-index: 99; color: #fff">
+									<i class="fa-solid fa-filter"></i>
+								</button>
+								<button	class="btn btn-warning"type="button"style="position: absolute; top: 150px; left: 0; z-index: 99; color: #fff"data-bs-toggle="modal"
+								data-bs-target="#addmodal">
+									<i class="fa-solid fa-plus"></i>
+								</button>
+
+									<div class="creative" >
+										<div class="container ">
+											<div class="row">
+												<div class="col-lg-4 col-md-6" ng-repeat="s in arrProduct |orderBy : sort | limitTo : 6 : begin ">
+													<div class="card">
+														<div class="creative-img-cover">
+															<img
+																class="card-img-top"
+																src="{{s.img}}"
+																alt="Card image"
+																style="width: 100%" />
+															<div class="creative-icon">
+																<span
+																	class="cart"
+																	data-bs-toggle="modal"
+																	data-bs-target="#eidtmodal"
+																	style="--bg: #34b7ae; --color: #fff"
+																	ng-click="editmodal(s._id)"><i class="fa-solid fa-pen-to-square" ></i>
+																</span>
+																<span
+																	class="cart"								ng-click="del(s._id)"									
+																	style="--bg: #ef0000; --color: #fff"
+																	><i class="fa-solid fa-trash"></i>
+																</span>
+															</div>
+														</div>
+										
+														<div class="card-body">
+															<a href="#" class="heading-note">{{s.Category}}</a>
+															<h5 class="card-title">{{s.name}}</h5>
+															<p class="card-text card-price">
+																<span ng-repeat="i in s.price"><span> </span>{{i | currency :'$'}}</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="d-flex justify-content-center">
+												<ul class="pagination">
+													<li class="page-item"><a class="page-link" ng-click="pageItem('pre')">Previous</a></li>
+											
+													<li
+														class="page-item num active"
+														ng-click="pageItem(i)"
+														ng-repeat=" i in pagination"
+														ng-if="(begin/6)+1 ==i+1">
+														<a class="page-link">{{i+1}}</a>
+													</li>
+													<li
+														class="page-item num"
+														ng-click="pageItem(i)"
+														ng-repeat=" i in pagination"
+														ng-if="(begin/6)+1 !=i+1">
+														<a class="page-link">{{i+1}}</a>
+													</li>
+											
+													<li class="page-item"><a class="page-link" ng-click="pageItem('next')">Next</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								
+							</div>
+							<!-- <div id="bill-history" class="container tab-pane fade">
+								<br />
+								
+								
+							</div>
+							<div id="edit-profile" class="container tab-pane fade">
+								<br />
+								
+								
+							</div> -->
+						</div>
+					</div>
+				</div>

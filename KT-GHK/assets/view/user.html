@@ -1,0 +1,57 @@
+<div
+					class="img-top"
+					style="
+						background: url('./assets/img/pro/seamless-gold-rhombus-grid-pattern-black-background_53876-97589.jpg');
+					">
+					<div class="container">
+						<h1
+							class="ps-5 heading-title animate__animated animate__fadeInUp text-white text-start name-account" ng-show="checkcookies">
+							Account
+						</h1>
+						<h1
+							class="ps-5 heading-title animate__animated animate__fadeInUp text-white text-start name-account" ng-repeat=" i in cookies">
+							{{i.fullname}}
+						</h1>
+						<h3 class="heading-sub animate__animated animate__fadeInUp text-start ps-5" ng-hide="checkcookies">User!</h3>
+					</div>
+				</div>
+				<!-- user-select-menu -->
+				<div id="user">
+					<div class="container translate-top">
+						<div class="user-menu" >
+							<ul class="nav nav-tabs" role="tablist" ng-hide="checkcookies">
+								<li class="nav-item">
+									<a class="nav-link active" data-bs-toggle="tab" href="#download"
+										><i class="fa-solid fa-download me-2"></i>Purchase history</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" data-bs-toggle="tab" href="#bill-history"
+										><i class="fa-solid fa-file me-2"></i>Edit profile</a
+									>
+								</li>
+								
+							</ul>
+							<div class="btn-group">
+								<button  class="btn btn-danger me-2 p-2" ng-click="btnlogout()" ng-hide="checkcookies">
+									Log out<i class="fa-solid fa-right-from-bracket ms-2"></i>
+								</button>
+								<a href="#!/login" class="btn btn-success me-2 p-2" ng-show="checkcookies">
+									Login
+								</a>
+							</div>
+						</div>
+						<!-- Tab panes -->
+						<div class="tab-content bg-white"ng-hide="checkcookies">
+							<div id="download" class="container tab-pane active">
+							
+							</div>
+							<div id="bill-history" class="container tab-pane fade">
+								
+								
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>

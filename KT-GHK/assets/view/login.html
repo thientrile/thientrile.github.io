@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="./assets/css/login.css" />
+<div class="section">
+	<div class="container mt-5">
+		<div class="row full-height justify-content-center">
+			<div class="col-12 text-center align-self-center py-5">
+				<div class="section pb-5 pt-5 pt-sm-2 text-center">
+					<h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+					<input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+					<label for="reg-log"></label>
+					<div class="card-3d-wrap mx-auto">
+						<div class="card-3d-wrapper">
+							<div name="login" class="card-front">
+								<div class="center-wrap">
+									<div class="section text-center">
+										<h4 class="mb-4 pb-3">Log In</h4>
+										<div class="form-group">
+											<input
+												type="email"
+												name="email"
+												ng-model="logemail"
+												class="form-style logemail"
+												placeholder="Your Email"
+												autocomplete="off" />
+											<span class="text-danger">{{logerr}}</span>
+											<i class="input-icon uil uil-at"></i>
+										</div>
+										<div class="form-group mt-2">
+											<input
+												ng-model="logpass"
+												type="password"
+												name="pass"
+												class="form-style"
+												placeholder="Your Password"
+												autocomplete="off" />
+
+											<i class="input-icon uil uil-lock-alt"></i>
+										</div>
+										<button type="button" class="btn mt-4" ng-click="btnlogin(logemail,logpass)">
+											submit
+										</button>
+										<p class="mb-0 mt-4 text-center">
+											<a href="#0" class="link">Forgot your password?</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div name="sign" class="card-back">
+								<div class="center-wrap">
+									<div class="section text-center">
+										<h4 class="mb-4 pb-3">Sign Up</h4>
+										<div name="form" class="form-group">
+											<input
+											ng-model="signname"
+												type="text"
+												name="name"
+												class="form-style logname"
+												placeholder="Your Full Name"
+												autocomplete="off" />
+											<i class="input-icon uil uil-user"></i>
+										</div>
+										<div class="form-group mt-2">
+											<input
+
+												type="email"
+												name="email"
+												ng-model="signemail"
+												class="form-style "
+												placeholder="Your Email"
+												autocomplete="off" />
+												<span class="text-danger">{{signerr}}</span>
+											<i class="input-icon uil uil-at"></i>
+										</div>
+										<div class="form-group mt-2">
+											<input
+												ng-model="signpwd"
+												type="password"
+												name="logpass"
+												class="form-style logpass"
+												placeholder="Your Password"
+												autocomplete="off" />
+											<i class="input-icon uil uil-lock-alt"></i>
+										</div>
+										<button type="button" class="btn mt-4"ng-click="btnsigin(signname,signemail,signpwd)">submit</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

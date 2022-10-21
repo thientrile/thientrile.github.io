@@ -302,7 +302,3 @@ function checkedIf() {
 	}
 }
 
-let boxs = document.querySelectorAll(".box");
-for (box of boxs) {
-	console.log(box);
-}
