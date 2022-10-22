@@ -1,57 +1,173 @@
 <div
-					class="img-top"
-					style="
-						background: url('./assets/img/pro/seamless-gold-rhombus-grid-pattern-black-background_53876-97589.jpg');
-					">
-					<div class="container">
-						<h1
-							class="ps-5 heading-title animate__animated animate__fadeInUp text-white text-start name-account" ng-show="checkcookies">
-							Account
-						</h1>
-						<h1
-							class="ps-5 heading-title animate__animated animate__fadeInUp text-white text-start name-account" ng-repeat=" i in cookies">
-							{{i.fullname}}
-						</h1>
-						<h3 class="heading-sub animate__animated animate__fadeInUp text-start ps-5" ng-hide="checkcookies">User!</h3>
-					</div>
-				</div>
-				<!-- user-select-menu -->
-				<div id="user">
-					<div class="container translate-top">
-						<div class="user-menu" >
-							<ul class="nav nav-tabs" role="tablist" ng-hide="checkcookies">
-								<li class="nav-item">
-									<a class="nav-link active" data-bs-toggle="tab" href="#download"
-										><i class="fa-solid fa-download me-2"></i>Purchase history</a
-									>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" data-bs-toggle="tab" href="#bill-history"
-										><i class="fa-solid fa-file me-2"></i>Edit profile</a
-									>
-								</li>
-								
-							</ul>
-							<div class="btn-group">
-								<button  class="btn btn-danger me-2 p-2" ng-click="btnlogout()" ng-hide="checkcookies">
-									Log out<i class="fa-solid fa-right-from-bracket ms-2"></i>
-								</button>
-								<a href="#!/login" class="btn btn-success me-2 p-2" ng-show="checkcookies">
-									Login
-								</a>
+	class="img-top"
+	style="background: url('./assets/img/pro/seamless-gold-rhombus-grid-pattern-black-background_53876-97589.jpg')">
+	<div class="container">
+		<h1
+			class="ps-5 heading-title animate__animated animate__fadeInUp text-white text-start name-account"
+			ng-show="checkcookies">
+			Account
+		</h1>
+		<h1
+			class="ps-5 heading-title animate__animated animate__fadeInUp text-white text-start name-account"
+			ng-repeat=" i in cookies">
+			{{i.fullname}}
+		</h1>
+		<h3 class="heading-sub animate__animated animate__fadeInUp text-start ps-5" ng-hide="checkcookies">User!</h3>
+	</div>
+</div>
+<!-- user-select-menu -->
+<div id="user">
+	<div class="container translate-top">
+		<div class="user-menu">
+			<ul class="nav nav-tabs" role="tablist" ng-hide="checkcookies">
+				<li class="nav-item">
+					<a class="nav-link active" data-bs-toggle="tab" href="#download"
+						><i class="fa-solid fa-download me-2"></i>Purchase history</a
+					>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-bs-toggle="tab" href="#bill-history"
+						><i class="fa-solid fa-file me-2"></i>Edit profile</a
+					>
+				</li>
+			</ul>
+
+			<button class="btn btn-danger me-2 p-2" ng-click="btnlogout()" ng-hide="checkcookies">
+				Log out<i class="fa-solid fa-right-from-bracket ms-2"></i>
+			</button>
+			<a href="#!/login" class="btn btn-success me-2 p-2" ng-show="checkcookies"> Login </a>
+		</div>
+		<!-- Tab panes -->
+		<div class="tab-content bg-white" ng-hide="checkcookies">
+			<div id="download" class="container tab-pane active">
+				<h1 class="text-center p-5" ng-if="cookies[0].history.length==0">Lịch sử trống</h1>
+				<br />
+
+				<table class="table table-hover" ng-if="cookies[0].history.length!=0">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Image</th>
+							<th>Category</th>
+							<th>Price</th>
+							<th>Amount</th>
+							<th>Sum</th>
+							<th>Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="i in cookies[0].history">
+							<th>{{i._id}}</th>
+							<th>{{i.name}}</th>
+							<th><img src="{{i.img}}" alt="" style="width: 100px" /></th>
+							<th>{{i.Category}}</th>
+							<th>{{i.price |currency}}</th>
+							<th>{{i.sl}}</th>
+							<th>{{i.sum | currency}}</th>
+							<th>{{i.date | date}}</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="bill-history" class="container tab-pane fade">
+				<div class="container">
+					<div class="row d-flex justify-content-center align-items-center">
+						<div class="col-lg-12 col-xl-11">
+							<div class="card text-black">
+								<div class="card-body p-md-5">
+									<div class="row justify-content-center">
+										<div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+											<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Edit Profile</p>
+
+											<form class="mx-1 mx-md-4">
+												<div class="d-flex flex-row align-items-center mb-4">
+													<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+													<div class="form-outline flex-fill mb-0">
+														<label class="form-label" for="form3Example1c"
+															>Your Name
+															<p ng-bind="cookies[0].fullname"></p>
+														</label>
+														<input
+															ng-model="upname"
+															
+															type="text"
+															id="form3Example1c"
+															class="form-control" />
+													</div>
+												</div>
+
+												<div class="d-flex flex-row align-items-center mb-4">
+													<i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+													<div class="form-outline flex-fill mb-0">
+														<label class="form-label" for="form3Example3c"
+															>Your Email
+															<p ng-bind="cookies[0].email"></p></label
+														><input
+															ng-model="upemail"
+															type="email"
+															id="form3Example3c"
+															class="form-control" />
+													</div>
+												</div>
+												<input type="checkbox" name="newpwd" ng-model="checkpws" />
+												<label for="newpwd">
+													<p>Change the password</p>
+												</label>
+												<div
+													ng-show="checkpws"
+													
+													class="d-flex flex-row align-items-center mb-4">
+													<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+													<div class="form-outline flex-fill mb-0">
+														<label class="form-label" for="form3Example4c">Password
+															<p class="text-danger">{{errEdit}}</p></label
+														><input
+														ng-model="pwd"
+															type="password"
+															id="form3Example4c"
+															class="form-control" />
+													</div>
+												</div>
+
+												<div ng-show="checkpws" class="d-flex flex-row align-items-center mb-4">
+													<i class="fas fa-key fa-lg me-3 fa-fw"></i>
+
+													<div class="form-outline flex-fill mb-0">
+														<label class="form-label" for="form3Example4cd"
+															>New your password</label
+														><input
+															ng-model="npwd"
+															type="password"
+															id="form3Example4cd"
+															class="form-control" />
+													</div>
+												</div>
+
+												<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+													<button
+														type="button"
+														class="btn btn-primary btn-lg"
+														ng-click="upUser(upname,upemail,checkpws,pwd,npwd)">
+														Update
+													</button>
+												</div>
+											</form>
+										</div>
+										<div
+											class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+											<img
+												src="assets\img\heading\logo\dgw-logo-grey.png"
+												class="img-fluid"
+												alt="Sample image" />
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<!-- Tab panes -->
-						<div class="tab-content bg-white"ng-hide="checkcookies">
-							<div id="download" class="container tab-pane active">
-							
-							</div>
-							<div id="bill-history" class="container tab-pane fade">
-								
-								
-								
-							</div>
-							
-						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+</div>

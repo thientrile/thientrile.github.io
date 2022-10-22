@@ -19,7 +19,7 @@
 <div class="creative">
 	<div class="container translate-top">
 		<div class="row">
-			<div class="col-lg-4 col-md-6" ng-repeat="s in arrProduct |orderBy : sort | limitTo : 6 : begin ">
+			<div class="col-lg-4 col-md-6" ng-repeat="s in arrProduct    | limitTo : 6 : begin |orderBy : sort | between : min : max">
 				<div class="card">
 					<div class="creative-img-cover">
 						<img class="card-img-top" src="{{s.img}}" alt="Card image" style="width: 100%" />

@@ -1,7 +1,11 @@
-// change the color when the menu sticky
+// sleep
+let sleep = (ms) => {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
 if (document.getElementById("nav-menu")) {
 	let navMenu = document.getElementById("nav-menu");
-	// let animate = document.querySelectorAll(".reveal");
+	
 	window.onscroll = function () {
 		if (window.pageYOffset > 0) {
 			navMenu.classList.add("navbar-white");
@@ -14,29 +18,15 @@ if (document.getElementById("nav-menu")) {
 			navMenu.classList.remove("shadow");
 			navMenu.classList.add("navbar-dark");
 		}
-
-		// for (let i = 0; i < animate.length; i++) {
-		// 	let windowHeight = window.innerHeight;
-		// 	let elementTop = animate[i].getBoundingClientRect().top;
-		// 	let elementVisible = 150;
-		// 	if (elementTop < windowHeight - elementVisible) {
-		// 		// animate[i].className.replace("reveal", "");
-		// 		console.log(animate[i].className.search("reveal"));
-		// 	} else {
-		// 		// animate[i].classList.add("reveal");
-		// 		console.log(false);
-		// 	}
-		// }
 	};
 }
 
 //
 
 // follow number
-if (document.querySelectorAll("#body .follow-point .point")) {
-	
-	let follows = document.querySelectorAll("#body .follow-point .point");
-	
+sleep(3000).then(()=>{if (document.querySelector("#body > div.follow-point.pt-5.ng-scope > div > div > div:nth-child(1) > span")) {
+	let follows = document.querySelectorAll("#body > div.follow-point.pt-5.ng-scope > div > div > div > span");
+
 	follows.forEach((follows) => {
 		let startValue = parseFloat(follows.getAttribute("data-duration"));
 		let endValue = parseFloat(follows.getAttribute("data-val"));
@@ -54,8 +44,8 @@ if (document.querySelectorAll("#body .follow-point .point")) {
 			}
 		}, setTime);
 	});
-}
-
+}})
+sleep(5000)
 // onte-stop
 if (document.querySelectorAll(".typewrite")) {
 	let TxtType = function (el, toRotate, period) {
@@ -117,37 +107,5 @@ if (document.querySelectorAll(".typewrite")) {
 		document.body.appendChild(css);
 	};
 }
-
-// var user = [{ name: "thientrile", email: "thientrile@gmail.com", password: "04032003" }];
-// var user = [];
-// if (document.getElementById("user-login")) {
-// 	document.getElementById("user-login").onclick = function () {
-// 		window.location = "login.html";
-// 	};
-// }
-// if (document.querySelector("body > div > div > div > div > div > div > div > div.card-front > div > div > button")) {
-// 	document.querySelector(
-// 		"body > div > div > div > div > div > div > div > div.card-front > div > div > button"
-// 	).onclick = function () {
-// 		console.log(true);
-// 		let email = document.querySelector(
-// 			"body > div > div > div > div > div > div > div > div.card-front > div > div > div:nth-child(2) > input"
-// 		).value;
-// 		let password = document.querySelector(
-// 			"body > div > div > div > div > div > div > div > div.card-front > div > div > div.form-group.mt-2 > input"
-// 		).value;
-// 		if (email == "admin@admin.com" && password == "admin") {
-// 			window.location = "user.html";
-// 		}
-// 		console.log(email);
-// 		console.log(password);
-// 	};
-// }
-
-// if (document.getElementById("logout")) {
-// 	document.getElementById("logout").onclick = function () {
-// 		window.location = "login.html";
-// 	};
-// }
 
 

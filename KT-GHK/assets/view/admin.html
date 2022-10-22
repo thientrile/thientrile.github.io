@@ -36,19 +36,19 @@
 								</li> -->
 								
 							</ul>
-							<div class="btn-group">
+							
 								<button  class="btn btn-danger me-2 p-2" ng-click="btnlogout()" ng-hide="checkcookies">
 									Log out<i class="fa-solid fa-right-from-bracket ms-2"></i>
 								</button>
 								<a href="#!/login" class="btn btn-success me-2 p-2" ng-show="checkcookies">
 									Login
 								</a>
-							</div>
+							
 						</div>
 						<!-- Tab panes -->
 						
 						<div class="tab-content bg-white"ng-hide="checkcookies">
-						<div id="download" class="container tab-pane active">
+						<div id="download bg-white" class="container tab-pane active">
 								<button	class="btn btn-dark"type="button"data-bs-toggle="offcanvas"data-bs-target="#filter"style="position: absolute; top: 80px; left: 0; z-index: 99; color: #fff">
 									<i class="fa-solid fa-filter"></i>
 								</button>
@@ -57,9 +57,9 @@
 									<i class="fa-solid fa-plus"></i>
 								</button>
 
-									<div class="creative" >
-										<div class="container ">
-											<div class="row">
+									<div class="creative bg-white" >
+										<div class="container bg-white">
+											<div class="row bg-white">
 												<div class="col-lg-4 col-md-6" ng-repeat="s in arrProduct |orderBy : sort | limitTo : 6 : begin ">
 													<div class="card">
 														<div class="creative-img-cover">
