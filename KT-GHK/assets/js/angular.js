@@ -5,11 +5,17 @@ app.config(($routeProvider) => {
 		.when("/login", { templateUrl: "assets/view/login.html" })
 		.when("/user", { templateUrl: "assets/view/user.html" })
 		.when("/admin", { templateUrl: "assets/view/admin.html" })
+		.when("/:id", { templateUrl: "assets/view/product.html?" +Math.random()})
+
 		.otherwise({ templateUrl: "assets/view/home.html" });
 });
 app.filter("between", function () {
 	return function (input, min, max) {
 		var output = [];
+		if(min==null && max==null)
+		{
+			return input;
+		}
 		for (let i of input) {
 			if (i.price[i.price.length - 1] >= min && i.price[i.price.length - 1] <= max) {
 				output.push(i);
@@ -18,17 +24,15 @@ app.filter("between", function () {
 		return output;
 	};
 });
-app.controller("app", ($scope, $http, $rootScope) => {
-	$scope.min = 0;
-	$scope.max = 100000;
-	// đăng nhập và tạo tài khoản
+app.controller("app", ($scope, $http, $routeParams, $route) => {
+	
 	$scope.account = [];
 	$http.get("assets/json/account.json").then(
 		(response) => {
 			$scope.account = response.data;
 		},
 		(response) => {
-			alert("Product JSON Error!");
+			alert("Không tìm thấy dữ liệu");
 		}
 	);
 	$scope.cookies = [];
@@ -277,7 +281,19 @@ app.controller("app", ($scope, $http, $rootScope) => {
 			$scope.cookies[0].fullname = upname;
 		}
 		if (upemail != undefined) {
-			$scope.cookies[0].email = $scope.upemail;
+			let temp = $scope.account.filter((i, d) => {
+				return i.email == signemail;
+			});
+			if(temp.length==0)
+			{
+
+				$scope.cookies[0].email = $scope.upemail;
+				$scope.signerr="";
+			}
+			else
+			{
+				$scope.signerr = "Already use this email to register";
+			}
 		}
 
 		if (checkpws == true) {
