@@ -1,0 +1,23 @@
+[
+  {
+    "date": "2023-06-01",
+    "title": "Internship starts — ERP/POS (PHP, MySQL)",
+    "details": "Integrated TikTok Shop, Lazada, KiotViet; webhooks, idempotency, cron.",
+    "link": "./case-studies/2023-erp-pos-tiktok-lazada-kiotViet.md",
+    "icon": "💼"
+  },
+  {
+    "date": "2024-05-10",
+    "title": "Multi-DB & Async Workflow",
+    "details": "Patterns: queues, outbox, correlation-id; reduced p95 latency.",
+    "link": "./case-studies/2024-05-10-multi-db-async-workflow.md",
+    "icon": "🧠"
+  },
+  {
+    "date": "2025-08-01",
+    "title": "Profile automation",
+    "details": "Auto-update Featured, Recent Activity & Case Studies via Actions.",
+    "link": "https://github.com/thientrile/thientrile",
+    "icon": "⚙️"
+  }
+]
