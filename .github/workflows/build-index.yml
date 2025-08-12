@@ -1,0 +1,31 @@
+name: Build index.html from README
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "README.md"
+      - "scripts/readme_to_html.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - run: npm ci || npm i --no-audit --no-fund
+      - run: node ./scripts/readme_to_html.mjs
+      - run: |
+          if git status --porcelain | grep -q "index.html"; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add index.html
+            git commit -m "chore: build index.html from README [skip ci]"
+            git push
+          else
+            echo "No changes."
+          fi
