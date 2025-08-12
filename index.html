@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Le Thien Tri | Profile</title>
-<link rel="icon" href="https://avatars.githubusercontent.com/u/0?v=4" id="dynamic-favicon" />
+<link rel="icon" href="https://avatars.githubusercontent.com/u/00000000?v=4" id="dynamic-favicon"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css" media="(prefers-color-scheme: dark)">
 <style>
@@ -13,11 +13,11 @@
 @media (prefers-color-scheme: dark){.markdown-body{background:#0b1220}}
 </style>
 <script>
-// Cập nhật favicon bằng avatar GitHub
+// Thay 0 bằng user id thực bằng cách fetch nếu chưa biết.
 (async () => {
   const user = 'thientrile';
   try {
-    const r = await fetch('https://api.github.com/users/' + user, { headers: { 'Accept':'application/vnd.github+json' }, cache:'force-cache' });
+    const r = await fetch('https://api.github.com/users/' + user, { headers: { 'Accept':'application/vnd.github+json' } });
     if (r.ok) {
       const j = await r.json();
       if (j.avatar_url) {
@@ -25,7 +25,7 @@
         if (link) link.href = j.avatar_url + '&s=64';
       }
     }
-  } catch (e) { console.warn('avatar favicon failed', e); }
+  } catch (e) { console.warn('favicon fetch failed', e); }
 })();
 </script>
 </head><body>
@@ -101,6 +101,10 @@
 <hr>
 <h2>🗓️ Timeline</h2>
 <!--TIMELINE:START-->
+<h3>2025</h3>
+<ul>
+<li>🧩 <strong>2024 – Now</strong> — University – Bachelor in Information Technology</li>
+</ul>
 <h3>2024</h3>
 <ul>
 <li>🔒 <strong>2024-11-05</strong> — ERP Integration (Private) — <em>POS ↔ TikTok Shop, Lazada; async workflows w/ retries &amp; idempotency</em></li>
@@ -108,10 +112,6 @@
 <h3>2023</h3>
 <ul>
 <li>🎓 <strong>2023-12-31</strong> — Graduated with Distinction — HITC (College of Information Technology HCMC) — <em>GPA 8.43/10; Teamwork, Project Management, SQL, Node.js, MongoDB, Angular, Vue.js, Laravel; Computer Architecture, Data Structures, OOP, CMS</em></li>
-</ul>
-<h3>Unknown</h3>
-<ul>
-<li>🧩 **** — University – Bachelor in Information Technology</li>
 </ul>
 <h3>1970</h3>
 <ul>
