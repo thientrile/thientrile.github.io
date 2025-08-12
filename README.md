@@ -15,12 +15,14 @@
 </p>
 
 ## 🧭 Về mình
+
 - 🚀 Làm Web/Mobile: **React / React Native**, **Node.js**, **MongoDB**, **Redis**, **JWT**
 - 🧩 Thích **Microservices**, **Tailwind**, **Redux Toolkit**, **WebSocket**
 - ⚙️ Nghiện **automation** với **n8n**, scripts, CI/CD
-- 🎯 Tôn chỉ: *Code chạy đã tốt, code gọn–đẹp mới “đã”*
+- 🎯 Tôn chỉ: _Code chạy đã tốt, code gọn–đẹp mới “đã”_
 
 ## 🧰 Tech stack yêu thích
+
 <p>
   <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
   <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
@@ -32,10 +34,12 @@
   <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
   <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
   <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" />
+<img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
+
 </p>
 
 ## 📊 GitHub Stats
+
 <p>
   <img height="160" src="https://github-readme-stats.vercel.app/api?username=thientrile&show_icons=true&theme=tokyonight&hide_border=true" />
   <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thientrile&layout=compact&theme=tokyonight&hide_border=true" />
@@ -49,19 +53,22 @@
 </p>
 
 ## 📝 Dự án nổi bật
-- 🌐 **thientrile.github.io** – Personal site / playground (HTML/CSS).  
-- 🛒 **webphp** – Website bán hàng viết bằng PHP + database.  
-- 🧪 **DACK_N2_CD21CT2** – Bài tập/đồ án web (HTML).  
-- 📊 **Salesweb** – Web giao diện bán hàng (JavaScript).  
-- 🎛 **soft-ui-dashboard** (fork) – Dashboard Bootstrap 5 (Creative Tim).  
-> (tự động lấy từ danh sách repo phổ biến trên profile)
+
+- 🌐 **thientrile.github.io** – Personal site / playground (HTML/CSS).
+- 🛒 **webphp** – Website bán hàng viết bằng PHP + database.
+- 🧪 **DACK_N2_CD21CT2** – Bài tập/đồ án web (HTML).
+- 📊 **Salesweb** – Web giao diện bán hàng (JavaScript).
+- 🎛 **soft-ui-dashboard** (fork) – Dashboard Bootstrap 5 (Creative Tim).
+  > (tự động lấy từ danh sách repo phổ biến trên profile)
 
 ## 🧷 Recent Activity (auto-update)
+
 <!--RECENT_ACTIVITY:START-->
 <!-- Nội dung sẽ được script cập nhật tự động -->
 <!--RECENT_ACTIVITY:END-->
 
 ## 📫 Liên hệ
+
 - Email: **thientrile2003@gmail.com**
 - LinkedIn: https://www.linkedin.com/in/thiên-trí-lê-44a9a6284/
 - Facebook: https://www.facebook.com/Liguni.0202
