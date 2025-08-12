@@ -120,7 +120,7 @@
 ## 📫 Contact
 - 📧 **Email:** thientrile2003@gmail.com
 - 💼 **LinkedIn:** [linkedin.com/in/thiên-trí-lê-44a9a6284](https://www.linkedin.com/in/thiên-trí-lê-44a9a6284/)
-- 🌐 **Portfolio:** [thientrile.github.io](https://thientrile.github.io)
+- 🌐 **Portfolio:** [thientrile.github.io](https://github.com/thientrile/thientrile.github.io)
 - 📱 **Facebook:** [facebook.com/Liguni.0202](https://www.facebook.com/Liguni.0202)
 
 ---
