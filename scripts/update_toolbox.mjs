@@ -29,43 +29,65 @@ async function gh(pathname){
   return r.json();
 }
 
-// Map ngôn ngữ -> devicon path basename
+// SOURCE ICONS
+// Cho phép chọn nguồn icon qua ENV: TECH_ICON_SOURCE = "npm" | "gh"
+// gh  -> GitHub repo (cũ): https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{slug}/{variant}.svg
+// npm -> NPM package:     https://cdn.jsdelivr.net/npm/devicon@latest/icons/{slug}/{variant}.svg
+const ICON_SOURCE = (process.env.TECH_ICON_SOURCE || 'npm').toLowerCase();
+
+// Map ngôn ngữ/tech -> slug (không chứa phần đuôi variant)
 const ICON_MAP = {
-  'JavaScript':'javascript/javascript-original',
-  'TypeScript':'typescript/typescript-original',
-  'Go':'go/go-original',
-  'HTML':'html5/html5-original',
-  'CSS':'css3/css3-original',
-  'Vue':'vuejs/vuejs-original',
-  'Vue.js':'vuejs/vuejs-original',
-  'React':'react/react-original',
-  'Python':'python/python-original',
-  'Java':'java/java-original',
-  'C#':'csharp/csharp-original',
-  'PHP':'php/php-original',
-  'Ruby':'ruby/ruby-original',
-  'Rust':'rust/rust-plain',
-  'Dockerfile':'docker/docker-original',
-  'Docker':'docker/docker-original',
-  'Shell':'bash/bash-original',
-  'PowerShell':'powershell/powershell-original',
-  'Kotlin':'kotlin/kotlin-original',
-  'Swift':'swift/swift-original',
-  'C++':'cplusplus/cplusplus-original',
-  'C':'c/c-original',
-  'Scala':'scala/scala-original',
-  'Perl':'perl/perl-original',
-  'Haskell':'haskell/haskell-original',
-  'Elixir':'elixir/elixir-original',
-  'MongoDB':'mongodb/mongodb-original',
-  'Redis':'redis/redis-original',
-  'PostgreSQL':'postgresql/postgresql-original',
-  'MySQL':'mysql/mysql-original',
-  'SQLite':'sqlite/sqlite-original',
-  'Nginx':'nginx/nginx-original',
-  'AWS':'amazonwebservices/amazonwebservices-original-wordmark',
-  'Cloudinary':'cloudinary/cloudinary-original'
+  'JavaScript':'javascript',
+  'TypeScript':'typescript',
+  'Go':'go',
+  'HTML':'html5',
+  'CSS':'css3',
+  'Vue':'vuejs',
+  'Vue.js':'vuejs',
+  'React':'react',
+  'Python':'python',
+  'Java':'java',
+  'C#':'csharp',
+  'PHP':'php',
+  'Ruby':'ruby',
+  'Rust':'rust',
+  'Dockerfile':'docker',
+  'Docker':'docker',
+  'Shell':'bash',
+  'PowerShell':'powershell',
+  'Kotlin':'kotlin',
+  'Swift':'swift',
+  'C++':'cplusplus',
+  'C':'c',
+  'Scala':'scala',
+  'Perl':'perl',
+  'Haskell':'haskell',
+  'Elixir':'elixir',
+  'MongoDB':'mongodb',
+  'Redis':'redis',
+  'PostgreSQL':'postgresql',
+  'MySQL':'mysql',
+  'SQLite':'sqlite',
+  'Nginx':'nginx',
+  'AWS':'amazonwebservices',
+  'Cloudinary':'cloudinary'
 };
+
+const NOT_IN_DEVICON = new Set(['cloudinary']);
+function buildIconUrl(slug) {
+  const variant = slug === 'amazonwebservices' ? 'amazonwebservices-original-wordmark'
+    : slug === 'rust' ? 'rust-plain'
+    : `${slug}-original`;
+  if (slug === 'cloudinary') {
+    // dùng simpleicons cho Cloudinary vì devicon chưa có
+    return 'https://cdn.simpleicons.org/cloudinary/3693F3';
+  }
+  if (ICON_SOURCE === 'gh') {
+    return `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${slug}/${variant}.svg`;
+  }
+  // npm (package tên devicon, không phải devicons)
+  return `https://cdn.jsdelivr.net/npm/devicon@latest/icons/${slug}/${variant}.svg`;
+}
 
 // Whitelist + order ưu tiên (có thể chỉnh cho profile này)
 const ORDER = [
@@ -110,11 +132,11 @@ function buildIcons(counts){
   const tags = [];
   for (const name of uniq){
     const key = name.replace(/\.js$/,'');
-    let iconPath = ICON_MAP[key] || ICON_MAP[name] || null;
-    // Heuristic cho Node.js
-    if (name === 'Node.js') iconPath = 'nodejs/nodejs-original';
-    if (!iconPath) continue;
-    tags.push(`<img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${iconPath}.svg" alt="${name}" title="${name}" />`);
+  let slug = ICON_MAP[key] || ICON_MAP[name] || null;
+  if (name === 'Node.js') slug = 'nodejs';
+  if (!slug) continue;
+  const url = buildIconUrl(slug);
+  tags.push(`<img height="28" src="${url}" alt="${name}" title="${name}" />`);
   }
   return `<p>\n  ${tags.join('\n  ')}\n</p>`;
 }
