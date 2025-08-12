@@ -41,7 +41,8 @@
   <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thientrile&layout=compact&theme=tokyonight&hide_border=true" />
 </p>
 <p>
-  <img height="180" src="https://streak-stats.demolab.com?user=thientrile&theme=tokyonight&hide_border=true" />
+  <img height="180" src="https://github-readme-streak-stats-eight.vercel.app/?user=thientrile&theme=tokyonight&hide_border=true
+" />
 </p>
 <p>
   <img src="https://github-profile-trophy.vercel.app/?username=thientrile&theme=onedark&no-frame=true&margin-w=8" />
