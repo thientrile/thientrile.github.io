@@ -64,7 +64,16 @@
 ## 🧷 Recent Activity (auto-update)
 
 <!--RECENT_ACTIVITY:START-->
-<!-- Nội dung sẽ được script cập nhật tự động -->
+- 🔼 Pushed **2** commit(s) to [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🔼 Pushed **1** commit(s) to [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🔼 Pushed **1** commit(s) to [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🔼 Pushed **1** commit(s) to [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🆕 Created branch `main` in [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🆕 Created repository in [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🔼 Pushed **1** commit(s) to [holha289/app-chat](https://github.com/holha289/app-chat) — _2025-07-28_
+- 🔼 Pushed **1** commit(s) to [holha289/app-chat](https://github.com/holha289/app-chat) — _2025-07-27_
+- 🔼 Pushed **3** commit(s) to [holha289/app-chat](https://github.com/holha289/app-chat) — _2025-07-27_
+- 🔼 Pushed **1** commit(s) to [holha289/app-chat](https://github.com/holha289/app-chat) — _2025-07-27_
 <!--RECENT_ACTIVITY:END-->
 
 ## 📫 Liên hệ
