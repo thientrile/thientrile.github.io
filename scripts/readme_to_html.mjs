@@ -214,11 +214,20 @@ html[data-theme="dark"] .intro-screen{color:#fff}
 .intro-inner{text-align:center}
 /* New intro animation: text grows from small to large then fades */
 .intro-text{font-size:clamp(2.4rem,6vw,5rem);font-weight:800;letter-spacing:.045em;display:inline-block;position:relative;animation:popGrow 1.55s var(--ease) forwards;line-height:.9;text-shadow:0 1px 0 #fff,0 2px 0 #e2e8f0,0 3px 1px #cbd5e1,0 5px 12px rgba(0,0,0,.18),0 8px 28px rgba(0,0,0,.12)}
-html[data-theme="dark"] .intro-text{font-weight:700;text-shadow:0 2px 4px rgba(0,0,0,.55),0 6px 22px rgba(0,0,0,.65)}
+/* Dark mode gets simplified cleaner shadow (old multi-layer white looked boxy on dark bg) */
+html[data-theme="dark"] .intro-text{font-weight:700;text-shadow:0 2px 6px rgba(0,0,0,.7),0 0 32px rgba(37,99,235,.25)}
 .intro-text::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay;background:radial-gradient(circle at 55% 40%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%)}
 .intro-text .word{display:inline-block}
 .intro-text .accent{background:linear-gradient(92deg,var(--accent) 0%,#4f8ef7 45%,#60a5fa 70%,#8cc9ff 100%);-webkit-background-clip:text;color:transparent;text-shadow:0 1px 1px rgba(255,255,255,.5),0 3px 8px rgba(0,0,0,.15)}
-html[data-theme="dark"] .intro-text .accent{background:linear-gradient(92deg,#60a5fa 0%,#3b82f6 40%,#2563eb 75%,#1e3a8a 100%);text-shadow:0 2px 6px rgba(0,0,0,.6)}
+html[data-theme="dark"] .intro-text .accent{background:linear-gradient(92deg,#93c5fd 0%,#60a5fa 35%,#3b82f6 70%,#1e3a8a 100%);text-shadow:0 0 22px rgba(59,130,246,.55),0 3px 10px rgba(0,0,0,.65)}
+/* Dark mode 3D block effect per word */
+html[data-theme="dark"] .intro-text .word{position:relative;padding:0 .22em .08em;border-radius:10px;isolation:isolate}
+html[data-theme="dark"] .intro-text .word::before{content:"";position:absolute;inset:0;border-radius:10px;background:linear-gradient(140deg,rgba(255,255,255,.08),rgba(255,255,255,.025) 45%,rgba(0,0,0,.4) 100%);backdrop-filter:blur(10px) brightness(1.02);-webkit-backdrop-filter:blur(10px) brightness(1.02);box-shadow:0 5px 14px -4px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.06) inset,0 1px 0 0 rgba(255,255,255,.05) inset,0 10px 24px -6px rgba(0,0,0,.7);z-index:-1;transform:translate3d(0,4px,-1px)}
+html[data-theme="dark"] .intro-text .word.accent::before{background:linear-gradient(125deg,#1d4ed8 0%,#1842b8 45%,#13378f 70%,#0d275d 100%);box-shadow:0 6px 20px -4px rgba(29,78,216,.65),0 0 0 1px rgba(255,255,255,.08) inset,0 1px 0 0 rgba(255,255,255,.06) inset,0 12px 30px -6px rgba(12,54,120,.75)}
+html[data-theme="dark"] .intro-text .word.accent{background:transparent;-webkit-background-clip:unset;color:#dbe9ff}
+/* Layered text-shadow to simulate extrusion (dimmed) */
+html[data-theme="dark"] .intro-text .word{text-shadow:0 1px 0 rgba(255,255,255,.32),0 2px 0 rgba(255,255,255,.25),0 3px 0 rgba(255,255,255,.18),0 4px 6px rgba(0,0,0,.55),0 7px 18px rgba(0,0,0,.7)}
+html[data-theme="dark"] .intro-text .word.accent{text-shadow:0 1px 0 rgba(255,255,255,.28),0 2px 0 rgba(255,255,255,.22),0 3px 0 rgba(255,255,255,.18),0 4px 8px rgba(29,78,216,.55),0 9px 22px rgba(12,54,120,.7)}
 body.intro-done .intro-screen{opacity:0;pointer-events:none;transition:opacity .55s ease .05s}
 body.preload .layout{opacity:0;transform:translateY(12px)}
 body.ready .layout{opacity:1;transform:none;transition:opacity .6s var(--ease) .15s, transform .6s var(--ease) .15s}
@@ -412,6 +421,15 @@ html[data-theme="dark"] .timeline .type-case{border-left-color:#8b5cf6}
 html[data-theme="dark"] .timeline .type-other{border-left-color:#94a3b8}
 @media print{.timeline:before{display:none}.timeline .tl-item{box-shadow:none}}
 @media print{.projects-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}.project-card{box-shadow:none;border:1px solid #ccc}}
+/* --- Dark intro refined (match light 3D aesthetic) overrides placed last to win specificity --- */
+html[data-theme="dark"] .intro-text{letter-spacing:.03em;}
+html[data-theme="dark"] .intro-text::before{content:"";position:absolute;inset:-14px -26px -18px -26px;border-radius:28px;background:linear-gradient(140deg,rgba(255,255,255,.08),rgba(255,255,255,.015) 55%,rgba(255,255,255,0) 85%);box-shadow:0 10px 38px -10px rgba(0,0,0,.85),0 4px 18px -6px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06) inset;pointer-events:none;filter:blur(.3px)}
+html[data-theme="dark"] .intro-text .word{background:none;padding:0 .22em .05em;border-radius:14px;position:relative;color:#ffffff;font-weight:800;text-shadow:0 1px 1px rgba(0,0,0,.55),0 2px 2px rgba(0,0,0,.55),0 3px 6px rgba(0,0,0,.65),0 8px 26px -6px rgba(0,0,0,.85);}
+html[data-theme="dark"] .intro-text .word::before{content:"";position:absolute;inset:0;border-radius:14px;background:linear-gradient(185deg,rgba(255,255,255,.22),rgba(255,255,255,.04) 55%,rgba(0,0,0,.35) 100%);mix-blend-mode:overlay;opacity:.4;pointer-events:none}
+html[data-theme="dark"] .intro-text .word.accent{color:#ffffff;background:none;-webkit-background-clip:unset;text-shadow:0 1px 1px rgba(0,0,0,.55),0 3px 8px rgba(0,0,0,.6),0 10px 26px -6px rgba(0,0,0,.8)}
+html[data-theme="dark"] .intro-text .word.accent::before{background:linear-gradient(185deg,rgba(255,255,255,.35),rgba(255,255,255,.06) 55%,rgba(0,0,0,.45) 100%);opacity:.28}
+/* Subtle hover (if user hovers) */
+@media (hover:hover){html[data-theme="dark"] .intro-text .word:hover::before{opacity:.55}}
 </style>
 <script>
 // Early theme application to avoid flash
