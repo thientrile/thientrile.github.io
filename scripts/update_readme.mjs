@@ -3,8 +3,10 @@ import fs from "fs/promises";
 import path from "path";
 
 const USERNAME = process.env.GH_USERNAME || "thientrile";
-const MODE = process.env.FEATURED_MODE || "updated"; // "updated" | "stars"
-const COUNT = Number(process.env.FEATURED_COUNT || 5);
+// Sorting mode (updated | stars)
+const MODE = process.env.PROJECTS_MODE || process.env.FEATURED_MODE || "updated";
+// How many projects to list (default 20)
+const LIMIT = Number(process.env.PROJECTS_LIMIT || process.env.FEATURED_COUNT || 20);
 const EXCLUDE = (process.env.FEATURED_EXCLUDE || "")
   .split(",")
   .map(s => s.trim())
@@ -36,43 +38,41 @@ async function gh(pathname, token) {
   return res.json();
 }
 
-async function getFeatured(username, token) {
-  // Lấy tối đa 100 repo public rồi lọc/sort theo MODE
+async function getProjects(username, token) {
   const repos = await gh(`/users/${username}/repos?per_page=100`, token);
-
   const filtered = repos
-    .filter(r => !r.fork) // bỏ fork
+    .filter(r => !r.fork)
     .filter(r => !EXCLUDE.includes(r.name));
 
-  const sorted =
-    MODE === "stars"
-      ? filtered.sort((a, b) => b.stargazers_count - a.stargazers_count)
-      : filtered.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+  const sorted = MODE === 'stars'
+    ? filtered.sort((a,b)=> b.stargazers_count - a.stargazers_count || new Date(b.pushed_at)-new Date(a.pushed_at))
+    : filtered.sort((a,b)=> new Date(b.pushed_at)-new Date(a.pushed_at));
 
-  const top = sorted.slice(0, COUNT);
+  const list = sorted.slice(0, LIMIT);
+  if (!list.length) return "- (chưa có repository phù hợp)";
 
-  if (!top.length) return "- (chưa có repository phù hợp)";
-
-  const mapLang = (r) => (r.language ? ` • ${r.language}` : "");
-  const mapStar = (r) => (r.stargazers_count ? ` ⭐ ${r.stargazers_count}` : "");
-  const mapDesc = (r) => (r.description ? ` — ${r.description}` : "");
-
-  return top
-    .map(
-      (r) =>
-        `- **[${r.name}](${r.html_url})**${mapLang(r)}${mapStar(r)}${mapDesc(r)}`
-    )
-    .join("\n");
+  const header = `| Project | Tech | ⭐ | Updated | Description |\n|---------|------|----|---------|-------------|`;
+  const rows = list.map(r => {
+    const name = `**[${r.name}](${r.html_url})**`;
+    const lang = r.language || '';
+    const stars = r.stargazers_count ? String(r.stargazers_count) : '';
+    const updated = r.pushed_at ? r.pushed_at.substring(0,10) : '';
+    let desc = r.description || '';
+    if (desc.length > 90) desc = desc.slice(0,87)+'…';
+    desc = desc.replace(/\|/g,'∣');
+    return `| ${name} | ${lang} | ${stars} | ${updated} | ${desc} |`;
+  });
+  return [header, ...rows].join('\n');
 }
 
 async function main() {
   const token = process.env.GITHUB_TOKEN;
-  const featured = await getFeatured(USERNAME, token);
+  const projects = await getProjects(USERNAME, token);
 
   let readme = await fs.readFile(readmePath, "utf8");
 
   // Replace Featured Projects
-  const featBlock = `${FEAT_START}\n${featured}\n${FEAT_END}`;
+  const featBlock = `${FEAT_START}\n${projects}\n${FEAT_END}`;
   readme = readme.replace(regexBetween(FEAT_START, FEAT_END), featBlock);
 
   const original = await fs.readFile(readmePath, "utf8");
@@ -80,7 +80,7 @@ async function main() {
     await fs.writeFile(readmePath, readme, "utf8");
     console.log("README.md updated ✅");
   } else {
-    console.log("No changes for Featured Projects ✋");
+  console.log("No changes for Projects ✋");
   }
 }
 

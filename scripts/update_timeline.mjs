@@ -17,7 +17,8 @@ const SHOW_SOURCE_LABELS = (process.env.TIMELINE_SOURCE_LABELS || "false") === "
 
 /** REPO OPTIONS **/
 const MODE  = process.env.TIMELINE_MODE   || "pushed";   // created | pushed | release
-const LIMIT = Number(process.env.TIMELINE_LIMIT || 10);
+// REPO_LIMIT: số repo activity lấy (mặc định 25). Đặt 0 hoặc âm để lấy tất cả.
+const REPO_LIMIT = Number(process.env.TIMELINE_REPO_LIMIT || process.env.TIMELINE_LIMIT || 25);
 const EXCLUDE = (process.env.TIMELINE_EXCLUDE || "").split(",").map(s => s.trim()).filter(Boolean);
 
 const repoRoot   = process.cwd();
@@ -132,10 +133,11 @@ async function loadRepos() {
       icon: "📦"
     };
   }));
-  return events
+  const sorted = events
     .filter(e => e.date)
-    .sort((a, b) => toTs(b.date) - toTs(a.date))
-    .slice(0, LIMIT);
+    .sort((a, b) => toTs(b.date) - toTs(a.date));
+  if (REPO_LIMIT > 0) return sorted.slice(0, REPO_LIMIT);
+  return sorted; // unlimited
 }
 
 function mergeAndDedupe(jsonItems, caseItems, repoItems) {

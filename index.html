@@ -1,133 +1,261 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Le Thien Tri | Profile</title>
-<link rel="icon" href="https://avatars.githubusercontent.com/u/00000000?v=4" id="dynamic-favicon"/>
+<title>Le Thien Tri | CV Profile</title>
+<meta name="description" content="Fullstack Developer | 🚀 Workflow Optimizer | ⚙️ Automation Enthusiast  "/>
+<meta property="og:title" content="Le Thien Tri | CV Profile"/>
+<meta property="og:description" content="Fullstack Developer | 🚀 Workflow Optimizer | ⚙️ Automation Enthusiast  "/>
+<meta property="og:type" content="profile"/>
+<link rel="icon" href="https://avatars.githubusercontent.com/u/0?v=4" id="dynamic-favicon"/>
+<link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css" media="(prefers-color-scheme: dark)">
 <style>
-:root{--max-w:980px}body{margin:0;background:#f6f8fa;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-@media (prefers-color-scheme: dark){body{background:#0d1117}}
-.wrap{max-width:var(--max-w);margin:32px auto;padding:16px}
-.markdown-body{box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:32px;border-radius:12px;background:#fff}
-@media (prefers-color-scheme: dark){.markdown-body{background:#0b1220}}
+.root{}
+:root{--max-w:1180px;--sidebar-w:300px;--gap:24px;--ease:cubic-bezier(.4,.08,.2,1);--bg-dark:#0d1117;--accent:#2563eb;--accent-fg:#fff;--brand-start:#1d4ed8;--brand-mid:#1e40af;--brand-end:#0f296b;--bg-light:#f5f7fb;--panel-light:#ffffff;--panel-dark:#0b1220;--badge-bg:#e3eaf6;--badge-fg:#334155;--badge-dark:#1e2936;--badge-dark-fg:#cbd5e1;--panel-border:#d0d7de;--app-bg:linear-gradient(135deg,#f5f7fb 0%,#eef2f9 55%,#e6edf6 100%);--tabs-h:54px}
+body{margin:0;background:var(--app-bg);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#24292f;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+@media (prefers-color-scheme: dark){:root{--app-bg:linear-gradient(135deg,#0d1117 0%,#0c1624 55%,#09101b 100%)}body{background:var(--app-bg);color:#e6edf3}}
+.intro-screen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--app-bg);color:#fff;z-index:1000;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+.intro-screen:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 35% 35%,rgba(37,99,235,.22),rgba(30,64,175,.08),transparent 70%);mix-blend-mode:overlay;pointer-events:none}
+.intro-inner{text-align:center}
+/* New intro animation: text grows from small to large then fades */
+.intro-text{font-size:clamp(2.4rem,6vw,5rem);font-weight:700;letter-spacing:.04em;display:inline-block;position:relative;animation:popGrow 1.55s var(--ease) forwards}
+.intro-text .word{display:inline-block}
+.intro-text .accent{background:linear-gradient(90deg,var(--accent),#60a5fa);-webkit-background-clip:text;color:transparent}
+body.intro-done .intro-screen{opacity:0;pointer-events:none;transition:opacity .55s ease .05s}
+body.preload .layout{opacity:0;transform:translateY(12px)}
+body.ready .layout{opacity:1;transform:none;transition:opacity .6s var(--ease) .15s, transform .6s var(--ease) .15s}
+@keyframes popGrow{0%{opacity:0;transform:scale(.25)}40%{opacity:1;transform:scale(.98)}70%{opacity:1;transform:scale(1.03)}85%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.08)}}
+@keyframes fadeUp{0%{opacity:0;transform:translateY(30px)}100%{opacity:1;transform:translateY(0)}}
+/* Scroll reveal */
+[data-reveal]{opacity:0;will-change:transform,opacity;transition:opacity .85s var(--ease),transform .85s var(--ease),filter .85s var(--ease);filter:blur(2px)}
+[data-reveal][data-reveal-type="fade-up"]{transform:translateY(28px)}
+[data-reveal][data-reveal-type="fade-left"]{transform:translateX(40px)}
+[data-reveal][data-reveal-type="fade-right"]{transform:translateX(-40px)}
+[data-reveal][data-reveal-type="scale"]{transform:scale(.92);transform-origin:50% 60%}
+[data-reveal][data-reveal-type="rise"]{transform:translateY(48px) scale(.97);opacity:.001}
+[data-reveal].reveal-in{opacity:1;transform:none;filter:blur(0)}
+[data-reveal].reveal-in[data-reveal-type="scale"]{transform:scale(1)}
+[data-reveal].reveal-in[data-reveal-type="rise"]{transform:translateY(0) scale(1)}
+@media (prefers-reduced-motion: reduce){.intro-text .word,[data-reveal]{animation:none;transition:none;opacity:1;transform:none}}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.layout{max-width:var(--max-w);margin:32px auto;padding:0 20px;display:grid;grid-template-columns:var(--sidebar-w) 1fr;gap:var(--gap)}
+@media (max-width:960px){.layout{display:block}}
+.sidebar{background:var(--panel-light);border-radius:14px;padding:22px 20px 26px;position:sticky;top:calc(var(--tabs-h) + 16px);align-self:start;box-shadow:0 4px 14px -4px rgba(0,0,0,.12),0 1px 0 0 rgba(255,255,255,.4) inset}
+@media (prefers-color-scheme: dark){.sidebar{background:var(--panel-dark);box-shadow:0 4px 14px -4px rgba(0,0,0,.6),0 1px 0 0 rgba(255,255,255,.04) inset}}
+.sidebar h1{margin-top:0;font-size:1.5rem}
+.tagline{font-size:.9rem;opacity:.8;margin-top:-6px;margin-bottom:12px}
+.contact a{display:block;margin:.25rem 0;font-size:.85rem;overflow:hidden;text-overflow:ellipsis}
+.main{min-width:0}
+.panel{background:var(--panel-light);border-radius:14px;padding:30px 32px;margin-bottom:26px;box-shadow:0 3px 10px -3px rgba(0,0,0,.12)}
+@media (prefers-color-scheme: dark){.panel{background:var(--panel-dark);box-shadow:0 3px 10px -3px rgba(0,0,0,.65)}}
+.panel h2:first-child{margin-top:0}
+nav.toc{font-size:.8rem;margin-top:16px}
+nav.toc ul{list-style:none;padding-left:0;margin:0}nav.toc li{margin:4px 0}
+code{font-family:ui-monospace,monospace;font-size:.85em}
+h2[id]{scroll-margin-top:calc(var(--tabs-h) + 28px)}
+/* Top Tabs */
+.top-tabs{position:sticky;top:0;z-index:500;backdrop-filter:saturate(180%) blur(14px);background:rgba(255,255,255,.78);border-bottom:1px solid rgba(0,0,0,.06);padding:6px 12px;display:flex;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;justify-content:center;min-height:var(--tabs-h)}
+.top-tabs::-webkit-scrollbar{display:none}
+@media (prefers-color-scheme: dark){.top-tabs{background:rgba(13,17,23,.78);border-bottom:1px solid rgba(255,255,255,.08)}}
+.top-tabs a{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.6px;padding:8px 12px;border-radius:22px;position:relative;display:inline-flex;align-items:center;line-height:1;color:#334155;background:rgba(0,0,0,.04);text-decoration:none;flex:0 0 auto;transition:background .35s var(--ease),color .35s var(--ease)}
+@media (prefers-color-scheme: dark){.top-tabs a{color:#cbd5e1;background:rgba(255,255,255,.06)}}
+.top-tabs a:hover{background:var(--accent);color:var(--accent-fg)}
+.top-tabs a.active{background:linear-gradient(90deg,var(--accent),#4f8ef7);color:var(--accent-fg);box-shadow:0 0 0 1px rgba(255,255,255,.4) inset}
+.top-tabs-fade{pointer-events:none;position:absolute;top:0;bottom:0;width:48px}
+.top-tabs-fade.left{left:0;background:linear-gradient(90deg,var(--app-bg),rgba(255,255,255,0))}
+@media (prefers-color-scheme: dark){.top-tabs-fade.left{background:linear-gradient(90deg,rgba(13,17,23,1),rgba(13,17,23,0))}}
+.top-tabs-fade.right{right:0;background:linear-gradient(270deg,var(--app-bg),rgba(255,255,255,0))}
+@media (prefers-color-scheme: dark){.top-tabs-fade.right{background:linear-gradient(270deg,rgba(13,17,23,1),rgba(13,17,23,0))}}
+@media print{body{background:#fff}.sidebar,nav.toc{position:static;box-shadow:none}.panel{box-shadow:none;border:1px solid #ddd;page-break-inside:avoid}a{text-decoration:none} .layout{display:block;max-width:1000px} }
+.badge{display:inline-block;background:var(--badge-bg);color:var(--badge-fg);padding:4px 10px 3px;border-radius:18px;font-size:.63rem;font-weight:600;margin:0 6px 6px 0;letter-spacing:.5px;text-transform:uppercase;transition:.25s background var(--ease), .25s color var(--ease)}
+@media (prefers-color-scheme: dark){.badge{background:var(--badge-dark);color:var(--badge-dark-fg)}}
+.badge:hover{background:var(--accent);color:var(--accent-fg)}
+/* Projects grid */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;margin:18px 0 34px}
+.project-card{background:var(--panel-light);border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:18px 18px 20px;position:relative;box-shadow:0 4px 14px -4px rgba(0,0,0,.08),0 1px 0 rgba(255,255,255,.4) inset;display:flex;flex-direction:column}
+@media (prefers-color-scheme: dark){.project-card{background:var(--panel-dark);border:1px solid rgba(255,255,255,.06);box-shadow:0 4px 14px -4px rgba(0,0,0,.65),0 1px 0 rgba(255,255,255,.03) inset}}
+.project-title{margin:0 0 8px;font-size:1.05rem;line-height:1.25}
+.project-title .project-icon, .project-title img.project-icon{vertical-align:middle;margin-right:6px;transform:translateY(-1px);filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
+.project-title a{text-decoration:none;color:inherit}
+.project-title a:hover{color:var(--accent)}
+.project-meta{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.pill{background:var(--badge-bg);color:var(--badge-fg);padding:4px 8px 3px;border-radius:14px;display:inline-flex;align-items:center;gap:4px}
+@media (prefers-color-scheme: dark){.pill{background:var(--badge-dark);color:var(--badge-dark-fg)}}
+.pill-star{background:#fcd34d;color:#78350f}
+@media (prefers-color-scheme: dark){.pill-star{background:#78350f;color:#fcd34d}}
+.project-desc{margin:0;font-size:.8rem;line-height:1.3;opacity:.85}
+@media print{.projects-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}.project-card{box-shadow:none;border:1px solid #ccc}}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"👋 Hi, I'm **Le Thien Tri** (Liguni)","jobTitle":"Fullstack Developer | 🚀 Workflow Optimizer | ⚙️ Automation Enthusiast  ","url":"https://thientrile.github.io","email":"mailto:thientrile2003@gmail.com"}</script>
 <script>
-// Thay 0 bằng user id thực bằng cách fetch nếu chưa biết.
-(async () => {
-  const user = 'thientrile';
-  try {
-    const r = await fetch('https://api.github.com/users/' + user, { headers: { 'Accept':'application/vnd.github+json' } });
-    if (r.ok) {
-      const j = await r.json();
-      if (j.avatar_url) {
-        const link = document.getElementById('dynamic-favicon');
-        if (link) link.href = j.avatar_url + '&s=64';
-      }
-    }
-  } catch (e) { console.warn('favicon fetch failed', e); }
+(async () => { // avatar favicon
+  const user='thientrile';
+  try {const r=await fetch('https://api.github.com/users/'+user,{headers:{'Accept':'application/vnd.github+json'}});if(r.ok){const j=await r.json();if(j.avatar_url){const l=document.getElementById('dynamic-favicon');if(l) l.href=j.avatar_url+'&s=64';const av=document.getElementById('profile-avatar');if(av) av.src=j.avatar_url+'&s=160';}}}catch(e){console.warn('avatar load fail',e)}
 })();
 </script>
 </head><body>
-<div class="wrap"><article class="markdown-body">
-<!-- Profile README (auto-updated) -->
+<div class="intro-screen"><div class="intro-inner"><span class="intro-text"><span class="word">liguni</span> <span class="word accent">dev</span></span></div></div>
+<nav class="top-tabs" id="top-tabs" aria-label="Sections Navigation"><a href="#education">🎓 Education</a><a href="#highlights">🏆 Highlights</a><a href="#tech-toolbox">🧰 Tech Toolbox</a><a href="#projects-auto-updated">🗂️ Projects (Auto-Updated)</a><a href="#case-studies">🧪 Case Studies</a><a href="#timeline">🗓️ Timeline</a></nav>
+<div class="layout">
+  <aside class="sidebar">
+    
+    <img id="profile-avatar" alt="avatar" width="120" height="120" style="border-radius:50%;display:block;margin:0 auto 12px;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,.15)"/>
+    <h1>👋 Hi, I'm **Le Thien Tri** (Liguni)</h1>
+    <div class="tagline">Fullstack Developer | 🚀 Workflow Optimizer | ⚙️ Automation Enthusiast  </div>
+    <div class="about"><div class='badge'>💼 Fullstack Developer with **3+ years** experience (Web & Mobile)</div><div class='badge'>🛠 Node.js / React Native / MongoDB / Redis</div><div class='badge'>🧩 Microservices, REST APIs, Authentication (JWT/OAuth)</div><div class='badge'>⚡ Love automation with **n8n**, CI/CD, workflow optimization</div><div class='badge'>🤝 Agile/Scrum team player, Git/GitHub daily</div></div>
+    <hr style="margin:16px 0;border:none;border-top:1px solid #d0d7de;"/>
+    <div class="contact"><span>📧 **Email:** thientrile2003@gmail.com</span><a href="https://www.linkedin.com/in/thiên-trí-lê-44a9a6284/" target="_blank" rel="noopener">linkedin.com/in/thiên-trí-lê-44a9a6284</a><a href="https://thientrile.github.io" target="_blank" rel="noopener">thientrile.github.io</a><a href="https://www.facebook.com/Liguni.0202" target="_blank" rel="noopener">facebook.com/Liguni.0202</a></div>
+  
+    <nav class="toc"><strong>Sections</strong><ul><li><a href="#education">🎓 Education</a></li><li><a href="#highlights">🏆 Highlights</a></li><li><a href="#tech-toolbox">🧰 Tech Toolbox</a></li><li><a href="#projects-auto-updated">🗂️ Projects (Auto-Updated)</a></li><li><a href="#case-studies">🧪 Case Studies</a></li><li><a href="#timeline">🗓️ Timeline</a></li></ul></nav>
+  </aside>
+  <main class="main"><!-- Profile README (auto-updated) -->
 
 <div align="center">
 
-<h1>👋 Hi, I&#39;m <strong>Le Thien Tri</strong> (Liguni)</h1>
-<p>💻 Fullstack Developer | 🚀 Workflow Optimizer | ⚙️ Automation Enthusiast  </p>
-<p><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?pause=1200&width=520&lines=Building+Scalable+%26+Beautiful+Apps;Node.js+%2B+React+Native+%2B+MongoDB;Turning+Ideas+Into+Impactful+Solutions" alt="Typing SVG"></a></p>
+<h1 id="hi-i-39-m-le-thien-tri-liguni">👋 Hi, I&#39;m <strong>Le Thien Tri</strong> (Liguni)</h1>
+<p data-reveal data-reveal-type="fade-up" data-reveal-order="0">💻 Fullstack Developer | 🚀 Workflow Optimizer | ⚙️ Automation Enthusiast  </p>
+<p data-reveal data-reveal-type="fade-left" data-reveal-order="1"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?pause=1200&width=520&lines=Building+Scalable+%26+Beautiful+Apps;Node.js+%2B+React+Native+%2B+MongoDB;Turning+Ideas+Into+Impactful+Solutions" alt="Typing SVG"></a></p>
 </div>
 
 <hr>
-<h2>🧭 About Me</h2>
+<h2 data-reveal data-reveal-type="fade-right" data-reveal-order="2" id="education">🎓 Education</h2>
 <ul>
-<li>💼 Fullstack Developer with <strong>3+ years</strong> experience (Web &amp; Mobile)</li>
-<li>🛠 Node.js / React Native / MongoDB / Redis</li>
-<li>🧩 Microservices, REST APIs, Authentication (JWT/OAuth)</li>
-<li>⚡ Love automation with <strong>n8n</strong>, CI/CD, workflow optimization</li>
-<li>🤝 Agile/Scrum team player, Git/GitHub daily</li>
+<li data-reveal data-reveal-type="scale" data-reveal-order="3"><strong>College of Information Technology Ho Chi Minh City (HITC)</strong><br>📅 2021 – 2023 • 🎓 Graduated with Distinction – GPA: <strong>8.43/10</strong><br><strong>Skills:</strong> Teamwork, Project Management, SQL, Node.js, MongoDB, Angular, Vue.js, Laravel<br><strong>Knowledge:</strong> Computer Architecture, Data Structures, Object-Oriented Programming, CMS Content Management</li>
 </ul>
 <hr>
-<h2>🎓 Education</h2>
+<h2 data-reveal data-reveal-type="rise" data-reveal-order="4" id="highlights">🏆 Highlights</h2>
 <ul>
-<li><strong>College of Information Technology Ho Chi Minh City (HITC)</strong><br>📅 2021 – 2023 • 🎓 Graduated with Distinction – GPA: <strong>8.43/10</strong><br><strong>Skills:</strong> Teamwork, Project Management, SQL, Node.js, MongoDB, Angular, Vue.js, Laravel<br><strong>Knowledge:</strong> Computer Architecture, Data Structures, Object-Oriented Programming, CMS Content Management</li>
+<li data-reveal data-reveal-type="fade-up" data-reveal-order="5">🚀 Built <strong>cross-platform apps</strong> with scalable backend architectures</li>
+<li data-reveal data-reveal-type="fade-left" data-reveal-order="6">🔐 Developed <strong>secure authentication systems</strong> (JWT + Redis caching)</li>
+<li data-reveal data-reveal-type="fade-right" data-reveal-order="7">⚡ Automated reporting &amp; financial tracking via <strong>n8n workflows</strong></li>
+<li data-reveal data-reveal-type="scale" data-reveal-order="8">🗄 Designed multi-tenant <strong>MongoDB architectures</strong> for SaaS</li>
+<li data-reveal data-reveal-type="rise" data-reveal-order="9">🤝 Integrated ERP/POS with <strong>TikTok, Lazada, KiotViet</strong> during internship</li>
 </ul>
 <hr>
-<h2>🏆 Highlights</h2>
-<ul>
-<li>🚀 Built <strong>cross-platform apps</strong> with scalable backend architectures</li>
-<li>🔐 Developed <strong>secure authentication systems</strong> (JWT + Redis caching)</li>
-<li>⚡ Automated reporting &amp; financial tracking via <strong>n8n workflows</strong></li>
-<li>🗄 Designed multi-tenant <strong>MongoDB architectures</strong> for SaaS</li>
-<li>🤝 Integrated ERP/POS with <strong>TikTok, Lazada, KiotViet</strong> during internship</li>
-</ul>
-<hr>
-<h2>🧰 Tech Toolbox</h2>
+<h2 data-reveal data-reveal-type="fade-up" data-reveal-order="10" id="tech-toolbox">🧰 Tech Toolbox</h2>
 <!--TECH_TOOLBOX:START-->
-<p>
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" title="Redis" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" title="Nginx" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" title="AWS" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudinary/cloudinary-original.svg" alt="Cloudinary" title="Cloudinary" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go" title="Go" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue" title="Vue" />
-  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP" />
+<p data-reveal data-reveal-type="fade-left" data-reveal-order="11">
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/docker/docker-original.svg" alt="Docker" title="Docker" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/redis/redis-original.svg" alt="Redis" title="Redis" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/nginx/nginx-original.svg" alt="Nginx" title="Nginx" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" title="AWS" />
+  <img height="28" src="https://cdn.simpleicons.org/cloudinary/3693F3" alt="Cloudinary" title="Cloudinary" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/go/go-original.svg" alt="Go" title="Go" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue" title="Vue" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/php/php-original.svg" alt="PHP" title="PHP" />
 </p>
 <!--TECH_TOOLBOX:END-->
 
 <hr>
-<h2>📝 Featured Projects (Auto-Updated)</h2>
+<h2 data-reveal data-reveal-type="fade-right" data-reveal-order="12" id="projects-auto-updated">🗂️ Projects (Auto-Updated)</h2>
 <!--FEATURED_PROJECTS:START-->
-<ul>
-<li><strong><a href="https://github.com/thientrile/thientrile.github.io">thientrile.github.io</a></strong> • JavaScript</li>
-<li><strong><a href="https://github.com/thientrile/API_eCommerce-">API_eCommerce-</a></strong> • JavaScript ⭐ 1 — api e-commerce </li>
-<li><strong><a href="https://github.com/thientrile/fontend">fontend</a></strong> • HTML</li>
-<li><strong><a href="https://github.com/thientrile/photo_gallery">photo_gallery</a></strong> • JavaScript</li>
-<li><strong><a href="https://github.com/thientrile/go-ecommerce-backend-api">go-ecommerce-backend-api</a></strong> • Go<!--FEATURED_PROJECTS:END--></li>
-</ul>
+<div class="projects-grid"><div class="project-card" data-reveal data-reveal-type="scale" data-reveal-order="13" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="rise" data-reveal-order="14" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/thientrile.github.io" target="_blank" rel="noopener">thientrile.github.io</a></h3><div class="project-meta"><span class="pill pill-lang">JavaScript</span><span class="pill pill-date">2025-08-12</span></div></div><div class="project-card" data-reveal data-reveal-type="fade-up" data-reveal-order="15" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="fade-left" data-reveal-order="16" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/API_eCommerce-" target="_blank" rel="noopener">API_eCommerce-</a></h3><div class="project-meta"><span class="pill pill-lang">JavaScript</span><span class="pill pill-star">★ 1</span><span class="pill pill-date">2025-08-12</span></div><p class="project-desc">api e-commerce</p></div><div class="project-card" data-reveal data-reveal-type="fade-right" data-reveal-order="17" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="scale" data-reveal-order="18" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/html5/html5-original.svg" alt="HTML" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/fontend" target="_blank" rel="noopener">fontend</a></h3><div class="project-meta"><span class="pill pill-lang">HTML</span><span class="pill pill-date">2025-08-12</span></div></div><div class="project-card" data-reveal data-reveal-type="rise" data-reveal-order="19" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="fade-up" data-reveal-order="20" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/photo_gallery" target="_blank" rel="noopener">photo_gallery</a></h3><div class="project-meta"><span class="pill pill-lang">JavaScript</span><span class="pill pill-date">2025-08-03</span></div></div><div class="project-card" data-reveal data-reveal-type="fade-left" data-reveal-order="21" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="fade-right" data-reveal-order="22" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/spamRegister" target="_blank" rel="noopener">spamRegister</a></h3><div class="project-meta"><span class="pill pill-lang">JavaScript</span><span class="pill pill-date">2025-05-30</span></div></div><div class="project-card" data-reveal data-reveal-type="scale" data-reveal-order="23" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="rise" data-reveal-order="24" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/DashboardAdmin" target="_blank" rel="noopener">DashboardAdmin</a></h3><div class="project-meta"><span class="pill pill-lang">Vue</span><span class="pill pill-date">2025-04-19</span></div></div><div class="project-card" data-reveal data-reveal-type="fade-up" data-reveal-order="25" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="fade-left" data-reveal-order="26" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/ical" target="_blank" rel="noopener">ical</a></h3><div class="project-meta"><span class="pill pill-lang">JavaScript</span><span class="pill pill-date">2025-03-29</span></div><p class="project-desc">enter ics file url and add to google calendar</p></div><div class="project-card" data-reveal data-reveal-type="fade-right" data-reveal-order="27" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="scale" data-reveal-order="28" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/quack" target="_blank" rel="noopener">quack</a></h3><div class="project-meta"><span class="pill pill-lang">JavaScript</span><span class="pill pill-date">2024-09-05</span></div></div><div class="project-card" data-reveal data-reveal-type="rise" data-reveal-order="29" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="fade-up" data-reveal-order="30" class="project-title"><a href="https://github.com/thientrile/WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES" target="_blank" rel="noopener">WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES</a></h3><div class="project-meta"><span class="pill pill-date">2023-10-29</span></div><p class="project-desc">xây dựng giao diện website bán điện thoại thông minh với angula</p></div><div class="project-card" data-reveal data-reveal-type="fade-left" data-reveal-order="31" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="fade-right" data-reveal-order="32" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/html5/html5-original.svg" alt="HTML" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/DACK_N2_CD21CT2" target="_blank" rel="noopener">DACK_N2_CD21CT2</a></h3><div class="project-meta"><span class="pill pill-lang">HTML</span><span class="pill pill-date">2023-10-29</span></div></div><div class="project-card" data-reveal data-reveal-type="scale" data-reveal-order="33" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="rise" data-reveal-order="34" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/Salesweb" target="_blank" rel="noopener">Salesweb</a></h3><div class="project-meta"><span class="pill pill-lang">JavaScript</span><span class="pill pill-date">2023-06-27</span></div></div><div class="project-card" data-reveal data-reveal-type="fade-up" data-reveal-order="35" data-reveal-type="fade-up"><h3 data-reveal data-reveal-type="fade-left" data-reveal-order="36" class="project-title"><img class="project-icon" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/php/php-original.svg" alt="PHP" loading="lazy" width="20" height="20"/><a href="https://github.com/thientrile/webphp" target="_blank" rel="noopener">webphp</a></h3><div class="project-meta"><span class="pill pill-lang">PHP</span><span class="pill pill-date">2022-12-27</span></div><p class="project-desc">wedsite bán hàng bằng ngôn ngữ php với database</p></div></div>
+<!--FEATURED_PROJECTS:END-->
+
 <hr>
-<h2>🧪 Case Studies</h2>
+<h2 data-reveal data-reveal-type="fade-right" data-reveal-order="37" id="case-studies">🧪 Case Studies</h2>
 <!--CASE_STUDIES:START-->
 <ul>
-<li><a href="./case-studies/2023-erp-pos-tiktok-lazada-kiotviet.md">ERP/POS Integration with TikTok, Lazada, and KiotViet (Internship 2023)</a><!--CASE_STUDIES:END--></li>
+<li data-reveal data-reveal-type="scale" data-reveal-order="38"><a href="./case-studies/2023-erp-pos-tiktok-lazada-kiotviet.md">ERP/POS Integration with TikTok, Lazada, and KiotViet (Internship 2023)</a><!--CASE_STUDIES:END--></li>
 </ul>
 <hr>
-<h2>🗓️ Timeline</h2>
+<h2 data-reveal data-reveal-type="rise" data-reveal-order="39" id="timeline">🗓️ Timeline</h2>
 <!--TIMELINE:START-->
-<h3>2025</h3>
+<h3 data-reveal data-reveal-type="fade-up" data-reveal-order="40" id="2025">2025</h3>
 <ul>
-<li>🧩 <strong>2024 – Now</strong> — University – Bachelor in Information Technology</li>
+<li data-reveal data-reveal-type="fade-left" data-reveal-order="41">🧩 <strong>2024 – Now</strong> — University – Bachelor in Information Technology</li>
+<li data-reveal data-reveal-type="fade-right" data-reveal-order="42">📦 <strong>2025-08-12</strong> — <a href="https://github.com/thientrile/thientrile.github.io">thientrile.github.io</a> — <em>Repository • JavaScript</em></li>
+<li data-reveal data-reveal-type="scale" data-reveal-order="43">📦 <strong>2025-08-12</strong> — <a href="https://github.com/thientrile/API_eCommerce-">API_eCommerce-</a> — <em>api e-commerce  • JavaScript ⭐ 1</em></li>
+<li data-reveal data-reveal-type="rise" data-reveal-order="44">📦 <strong>2025-08-12</strong> — <a href="https://github.com/thientrile/fontend">fontend</a> — <em>Repository • HTML</em></li>
+<li data-reveal data-reveal-type="fade-up" data-reveal-order="45">📦 <strong>2025-08-03</strong> — <a href="https://github.com/thientrile/photo_gallery">photo_gallery</a> — <em>Repository • JavaScript</em></li>
+<li data-reveal data-reveal-type="fade-left" data-reveal-order="46">📦 <strong>2025-05-30</strong> — <a href="https://github.com/thientrile/spamRegister">spamRegister</a> — <em>Repository • JavaScript</em></li>
+<li data-reveal data-reveal-type="fade-right" data-reveal-order="47">📦 <strong>2025-04-19</strong> — <a href="https://github.com/thientrile/DashboardAdmin">DashboardAdmin</a> — <em>Repository • Vue</em></li>
+<li data-reveal data-reveal-type="scale" data-reveal-order="48">📦 <strong>2025-03-29</strong> — <a href="https://github.com/thientrile/ical">ical</a> — <em>enter ics file url and add to google calendar • JavaScript</em></li>
 </ul>
-<h3>2024</h3>
+<h3 data-reveal data-reveal-type="rise" data-reveal-order="49" id="2024">2024</h3>
 <ul>
-<li>🔒 <strong>2024-11-05</strong> — ERP Integration (Private) — <em>POS ↔ TikTok Shop, Lazada; async workflows w/ retries &amp; idempotency</em></li>
+<li data-reveal data-reveal-type="fade-up" data-reveal-order="50">🔒 <strong>2024-11-05</strong> — ERP Integration (Private) — <em>POS ↔ TikTok Shop, Lazada; async workflows w/ retries &amp; idempotency</em></li>
+<li data-reveal data-reveal-type="fade-left" data-reveal-order="51">📦 <strong>2024-09-05</strong> — <a href="https://github.com/thientrile/quack">quack</a> — <em>Repository • JavaScript</em></li>
 </ul>
-<h3>2023</h3>
+<h3 data-reveal data-reveal-type="fade-right" data-reveal-order="52" id="2023">2023</h3>
 <ul>
-<li>🎓 <strong>2023-12-31</strong> — Graduated with Distinction — HITC (College of Information Technology HCMC) — <em>GPA 8.43/10; Teamwork, Project Management, SQL, Node.js, MongoDB, Angular, Vue.js, Laravel; Computer Architecture, Data Structures, OOP, CMS</em></li>
+<li data-reveal data-reveal-type="scale" data-reveal-order="53">🎓 <strong>2023-12-31</strong> — Graduated with Distinction — HITC (College of Information Technology HCMC) — <em>GPA 8.43/10; Teamwork, Project Management, SQL, Node.js, MongoDB, Angular, Vue.js, Laravel; Computer Architecture, Data Structures, OOP, CMS</em></li>
+<li data-reveal data-reveal-type="rise" data-reveal-order="54">📦 <strong>2023-10-29</strong> — <a href="https://github.com/thientrile/WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES">WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES</a> — <em>xây dựng giao diện website bán điện thoại thông minh với angula</em></li>
+<li data-reveal data-reveal-type="fade-up" data-reveal-order="55">📦 <strong>2023-10-29</strong> — <a href="https://github.com/thientrile/DACK_N2_CD21CT2">DACK_N2_CD21CT2</a> — <em>Repository • HTML</em></li>
+<li data-reveal data-reveal-type="fade-left" data-reveal-order="56">📦 <strong>2023-06-27</strong> — <a href="https://github.com/thientrile/Salesweb">Salesweb</a> — <em>Repository • JavaScript</em></li>
 </ul>
-<h3>1970</h3>
+<h3 data-reveal data-reveal-type="fade-right" data-reveal-order="57" id="2022">2022</h3>
 <ul>
-<li>📄 <strong>1970-01-01</strong> — <a href="./case-studies/2023-erp-pos-tiktok-lazada-kiotviet.md">ERP/POS Integration with TikTok, Lazada, and KiotViet (Internship 2023)</a> — <em>Case study</em><!--TIMELINE:END--></li>
+<li data-reveal data-reveal-type="scale" data-reveal-order="58">📦 <strong>2022-12-27</strong> — <a href="https://github.com/thientrile/webphp">webphp</a> — <em>wedsite bán hàng bằng ngôn ngữ php với database • PHP</em></li>
+</ul>
+<h3 data-reveal data-reveal-type="rise" data-reveal-order="59" id="1970">1970</h3>
+<ul>
+<li data-reveal data-reveal-type="fade-up" data-reveal-order="60">📄 <strong>1970-01-01</strong> — <a href="./case-studies/2023-erp-pos-tiktok-lazada-kiotviet.md">ERP / POS Integration with TikTok, Lazada &amp; KiotViet</a> — <em>Case study</em><!--TIMELINE:END--></li>
 </ul>
 <hr>
-<h2>📫 Contact</h2>
-<ul>
-<li>📧 <strong>Email:</strong> <a href="mailto:thientrile2003@gmail.com">thientrile2003@gmail.com</a></li>
-<li>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thi%C3%AAn-tr%C3%AD-l%C3%AA-44a9a6284/">linkedin.com/in/thiên-trí-lê-44a9a6284</a></li>
-<li>🌐 <strong>Portfolio:</strong> <a href="https://thientrile.github.io">thientrile.github.io</a></li>
-<li>📱 <strong>Facebook:</strong> <a href="https://www.facebook.com/Liguni.0202">facebook.com/Liguni.0202</a></li>
-</ul>
-<hr>
-<blockquote>
-<p><em>&quot;Great code is not just about making things work, it&#39;s about making them work beautifully and efficiently.&quot;</em> ✨</p>
-</blockquote>
-
-</article></div></body></html>
+</main>
+</div>
+<script>
+document.documentElement.classList.add('js');
+document.body.classList.add('preload');
+window.addEventListener('load',()=>{
+  // Intro sequence: show layout quickly, finish intro after animation end
+  setTimeout(()=>{document.body.classList.add('ready');},80);
+  const introText=document.querySelector('.intro-text');
+  if(introText){
+    introText.addEventListener('animationend',()=>{
+      document.body.classList.add('intro-done');
+    });
+    // Fallback in case animationend not fired
+    setTimeout(()=>document.body.classList.add('intro-done'),1800);
+  } else {
+    document.body.classList.add('intro-done');
+  }
+  // Scroll reveal
+  const els=[...document.querySelectorAll('[data-reveal]')];
+  if('IntersectionObserver'in window){
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting){
+          const el=e.target;
+          // stagger delay dựa trên order mod 8 để không quá dài
+          const order=parseInt(el.getAttribute('data-reveal-order')||'0',10);
+          const delay=Math.min(0.6,(order%8)*0.08);
+          el.style.transitionDelay = String(delay) + 's';
+          el.classList.add('reveal-in');
+          io.unobserve(el);
+        } })
+    },{threshold:.08, rootMargin:'0px 0px -10% 0px'});
+    els.forEach(el=>io.observe(el));
+  } else {
+    els.forEach(el=>el.classList.add('reveal-in'));
+  }
+  // Active tab highlight
+  const tabLinks=[...document.querySelectorAll('.top-tabs a')];
+  if('IntersectionObserver'in window && tabLinks.length){
+    const heads=[...document.querySelectorAll('h2[id]')];
+    const activeSet=new Set();
+    const io2=new IntersectionObserver(entries=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting){
+          const id=en.target.id;
+          tabLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+id));
+        }
+      });
+    },{rootMargin:'-40% 0px -50% 0px',threshold:[0,1]});
+    heads.forEach(h=>io2.observe(h));
+  }
+  // Tab click smooth (already CSS smooth); close intro quickly if clicking
+  document.getElementById('top-tabs')?.addEventListener('click',e=>{
+    const a=e.target.closest('a');
+    if(a){document.body.classList.add('intro-done');}
+  });
+});
+</script>
+</body></html>
