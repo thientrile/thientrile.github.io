@@ -61,9 +61,9 @@
 <!--RECENT_ACTIVITY:END-->
 
 ## 📫 Liên hệ
-- Email: **your.email@example.com**
-- LinkedIn: https://linkedin.com/in/your-profile
-- Facebook: https://fb.com/your-profile
+- Email: **thientrile2003@gmail.com**
+- LinkedIn: https://www.linkedin.com/in/thiên-trí-lê-44a9a6284/
+- Facebook: https://www.facebook.com/Liguni.0202
 
 ---
 
