@@ -3,7 +3,7 @@ name: Update README (Recent + Featured + Case Studies)
 
 on:
   schedule:
-    - cron: "0 2 * * *"   # 02:00 UTC ~ 09:00 VN
+    - cron: "0 2 * * *" # 02:00 UTC ~ 09:00 VN
   workflow_dispatch:
   push:
     paths:
@@ -36,8 +36,15 @@ jobs:
         env:
           CASE_STUDIES_LIMIT: 10
         run: node ./scripts/update_case_studies.mjs
-      - name: Update timeline
+      - name: Update timeline (from repos)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: thientrile
+          TIMELINE_MODE: created # created | pushed | release
+          TIMELINE_LIMIT: 8 # số item trên timeline
+          TIMELINE_EXCLUDE: "" # ví dụ: "old-demo,playground"
         run: node ./scripts/update_timeline.mjs
+
       - name: Show diff
         run: |
           git status
