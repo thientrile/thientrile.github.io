@@ -58,8 +58,8 @@
 - **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** • JavaScript
 - **[fontend](https://github.com/thientrile/fontend)** • HTML
 - **[photo_gallery](https://github.com/thientrile/photo_gallery)** • JavaScript
+- **[API_eCommerce-](https://github.com/thientrile/API_eCommerce-)** • JavaScript ⭐ 1 — api e-commerce 
 - **[go-ecommerce-backend-api](https://github.com/thientrile/go-ecommerce-backend-api)** • Go
-- **[spamRegister](https://github.com/thientrile/spamRegister)** • JavaScript
 <!--FEATURED_PROJECTS:END-->
 
 ---
@@ -74,13 +74,16 @@
 ## 🗓️ Timeline
 <!--TIMELINE:START-->
 ### 2025
-- ⚙️ **2025-08-01** — [Profile automation](https://github.com/thientrile/thientrile) — _Auto-update Featured, Recent Activity & Case Studies via Actions._
+- 📦 **2025-08-12** — [fontend](https://github.com/thientrile/fontend) — _Repository • HTML_
+- 📦 **2025-08-03** — [photo_gallery](https://github.com/thientrile/photo_gallery) — _Repository • JavaScript_
+- 📦 **2025-05-30** — [spamRegister](https://github.com/thientrile/spamRegister) — _Repository • JavaScript_
+- 📦 **2025-05-23** — [go-ecommerce-backend-api](https://github.com/thientrile/go-ecommerce-backend-api) — _Repository • Go_
+- 📦 **2025-03-29** — [ical](https://github.com/thientrile/ical) — _enter ics file url and add to google calendar • JavaScript_
 
 ### 2024
-- 🧠 **2024-05-10** — [Multi-DB & Async Workflow](./case-studies/2024-05-10-multi-db-async-workflow.md) — _Patterns: queues, outbox, correlation-id; reduced p95 latency._
-
-### 2023
-- 💼 **2023-06-01** — [Internship starts — ERP/POS (PHP, MySQL)](./case-studies/2023-erp-pos-tiktok-lazada-kiotViet.md) — _Integrated TikTok Shop, Lazada, KiotViet; webhooks, idempotency, cron._
+- 📦 **2024-11-20** — [DashboardAdmin](https://github.com/thientrile/DashboardAdmin) — _Repository • Vue_
+- 📦 **2024-09-05** — [quack](https://github.com/thientrile/quack) — _Repository • JavaScript_
+- 📦 **2024-06-08** — [API_eCommerce-](https://github.com/thientrile/API_eCommerce-) — _api e-commerce  • JavaScript ⭐ 1_
 <!--TIMELINE:END-->
 
 ---
