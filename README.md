@@ -64,7 +64,14 @@
 
 ## 🗓️ Timeline
 <!--TIMELINE:START-->
-<!-- Auto-generated from data/timeline.json + /case-studies -->
+### 2025
+- ⚙️ **2025-08-01** — [Profile automation](https://github.com/thientrile/thientrile) — _Auto-update Featured, Recent Activity & Case Studies via Actions._
+
+### 2024
+- 🧠 **2024-05-10** — [Multi-DB & Async Workflow](./case-studies/2024-05-10-multi-db-async-workflow.md) — _Patterns: queues, outbox, correlation-id; reduced p95 latency._
+
+### 2023
+- 💼 **2023-06-01** — [Internship starts — ERP/POS (PHP, MySQL)](./case-studies/2023-erp-pos-tiktok-lazada-kiotViet.md) — _Integrated TikTok Shop, Lazada, KiotViet; webhooks, idempotency, cron._
 <!--TIMELINE:END-->
 
 ---
