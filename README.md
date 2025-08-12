@@ -52,7 +52,11 @@
 ## 📝 Featured Projects (Auto-Updated)
 
 <!--FEATURED_PROJECTS:START-->
-<!-- Will be updated automatically -->
+- **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** • JavaScript
+- **[fontend](https://github.com/thientrile/fontend)** • HTML
+- **[photo_gallery](https://github.com/thientrile/photo_gallery)** • JavaScript
+- **[go-ecommerce-backend-api](https://github.com/thientrile/go-ecommerce-backend-api)** • Go
+- **[spamRegister](https://github.com/thientrile/spamRegister)** • JavaScript
 <!--FEATURED_PROJECTS:END-->
 
 ---
@@ -72,7 +76,16 @@
 ## 🧷 Recent Activity (Auto-Updated)
 
 <!--RECENT_ACTIVITY:START-->
-<!-- Will be updated automatically -->
+- 🔼 Pushed **2** commit(s) to [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🔼 Pushed **1** commit(s) to [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🔼 Pushed **1** commit(s) to [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🔼 Pushed **1** commit(s) to [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🆕 Created branch `main` in [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🆕 Created repository in [thientrile/photo_gallery](https://github.com/thientrile/photo_gallery) — _2025-08-03_
+- 🔼 Pushed **1** commit(s) to [holha289/app-chat](https://github.com/holha289/app-chat) — _2025-07-28_
+- 🔼 Pushed **1** commit(s) to [holha289/app-chat](https://github.com/holha289/app-chat) — _2025-07-27_
+- 🔼 Pushed **3** commit(s) to [holha289/app-chat](https://github.com/holha289/app-chat) — _2025-07-27_
+- 🔼 Pushed **1** commit(s) to [holha289/app-chat](https://github.com/holha289/app-chat) — _2025-07-27_
 <!--RECENT_ACTIVITY:END-->
 
 ---
