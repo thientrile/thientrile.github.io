@@ -79,14 +79,24 @@
 
 ## 🗓️ Timeline
 <!--TIMELINE:START-->
+### 2025
+- 🧩 **2024 – Now** — University – Bachelor in Information Technology
+- 📦 **2025-08-12** — [thientrile.github.io](https://github.com/thientrile/thientrile.github.io) — _Repository • JavaScript_
+- 📦 **2025-08-12** — [API_eCommerce-](https://github.com/thientrile/API_eCommerce-) — _api e-commerce  • JavaScript ⭐ 1_
+- 📦 **2025-08-12** — [fontend](https://github.com/thientrile/fontend) — _Repository • HTML_
+- 📦 **2025-08-03** — [photo_gallery](https://github.com/thientrile/photo_gallery) — _Repository • JavaScript_
+- 📦 **2025-07-07** — [go-ecommerce-backend-api](https://github.com/thientrile/go-ecommerce-backend-api) — _Repository • Go_
+- 📦 **2025-05-30** — [spamRegister](https://github.com/thientrile/spamRegister) — _Repository • JavaScript_
+- 📦 **2025-04-19** — [DashboardAdmin](https://github.com/thientrile/DashboardAdmin) — _Repository • Vue_
+- 📦 **2025-03-29** — [ical](https://github.com/thientrile/ical) — _enter ics file url and add to google calendar • JavaScript_
+
 ### 2024
 - 🔒 **2024-11-05** — ERP Integration (Private) — _POS ↔ TikTok Shop, Lazada; async workflows w/ retries & idempotency_
+- 📦 **2024-09-05** — [quack](https://github.com/thientrile/quack) — _Repository • JavaScript_
 
 ### 2023
 - 🎓 **2023-12-31** — Graduated with Distinction — HITC (College of Information Technology HCMC) — _GPA 8.43/10; Teamwork, Project Management, SQL, Node.js, MongoDB, Angular, Vue.js, Laravel; Computer Architecture, Data Structures, OOP, CMS_
-
-### Unknown
-- 🧩 **** — University – Bachelor in Information Technology
+- 📦 **2023-10-29** — [WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES](https://github.com/thientrile/WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES) — _xây dựng giao diện website bán điện thoại thông minh với angula_
 
 ### 1970
 - 📄 **1970-01-01** — [ERP/POS Integration with TikTok, Lazada, and KiotViet (Internship 2023)](./case-studies/2023-erp-pos-tiktok-lazada-kiotviet.md) — _Case study_

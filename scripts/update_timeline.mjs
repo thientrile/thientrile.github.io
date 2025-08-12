@@ -7,7 +7,13 @@ const USERNAME = process.env.GH_USERNAME || "thientrile";
 /** SOURCES (bật/tắt) **/
 const USE_JSON   = (process.env.TIMELINE_USE_JSON   ?? "true")  === "true";
 const USE_CASES  = (process.env.TIMELINE_USE_CASES  ?? "true")  === "true";
-const USE_REPOS  = (process.env.TIMELINE_USE_REPOS  ?? "false") === "true"; // mặc định tắt
+// Bật repos mặc định để luôn hiển thị hoạt động Git
+const USE_REPOS  = (process.env.TIMELINE_USE_REPOS  ?? "true") === "true";
+
+// Chiến lược gộp: prefer-json | first | all
+const DEDUPE_STRATEGY = process.env.TIMELINE_DEDUPE || "prefer-json";
+// Hiển thị nhãn nguồn (JSON / Case / Git)
+const SHOW_SOURCE_LABELS = (process.env.TIMELINE_SOURCE_LABELS || "false") === "true";
 
 /** REPO OPTIONS **/
 const MODE  = process.env.TIMELINE_MODE   || "pushed";   // created | pushed | release
@@ -34,7 +40,30 @@ async function loadJson() {
   try {
     const raw = await fs.readFile(dataPath, "utf8");
     const arr = JSON.parse(raw);
-    return Array.isArray(arr) ? arr.map(e => ({ source: "json", ...e })) : [];
+    if (!Array.isArray(arr)) return [];
+    const todayIso = new Date().toISOString().slice(0,10);
+    return arr.map(e => {
+      // Support year range entries: { year: "2024 – Now", title: ... }
+      if (e.year && !e.date) {
+        const yrStr = String(e.year).trim();
+        const parts = yrStr.split(/[-–—]/).map(s => s.trim());
+        let startYear = parts[0];
+        let endYear = parts[1] || parts[0];
+        const nowYear = new Date().getFullYear().toString();
+        const isOngoing = /now/i.test(endYear);
+        if (isOngoing) endYear = nowYear;
+        // Use end year for chronological placement
+        const syntheticDate = `${endYear}-12-31`;
+        return {
+          source: "json",
+          ...e,
+          date: syntheticDate,
+          _yearRange: yrStr,
+          ongoing: isOngoing
+        };
+      }
+      return { source: "json", ...e };
+    });
   } catch { return []; }
 }
 
@@ -110,15 +139,21 @@ async function loadRepos() {
 }
 
 function mergeAndDedupe(jsonItems, caseItems, repoItems) {
-  // Ưu tiên JSON > CASES > REPOS (theo key date+title)
-  const key = (e) => `${e.date}::${e.title}`.toLowerCase();
-  const map = new Map();
-  for (const e of [...repoItems, ...caseItems, ...jsonItems]) {
-    const k = key(e);
-    // nếu JSON ghi đè, đặt sau cùng
-    if (!map.has(k) || e.source === "json") map.set(k, e);
+  if (DEDUPE_STRATEGY === 'all') {
+    return [...jsonItems, ...caseItems, ...repoItems];
   }
-  return [...map.values()];
+  const byKey = new Map();
+  const ordered = [...jsonItems, ...caseItems, ...repoItems]; // JSON trước nếu prefer-json
+  for (const item of ordered) {
+    const key = `${item.date}::${item.title}`.toLowerCase();
+    if (!byKey.has(key)) {
+      byKey.set(key, item);
+    } else if (DEDUPE_STRATEGY === 'prefer-json' && item.source === 'json') {
+      byKey.set(key, item); // JSON ghi đè
+    }
+    // nếu strategy = first thì bỏ qua ghi đè
+  }
+  return [...byKey.values()];
 }
 
 function groupRender(items) {
@@ -147,8 +182,10 @@ function groupRender(items) {
     out.push(`### ${year}`);
     for (const e of ordered) {
       const icon = e.icon || (e.source === "repos" ? "📦" : e.source === "cases" ? "📄" : "🧩");
-      const title = e.link ? `[${e.title}](${e.link})` : e.title;
-      out.push(`- ${icon} **${fmt(e.date)}** — ${title}${e.details ? ` — _${e.details}_` : ""}`);
+  const title = e.link ? `[${e.title}](${e.link})` : e.title;
+  const dateDisplay = e._yearRange ? e._yearRange : fmt(e.date);
+  const sourceLabel = SHOW_SOURCE_LABELS ? ` _( ${e.source} )_` : "";
+  out.push(`- ${icon} **${dateDisplay}** — ${title}${e.details ? ` — _${e.details}_` : ""}${sourceLabel}`);
     }
     out.push("");
   }
