@@ -54,12 +54,9 @@
 
 ## 📝 Dự án nổi bật
 
-- 🌐 **thientrile.github.io** – Personal site / playground (HTML/CSS).
-- 🛒 **webphp** – Website bán hàng viết bằng PHP + database.
-- 🧪 **DACK_N2_CD21CT2** – Bài tập/đồ án web (HTML).
-- 📊 **Salesweb** – Web giao diện bán hàng (JavaScript).
-- 🎛 **soft-ui-dashboard** (fork) – Dashboard Bootstrap 5 (Creative Tim).
-  > (tự động lấy từ danh sách repo phổ biến trên profile)
+<!--FEATURED_PROJECTS:START-->
+<!-- Nội dung sẽ được script cập nhật tự động -->
+<!--FEATURED_PROJECTS:END-->
 
 ## 🧷 Recent Activity (auto-update)
 

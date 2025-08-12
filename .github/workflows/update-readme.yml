@@ -2,7 +2,7 @@ name: Update README (Recent Activity)
 
 on:
   schedule:
-    - cron: "0 2 * * *"  # 02:00 UTC ~ 09:00 Asia/Ho_Chi_Minh
+    - cron: "0 2 * * *" # 02:00 UTC ~ 09:00 Asia/Ho_Chi_Minh
   workflow_dispatch:
 
 permissions:
@@ -37,3 +37,11 @@ jobs:
           else
             echo "No changes"
           fi
+      - name: Run updater
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: thientrile
+          FEATURED_MODE: updated # hoặc "stars"
+          FEATURED_COUNT: 5
+          FEATURED_EXCLUDE: "" # ví dụ: "soft-ui-dashboard,old-repo"
+        run: node ./scripts/update_readme.mjs
