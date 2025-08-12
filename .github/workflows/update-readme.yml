@@ -32,6 +32,12 @@ jobs:
           FEATURED_COUNT: 5
         run: node ./scripts/update_readme.mjs
 
+      - name: Update Tech Toolbox
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: thientrile
+        run: node ./scripts/update_toolbox.mjs
+
       - name: Update case studies list
         env:
           CASE_STUDIES_LIMIT: 10
