@@ -50,7 +50,6 @@
   <img height="28" src="https://cdn.simpleicons.org/cloudinary/3693F3" alt="Cloudinary" title="Cloudinary" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
-  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/go/go-original.svg" alt="Go" title="Go" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue" title="Vue" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/php/php-original.svg" alt="PHP" title="PHP" />
@@ -64,24 +63,17 @@
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
 | **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-08-12 |  |
+| **[ical](https://github.com/thientrile/ical)** | JavaScript |  | 2025-08-12 | enter ics file url and add to google calendar |
 | **[API_eCommerce-](https://github.com/thientrile/API_eCommerce-)** | JavaScript | 1 | 2025-08-12 | api e-commerce  |
 | **[fontend](https://github.com/thientrile/fontend)** | HTML |  | 2025-08-12 |  |
 | **[photo_gallery](https://github.com/thientrile/photo_gallery)** | JavaScript |  | 2025-08-03 |  |
-| **[spamRegister](https://github.com/thientrile/spamRegister)** | JavaScript |  | 2025-05-30 |  |
-| **[DashboardAdmin](https://github.com/thientrile/DashboardAdmin)** | Vue |  | 2025-04-19 |  |
-| **[ical](https://github.com/thientrile/ical)** | JavaScript |  | 2025-03-29 | enter ics file url and add to google calendar |
-| **[quack](https://github.com/thientrile/quack)** | JavaScript |  | 2024-09-05 |  |
-| **[WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES](https://github.com/thientrile/WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES)** |  |  | 2023-10-29 | xây dựng giao diện website bán điện thoại thông minh với angula |
-| **[DACK_N2_CD21CT2](https://github.com/thientrile/DACK_N2_CD21CT2)** | HTML |  | 2023-10-29 |  |
-| **[Salesweb](https://github.com/thientrile/Salesweb)** | JavaScript |  | 2023-06-27 |  |
-| **[webphp](https://github.com/thientrile/webphp)** | PHP |  | 2022-12-27 | wedsite bán hàng bằng ngôn ngữ php với database |
 <!--FEATURED_PROJECTS:END-->
 
 ---
 
 ## 🧪 Case Studies
 <!--CASE_STUDIES:START-->
-- [ERP/POS Integration with TikTok, Lazada, and KiotViet (Internship 2023)](./case-studies/2023-erp-pos-tiktok-lazada-kiotviet.md)
+- [ERP / POS Integration with TikTok, Lazada & KiotViet](./case-studies/2023-erp-pos-tiktok-lazada-kiotviet.md)
 <!--CASE_STUDIES:END-->
 
 ---
@@ -90,26 +82,12 @@
 <!--TIMELINE:START-->
 ### 2025
 - 🧩 **2024 – Now** — University – Bachelor in Information Technology
-- 📦 **2025-08-12** — [thientrile.github.io](https://github.com/thientrile/thientrile.github.io) — _Repository • JavaScript_
-- 📦 **2025-08-12** — [API_eCommerce-](https://github.com/thientrile/API_eCommerce-) — _api e-commerce  • JavaScript ⭐ 1_
-- 📦 **2025-08-12** — [fontend](https://github.com/thientrile/fontend) — _Repository • HTML_
-- 📦 **2025-08-03** — [photo_gallery](https://github.com/thientrile/photo_gallery) — _Repository • JavaScript_
-- 📦 **2025-05-30** — [spamRegister](https://github.com/thientrile/spamRegister) — _Repository • JavaScript_
-- 📦 **2025-04-19** — [DashboardAdmin](https://github.com/thientrile/DashboardAdmin) — _Repository • Vue_
-- 📦 **2025-03-29** — [ical](https://github.com/thientrile/ical) — _enter ics file url and add to google calendar • JavaScript_
 
 ### 2024
 - 🔒 **2024-11-05** — ERP Integration (Private) — _POS ↔ TikTok Shop, Lazada; async workflows w/ retries & idempotency_
-- 📦 **2024-09-05** — [quack](https://github.com/thientrile/quack) — _Repository • JavaScript_
 
 ### 2023
 - 🎓 **2023-12-31** — Graduated with Distinction — HITC (College of Information Technology HCMC) — _GPA 8.43/10; Teamwork, Project Management, SQL, Node.js, MongoDB, Angular, Vue.js, Laravel; Computer Architecture, Data Structures, OOP, CMS_
-- 📦 **2023-10-29** — [WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES](https://github.com/thientrile/WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES) — _xây dựng giao diện website bán điện thoại thông minh với angula_
-- 📦 **2023-10-29** — [DACK_N2_CD21CT2](https://github.com/thientrile/DACK_N2_CD21CT2) — _Repository • HTML_
-- 📦 **2023-06-27** — [Salesweb](https://github.com/thientrile/Salesweb) — _Repository • JavaScript_
-
-### 2022
-- 📦 **2022-12-27** — [webphp](https://github.com/thientrile/webphp) — _wedsite bán hàng bằng ngôn ngữ php với database • PHP_
 
 ### 1970
 - 📄 **1970-01-01** — [ERP / POS Integration with TikTok, Lazada & KiotViet](./case-studies/2023-erp-pos-tiktok-lazada-kiotviet.md) — _Case study_
