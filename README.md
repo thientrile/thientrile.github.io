@@ -19,6 +19,15 @@
 - 🤝 Agile/Scrum team player, Git/GitHub daily
 
 ---
+## 🎓 Education
+
+- **College of Information Technology Ho Chi Minh City (HITC)**  
+  📅 2021 – 2023 • 🎓 Graduated with Distinction – GPA: **8.43/10**  
+  **Skills:** Teamwork, Project Management, SQL, Node.js, MongoDB, Angular, Vue.js, Laravel  
+  **Knowledge:** Computer Architecture, Data Structures, Object-Oriented Programming, CMS Content Management
+
+
+---
 
 ## 🏆 Highlights
 - 🚀 Built **cross-platform apps** with scalable backend architectures

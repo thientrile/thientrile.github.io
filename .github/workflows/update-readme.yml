@@ -36,15 +36,18 @@ jobs:
         env:
           CASE_STUDIES_LIMIT: 10
         run: node ./scripts/update_case_studies.mjs
-      - name: Update timeline (from repos)
+      - name: Update timeline (hybrid)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: thientrile
-          TIMELINE_MODE: created # created | pushed | release
-          TIMELINE_LIMIT: 8 # số item trên timeline
-          TIMELINE_EXCLUDE: "" # ví dụ: "old-demo,playground"
+          TIMELINE_USE_JSON: "true"     # luôn đọc data/timeline.json
+          TIMELINE_USE_CASES: "true"    # lấy thêm từ /case-studies
+          TIMELINE_USE_REPOS: "false"   # bật "true" nếu muốn lấy từ repos
+          TIMELINE_MODE: "pushed"       # created | pushed | release
+          TIMELINE_LIMIT: "8"           # số item từ nguồn repos
+          TIMELINE_EXCLUDE: ""          # ví dụ: "playground,old-demo"
         run: node ./scripts/update_timeline.mjs
-
+     
       - name: Show diff
         run: |
           git status

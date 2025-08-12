@@ -3,23 +3,65 @@ import fs from "fs/promises";
 import path from "path";
 
 const USERNAME = process.env.GH_USERNAME || "thientrile";
-const LIMIT = Number(process.env.TIMELINE_LIMIT || 10);
-const MODE = process.env.TIMELINE_MODE || "pushed"; // "created" | "pushed" | "release"
-const EXCLUDE = (process.env.TIMELINE_EXCLUDE || "")
-  .split(",")
-  .map(s => s.trim())
-  .filter(Boolean);
 
-const repoRoot = process.cwd();
+/** SOURCES (bật/tắt) **/
+const USE_JSON   = (process.env.TIMELINE_USE_JSON   ?? "true")  === "true";
+const USE_CASES  = (process.env.TIMELINE_USE_CASES  ?? "true")  === "true";
+const USE_REPOS  = (process.env.TIMELINE_USE_REPOS  ?? "false") === "true"; // mặc định tắt
+
+/** REPO OPTIONS **/
+const MODE  = process.env.TIMELINE_MODE   || "pushed";   // created | pushed | release
+const LIMIT = Number(process.env.TIMELINE_LIMIT || 10);
+const EXCLUDE = (process.env.TIMELINE_EXCLUDE || "").split(",").map(s => s.trim()).filter(Boolean);
+
+const repoRoot   = process.cwd();
 const readmePath = path.join(repoRoot, "README.md");
+const dataPath   = path.join(repoRoot, "data", "timeline.json");
+const casesDir   = path.join(repoRoot, "case-studies");
 
 const START = "<!--TIMELINE:START-->";
 const END   = "<!--TIMELINE:END-->";
 
 function regexBetween(a, b) {
-  return new RegExp(
-    `${a.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}[\\s\\S]*?${b.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}`
-  );
+  return new RegExp(`${a.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}[\\s\\S]*?${b.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}`);
+}
+const toTs = (iso) => new Date((iso || "1970-01-01") + (iso?.includes("T") ? "" : "T00:00:00Z")).getTime();
+const fmt  = (iso) => (iso || "").slice(0, 10);
+const yyyy = (iso) => (iso || "").slice(0, 4);
+
+async function loadJson() {
+  if (!USE_JSON) return [];
+  try {
+    const raw = await fs.readFile(dataPath, "utf8");
+    const arr = JSON.parse(raw);
+    return Array.isArray(arr) ? arr.map(e => ({ source: "json", ...e })) : [];
+  } catch { return []; }
+}
+
+function parseDateFromName(name) {
+  const m = name.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
+}
+async function loadCases() {
+  if (!USE_CASES) return [];
+  try { await fs.stat(casesDir); } catch { return []; }
+  const files = (await fs.readdir(casesDir)).filter(f => f.endsWith(".md"));
+  const items = [];
+  for (const file of files) {
+    const date = parseDateFromName(file);
+    const content = await fs.readFile(path.join(casesDir, file), "utf8");
+    const titleLine = content.split("\n").find(l => l.trim().startsWith("#"));
+    const title = (titleLine || file).replace(/^#\s*/, "").trim();
+    items.push({
+      source: "cases",
+      date: date ?? "1970-01-01",
+      title,
+      details: "Case study",
+      link: `./case-studies/${encodeURIComponent(file)}`,
+      icon: "📄"
+    });
+  }
+  return items;
 }
 
 async function gh(pathname, token) {
@@ -27,87 +69,86 @@ async function gh(pathname, token) {
   const headers = {
     "Accept": "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
-    "User-Agent": "readme-timeline",
+    "User-Agent": "readme-timeline"
   };
   if (token) headers.Authorization = `Bearer ${token}`;
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`${res.status} ${await res.text()}`);
   return res.json();
 }
-
 async function fetchRepos(username, token) {
-  // sort client-side để linh hoạt theo MODE
   const repos = await gh(`/users/${username}/repos?per_page=100`, token);
-  return repos
-    .filter(r => !r.fork)
-    .filter(r => !EXCLUDE.includes(r.name));
+  return repos.filter(r => !r.fork && !EXCLUDE.includes(r.name));
 }
-
-async function fetchLatestRelease(owner, repo, token) {
+async function latestReleaseDate(owner, repo, token) {
   try {
     const rel = await gh(`/repos/${owner}/${repo}/releases/latest`, token);
-    // nếu repo không có release, API sẽ trả 404 → rơi vào catch
-    return rel.published_at || rel.created_at;
-  } catch {
-    return null;
-  }
+    return rel.published_at || rel.created_at || null;
+  } catch { return null; }
 }
-
-function yyyy(dateIso) { return dateIso?.slice(0, 4); }
-function fmt(dateIso)  { return dateIso?.slice(0, 10); }
-function toTs(dateIso) { return new Date(dateIso || "1970-01-01").getTime(); }
-
-async function buildEventsFromRepos(username, token) {
-  const repos = await fetchRepos(username, token);
-
-  // map repo → event (date tùy theo MODE)
+async function loadRepos() {
+  if (!USE_REPOS) return [];
+  const token = process.env.GITHUB_TOKEN;
+  const repos = await fetchRepos(USERNAME, token);
   const events = await Promise.all(repos.map(async (r) => {
-    let dateForSort;
-    if (MODE === "created") dateForSort = r.created_at;
-    else if (MODE === "pushed") dateForSort = r.pushed_at;
-    else if (MODE === "release") {
-      dateForSort = await fetchLatestRelease(username, r.name, token);
-      // fallback về pushed nếu không có release
-      if (!dateForSort) dateForSort = r.pushed_at;
-    }
-
-    const lang = r.language ? ` • ${r.language}` : "";
-    const stars = r.stargazers_count ? ` ⭐ ${r.stargazers_count}` : "";
+    let date = r.pushed_at;
+    if (MODE === "created") date = r.created_at;
+    if (MODE === "release") date = (await latestReleaseDate(USERNAME, r.name, token)) || r.pushed_at;
     return {
-      date: dateForSort,
+      source: "repos",
+      date,
       title: r.name,
-      url: r.html_url,
-      details: (r.description || "Repository") + lang + stars
+      details: (r.description || "Repository") + (r.language ? ` • ${r.language}` : "") + (r.stargazers_count ? ` ⭐ ${r.stargazers_count}` : ""),
+      link: r.html_url,
+      icon: "📦"
     };
   }));
-
-  // sort desc theo date & cắt LIMIT
   return events
     .filter(e => e.date)
     .sort((a, b) => toTs(b.date) - toTs(a.date))
     .slice(0, LIMIT);
 }
 
-function groupByYear(events) {
+function mergeAndDedupe(jsonItems, caseItems, repoItems) {
+  // Ưu tiên JSON > CASES > REPOS (theo key date+title)
+  const key = (e) => `${e.date}::${e.title}`.toLowerCase();
   const map = new Map();
-  for (const e of events) {
-    const y = yyyy(e.date) || "Unknown";
-    if (!map.has(y)) map.set(y, []);
-    map.get(y).push(e);
+  for (const e of [...repoItems, ...caseItems, ...jsonItems]) {
+    const k = key(e);
+    // nếu JSON ghi đè, đặt sau cùng
+    if (!map.has(k) || e.source === "json") map.set(k, e);
   }
-  return [...map.entries()]
-    .sort((a,b) => Number(b[0]) - Number(a[0]))
-    .map(([year, items]) => ({ year, items }));
+  return [...map.values()];
 }
 
-function render(events) {
-  if (!events.length) return "- (No repo events yet)";
-  const groups = groupByYear(events);
+function groupRender(items) {
+  if (!items.length) return "- (No timeline items yet)";
+  // pin items giữ nguyên năm nhưng ưu tiên đầu danh sách năm
+  items.sort((a, b) => {
+    const d = toTs(b.date) - toTs(a.date);
+    if (d !== 0) return d;
+    // nếu cùng ngày, JSON trước
+    if (a.source !== b.source) return a.source === "json" ? -1 : 1;
+    return 0;
+  });
+  const byYear = new Map();
+  for (const e of items) {
+    const y = yyyy(e.date) || "Unknown";
+    if (!byYear.has(y)) byYear.set(y, []);
+    byYear.get(y).push(e);
+  }
+  const years = [...byYear.entries()].sort((a,b) => Number(b[0]) - Number(a[0]));
   const out = [];
-  for (const g of groups) {
-    out.push(`### ${g.year}`);
-    for (const e of g.items) {
-      out.push(`- 📦 **${fmt(e.date)}** — [${e.title}](${e.url}) — _${e.details}_`);
+  for (const [year, arr] of years) {
+    // pin lên đầu năm
+    const pins = arr.filter(i => i.pin);
+    const rest = arr.filter(i => !i.pin);
+    const ordered = [...pins, ...rest];
+    out.push(`### ${year}`);
+    for (const e of ordered) {
+      const icon = e.icon || (e.source === "repos" ? "📦" : e.source === "cases" ? "📄" : "🧩");
+      const title = e.link ? `[${e.title}](${e.link})` : e.title;
+      out.push(`- ${icon} **${fmt(e.date)}** — ${title}${e.details ? ` — _${e.details}_` : ""}`);
     }
     out.push("");
   }
@@ -115,18 +156,21 @@ function render(events) {
 }
 
 async function main() {
-  const token = process.env.GITHUB_TOKEN;
-  const events = await buildEventsFromRepos(USERNAME, token);
-  const body = render(events);
-
+  const [jsonItems, caseItems, repoItems] = await Promise.all([
+    loadJson(),
+    loadCases(),
+    loadRepos()
+  ]);
+  const merged = mergeAndDedupe(jsonItems, caseItems, repoItems);
+  const body = groupRender(merged);
   let readme = await fs.readFile(readmePath, "utf8");
   if (!readme.includes(START) || !readme.includes(END)) {
     throw new Error("Markers not found in README.md for TIMELINE");
   }
   const block = `${START}\n${body}\n${END}`;
   readme = readme.replace(regexBetween(START, END), block);
-  await fs.writeFile(readmePath, readme, "utf8");
-  console.log(`Timeline (from repos) updated: ${events.length} item(s).`);
+  await fs.writeFile(readmePath, "utf8");
+  console.log(`Timeline updated: json=${jsonItems.length}, cases=${caseItems.length}, repos=${repoItems.length}`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

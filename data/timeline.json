@@ -1,23 +1,16 @@
 [
   {
-    "date": "2023-06-01",
-    "title": "Internship starts — ERP/POS (PHP, MySQL)",
-    "details": "Integrated TikTok Shop, Lazada, KiotViet; webhooks, idempotency, cron.",
-    "link": "./case-studies/2023-erp-pos-tiktok-lazada-kiotViet.md",
-    "icon": "💼"
+    "date": "2023-12-31",
+    "title": "Graduated with Distinction — HITC (College of Information Technology HCMC)",
+    "details": "GPA 8.43/10; Teamwork, Project Management, SQL, Node.js, MongoDB, Angular, Vue.js, Laravel; Computer Architecture, Data Structures, OOP, CMS",
+    "icon": "🎓",
+    "pin": true
   },
   {
-    "date": "2024-05-10",
-    "title": "Multi-DB & Async Workflow",
-    "details": "Patterns: queues, outbox, correlation-id; reduced p95 latency.",
-    "link": "./case-studies/2024-05-10-multi-db-async-workflow.md",
-    "icon": "🧠"
-  },
-  {
-    "date": "2025-08-01",
-    "title": "Profile automation",
-    "details": "Auto-update Featured, Recent Activity & Case Studies via Actions.",
-    "link": "https://github.com/thientrile/thientrile",
-    "icon": "⚙️"
+    "date": "2024-11-05",
+    "title": "ERP Integration (Private)",
+    "details": "POS ↔ TikTok Shop, Lazada; async workflows w/ retries & idempotency",
+    "icon": "🔒",
+    "private": true
   }
 ]
