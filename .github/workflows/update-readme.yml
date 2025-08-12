@@ -1,9 +1,15 @@
-name: Update README (Recent Activity + Featured)
+# .github/workflows/update-readme.yml
+name: Update README (Recent + Featured + Case Studies)
 
 on:
   schedule:
-    - cron: "0 2 * * *"   # 02:00 UTC = 09:00 VN
+    - cron: "0 2 * * *"   # 02:00 UTC ~ 09:00 VN
   workflow_dispatch:
+  push:
+    paths:
+      - "README.md"
+      - "scripts/**"
+      - "case-studies/**"
 
 permissions:
   contents: write
@@ -13,34 +19,23 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
-        with:
-          ref: main
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
 
-      - name: Setup Node 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Debug markers (optional)
-        run: |
-          echo "----- First 50 lines of README.md -----"
-          head -n 50 README.md || true
-          echo "----- Check markers -----"
-          grep -n "RECENT_ACTIVITY:START" -n README.md || echo "RECENT start not found"
-          grep -n "RECENT_ACTIVITY:END" -n README.md   || echo "RECENT end not found"
-          grep -n "FEATURED_PROJECTS:START" -n README.md || echo "FEATURED start not found"
-          grep -n "FEATURED_PROJECTS:END" -n README.md   || echo "FEATURED end not found"
-
-      - name: Run updater
+      - name: Run updater (Recent + Featured)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: thientrile
           FEATURED_MODE: updated
           FEATURED_COUNT: 5
-          FEATURED_EXCLUDE: ""
         run: node ./scripts/update_readme.mjs
+
+      - name: Update case studies list
+        env:
+          CASE_STUDIES_LIMIT: 10
+        run: node ./scripts/update_case_studies.mjs
 
       - name: Show diff
         run: |
@@ -55,7 +50,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [[ `git status --porcelain` ]]; then
             git add README.md
-            git commit -m "chore: auto-update README [skip ci]"
+            git commit -m "chore: auto-update README (cases + stats) [skip ci]"
             git push origin HEAD:main
             echo "pushed=true" >> $GITHUB_OUTPUT
           else
@@ -63,7 +58,7 @@ jobs:
             echo "pushed=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Fallback - create PR if push blocked
+      - name: Fallback - PR if push blocked
         if: steps.direct-push.outputs.pushed == 'false'
         uses: peter-evans/create-pull-request@v6
         with:
@@ -72,5 +67,3 @@ jobs:
           body: "Auto-generated update from GitHub Actions."
           branch: "chore/update-readme"
           delete-branch: true
-      - name: Update case studies list
-        run: node ./scripts/update_case_studies.mjs

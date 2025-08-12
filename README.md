@@ -93,7 +93,7 @@
 ## 🧪 Case Studies & Work Notes
 
 <!--CASE_STUDIES:START-->
-<!-- Auto-generated from /case-studies -->
+- [ERP/POS Integration with TikTok, Lazada, and KiotViet (Internship 2023)](./case-studies/2023-erp-pos-tiktok-lazada-kiotviet.md)
 <!--CASE_STUDIES:END-->
 
 ---
