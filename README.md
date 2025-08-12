@@ -77,6 +77,14 @@
 
 ---
 
+## 🧪 Case Studies & Work Notes
+
+<!--CASE_STUDIES:START-->
+<!-- Auto-generated from /case-studies -->
+<!--CASE_STUDIES:END-->
+
+---
+
 ## 📫 Let's Connect
 
 - 📧 **Email:** thientrile2003@gmail.com

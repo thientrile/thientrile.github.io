@@ -72,3 +72,5 @@ jobs:
           body: "Auto-generated update from GitHub Actions."
           branch: "chore/update-readme"
           delete-branch: true
+      - name: Update case studies list
+        run: node ./scripts/update_case_studies.mjs
