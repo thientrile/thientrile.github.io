@@ -55,7 +55,11 @@
 ## 📝 Dự án nổi bật
 
 <!--FEATURED_PROJECTS:START-->
-<!-- Nội dung sẽ được script cập nhật tự động -->
+- **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** • JavaScript
+- **[fontend](https://github.com/thientrile/fontend)** • HTML
+- **[photo_gallery](https://github.com/thientrile/photo_gallery)** • JavaScript
+- **[go-ecommerce-backend-api](https://github.com/thientrile/go-ecommerce-backend-api)** • Go
+- **[spamRegister](https://github.com/thientrile/spamRegister)** • JavaScript
 <!--FEATURED_PROJECTS:END-->
 
 ## 🧷 Recent Activity (auto-update)
