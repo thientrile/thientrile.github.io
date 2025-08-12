@@ -54,9 +54,13 @@ async function main() {
     throw new Error("Markers not found in README.md for case studies");
   }
   const block = `${START}\n${body}\n${END}`;
-  readme = readme.replace(regexBetween(START, END), block);
-  await fs.writeFile(readmePath, readme, "utf8");
-  console.log(`Case studies updated: ${items.length} item(s).`);
+  const updated = readme.replace(regexBetween(START, END), block);
+  if (updated !== readme) {
+    await fs.writeFile(readmePath, updated, "utf8");
+    console.log(`Case studies updated: ${items.length} item(s).`);
+  } else {
+    console.log("No changes for Case Studies ✋");
+  }
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

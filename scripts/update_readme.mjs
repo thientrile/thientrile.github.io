@@ -75,8 +75,13 @@ async function main() {
   const featBlock = `${FEAT_START}\n${featured}\n${FEAT_END}`;
   readme = readme.replace(regexBetween(FEAT_START, FEAT_END), featBlock);
 
-  await fs.writeFile(readmePath, readme, "utf8");
-  console.log("README.md updated ✅");
+  const original = await fs.readFile(readmePath, "utf8");
+  if (original !== readme) {
+    await fs.writeFile(readmePath, readme, "utf8");
+    console.log("README.md updated ✅");
+  } else {
+    console.log("No changes for Featured Projects ✋");
+  }
 }
 
 main().catch((e) => {

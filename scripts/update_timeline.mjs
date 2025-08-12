@@ -168,9 +168,13 @@ async function main() {
     throw new Error("Markers not found in README.md for TIMELINE");
   }
   const block = `${START}\n${body}\n${END}`;
-  readme = readme.replace(regexBetween(START, END), block);
-  await fs.writeFile(readmePath, "utf8");
-  console.log(`Timeline updated: json=${jsonItems.length}, cases=${caseItems.length}, repos=${repoItems.length}`);
+  const updated = readme.replace(regexBetween(START, END), block);
+  if (updated !== readme) {
+    await fs.writeFile(readmePath, updated, "utf8");
+    console.log(`Timeline updated: json=${jsonItems.length}, cases=${caseItems.length}, repos=${repoItems.length}`);
+  } else {
+    console.log("No changes for Timeline ✋");
+  }
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
