@@ -1,17 +1,70 @@
-# 👋 Hey, I’m Liguni
+<!-- Profile README (auto-updated) -->
 
-> Quiet & sharp.  
-> Go further inside 🌌  
-> 🐚 Not random — just intentional.
+<div align="center">
+  
+# 👋 Xin chào, mình là **Lê Thiên Trí** (Liguni)
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?pause=1200&width=520&lines=Lập+trình+viên+%7C+Fullstack+%7C+Tối+ưu+workflows;Node.js+%2B+MongoDB+%2B+React+Native;Yêu+automation%2C+n8n%2C+DevOps+nhẹ+nhàng)](https://git.io/typing-svg)
+
+</div>
+
+<p align="center">
+  <a href="https://github.com/thientrile"><img alt="followers" src="https://img.shields.io/github/followers/thientrile?label=Follow&style=for-the-badge"></a>
+  <a href="https://github.com/thientrile?tab=repositories"><img alt="repos" src="https://img.shields.io/badge/Repo-Explore-1f6feb?style=for-the-badge"></a>
+  <img alt="profile views" src="https://komarev.com/ghpvc/?username=thientrile&style=for-the-badge">
+</p>
+
+## 🧭 Về mình
+- 🚀 Làm Web/Mobile: **React / React Native**, **Node.js**, **MongoDB**, **Redis**, **JWT**
+- 🧩 Thích **Microservices**, **Tailwind**, **Redux Toolkit**, **WebSocket**
+- ⚙️ Nghiện **automation** với **n8n**, scripts, CI/CD
+- 🎯 Tôn chỉ: *Code chạy đã tốt, code gọn–đẹp mới “đã”*
+
+## 🧰 Tech stack yêu thích
+<p>
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" />
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" />
+  <img height="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" />
+</p>
+
+## 📊 GitHub Stats
+<p>
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=thientrile&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thientrile&layout=compact&theme=tokyonight&hide_border=true" />
+</p>
+<p>
+  <img height="180" src="https://streak-stats.demolab.com?user=thientrile&theme=tokyonight&hide_border=true" />
+</p>
+<p>
+  <img src="https://github-profile-trophy.vercel.app/?username=thientrile&theme=onedark&no-frame=true&margin-w=8" />
+</p>
+
+## 📝 Dự án nổi bật
+- 🌐 **thientrile.github.io** – Personal site / playground (HTML/CSS).  
+- 🛒 **webphp** – Website bán hàng viết bằng PHP + database.  
+- 🧪 **DACK_N2_CD21CT2** – Bài tập/đồ án web (HTML).  
+- 📊 **Salesweb** – Web giao diện bán hàng (JavaScript).  
+- 🎛 **soft-ui-dashboard** (fork) – Dashboard Bootstrap 5 (Creative Tim).  
+> (tự động lấy từ danh sách repo phổ biến trên profile)
+
+## 🧷 Recent Activity (auto-update)
+<!--RECENT_ACTIVITY:START-->
+<!-- Nội dung sẽ được script cập nhật tự động -->
+<!--RECENT_ACTIVITY:END-->
+
+## 📫 Liên hệ
+- Email: **your.email@example.com**
+- LinkedIn: https://linkedin.com/in/your-profile
+- Facebook: https://fb.com/your-profile
 
 ---
 
-## 🧠 About me
-
-```ts
-const Liguni = {
-  dev: ['Fullstack', 'Security', 'Android Rooting'],
-  tools: ['Node.js', 'Go', 'Docker', 'K8s', 'MongoDB', 'Redis'],
-  values: ['Minimalism', 'Clarity', 'Curiosity'],
-  motto: 'Code deeper, live smarter',
-};
+> “Build it right. Make it fast. Keep it simple.” ✨
