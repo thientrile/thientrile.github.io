@@ -12,5 +12,18 @@
     "details": "POS ↔ TikTok Shop, Lazada; async workflows w/ retries & idempotency",
     "icon": "🔒",
     "private": true
+  },
+  {
+    "year": "2024 – Now",
+    "title": "University – Bachelor in Information Technology",
+    "institution": "Ho Chi Minh City College of Information Technology (continuing to university)",
+    "description": "Pursuing a Bachelor's degree in Information Technology. Focused on IT infrastructure, cybersecurity, operating systems, data management, and applied mathematics.",
+    "highlights": [
+    "Core courses: IT Infrastructure, Operating Systems, Information Management, Introduction to Cybersecurity, Data Structures & Algorithms",
+    "Strong foundation in Discrete Mathematics, Linear Algebra, Probability & Statistics",
+    "Skills: Networking basics, OS concepts, database management, security fundamentals, algorithmic thinking",
+    "Applied technologies: Node.js, MongoDB, SQL, Angular, Vue, Laravel, React Native, MERN Stack development, Data Analysis"
+  ],
+    "status": "In Progress"
   }
 ]
