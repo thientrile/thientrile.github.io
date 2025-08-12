@@ -63,12 +63,18 @@ const ICON_MAP = {
   'MySQL':'mysql/mysql-original',
   'SQLite':'sqlite/sqlite-original',
   'Nginx':'nginx/nginx-original',
-  'AWS':'amazonwebservices/amazonwebservices-original-wordmark'
+  'AWS':'amazonwebservices/amazonwebservices-original-wordmark',
+  'Cloudinary':'cloudinary/cloudinary-original'
 };
 
 // Whitelist + order ưu tiên (có thể chỉnh cho profile này)
 const ORDER = [
   'JavaScript','TypeScript','React','Node.js','Go','MongoDB','Redis','Docker','Nginx','AWS'
+];
+
+// Luôn hiển thị ngay cả khi không có repo nào detect ra
+const MANDATORY = [
+  'Docker','Redis','MongoDB','MySQL','Nginx','AWS','Cloudinary'
 ];
 
 function normalizeName(lang){
@@ -94,8 +100,9 @@ function buildIcons(counts){
   const present = [...counts.keys()];
   // Node.js không phải language primary trên GitHub (hiển thị JavaScript). Nếu dùng JS và có backend -> ép thêm Node.js
   if (present.includes('JavaScript') && !present.includes('Node.js')) present.splice(present.indexOf('JavaScript')+1,0,'Node.js');
-  // Lọc theo ORDER + bổ sung những cái khác sau
+  // Bắt đầu với mandatory (giữ thứ tự), sau đó ORDER, sau đó phần còn lại
   const ordered = [
+    ...MANDATORY,
     ...ORDER.filter(o => present.includes(o)),
     ...present.filter(p => !ORDER.includes(p))
   ];
