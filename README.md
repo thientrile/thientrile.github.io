@@ -49,8 +49,8 @@
 - **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** • JavaScript
 - **[fontend](https://github.com/thientrile/fontend)** • HTML
 - **[photo_gallery](https://github.com/thientrile/photo_gallery)** • JavaScript
+- **[API_eCommerce-](https://github.com/thientrile/API_eCommerce-)** • JavaScript ⭐ 1 — api e-commerce 
 - **[go-ecommerce-backend-api](https://github.com/thientrile/go-ecommerce-backend-api)** • Go
-- **[spamRegister](https://github.com/thientrile/spamRegister)** • JavaScript
 <!--FEATURED_PROJECTS:END-->
 
 ---
@@ -74,9 +74,7 @@
 ### 2024
 - 📦 **2024-11-20** — [DashboardAdmin](https://github.com/thientrile/DashboardAdmin) — _Repository • Vue_
 - 📦 **2024-09-05** — [quack](https://github.com/thientrile/quack) — _Repository • JavaScript_
-
-### 2023
-- 📦 **2023-10-29** — [WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES](https://github.com/thientrile/WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES) — _xây dựng giao diện website bán điện thoại thông minh với angula_
+- 📦 **2024-06-08** — [API_eCommerce-](https://github.com/thientrile/API_eCommerce-) — _api e-commerce  • JavaScript ⭐ 1_
 <!--TIMELINE:END-->
 
 ---
