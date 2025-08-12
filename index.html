@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Le Thien Tri | Profile</title>
+  <!-- GitHub-flavored Markdown styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css" media="(prefers-color-scheme: dark)">
+  <style>
+    :root { --max-w: 980px; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: #f6f8fa; }
+    @media (prefers-color-scheme: dark) { body { background:#0d1117; } }
+    .wrap { max-width: var(--max-w); margin: 32px auto; padding: 16px; }
+    .markdown-body { box-sizing: border-box; min-width: 200px; max-width: var(--max-w); margin: 0 auto; padding: 32px; border-radius: 12px; background: #fff; }
+    @media (prefers-color-scheme: dark) { .markdown-body { background:#0b1220; } }
+    .loading { opacity: .7; font-style: italic; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article id="md" class="markdown-body">
+      <p class="loading">Loading profile…</p>
+    </article>
+  </div>
+
+  <!-- Markdown renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    (async () => {
+      const USER = "thientrile";
+      const BRANCH = "main";
+      const RAW = `https://raw.githubusercontent.com/${USER}/${USER}/${BRANCH}/README.md`;
+      const BASE = `https://github.com/${USER}/${USER}/blob/${BRANCH}/`;
+
+      try {
+        const res = await fetch(RAW, { cache: "no-store" });
+        if (!res.ok) throw new Error("Failed to fetch README");
+        let md = await res.text();
+
+        // Optional: ẩn một số phần nếu muốn (ví dụ gh stats quá dài)
+        // md = md.replace(/## 🧷 Recent Activity[\s\S]*?<!--RECENT_ACTIVITY:END-->/, "");
+
+        // Render
+        document.getElementById("md").innerHTML = marked.parse(md);
+
+        // Fix link/ảnh tương đối để trỏ đúng file trong repo
+        document.querySelectorAll("#md a[href]").forEach(a => {
+          const href = a.getAttribute("href");
+          if (href && !/^https?:|^#|^mailto:/.test(href)) {
+            a.href = new URL(href, BASE).href;
+            a.target = "_blank";
+          }
+        });
+        document.querySelectorAll("#md img[src]").forEach(img => {
+          const src = img.getAttribute("src");
+          if (src && !/^https?:|^data:/.test(src)) {
+            img.src = `https://raw.githubusercontent.com/${USER}/${USER}/${BRANCH}/${src}`;
+          }
+          img.loading = "lazy";
+        });
+      } catch (e) {
+        document.getElementById("md").innerHTML =
+          `<h1>Le Thien Tri (Liguni)</h1>
+           <p>Could not load README right now. Please refresh later.</p>`;
+        console.error(e);
+      }
+    })();
+  </script>
+</body>
+</html>
