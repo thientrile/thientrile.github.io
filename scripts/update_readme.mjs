@@ -5,8 +5,10 @@ import path from "path";
 const USERNAME = process.env.GH_USERNAME || "thientrile";
 // Sorting mode (updated | stars)
 const MODE = process.env.PROJECTS_MODE || process.env.FEATURED_MODE || "updated";
-// How many projects to list (default 20)
-const LIMIT = Number(process.env.PROJECTS_LIMIT || process.env.FEATURED_COUNT || 20);
+// How many projects to list; default is all when not specified
+const LIMIT = (process.env.PROJECTS_LIMIT || process.env.FEATURED_COUNT)
+  ? Number(process.env.PROJECTS_LIMIT || process.env.FEATURED_COUNT)
+  : Infinity;
 const EXCLUDE = (process.env.FEATURED_EXCLUDE || "")
   .split(",")
   .map(s => s.trim())
@@ -38,8 +40,36 @@ async function gh(pathname, token) {
   return res.json();
 }
 
+async function ghPaged(basePath, token, { perPage = 100, maxPages = 10 } = {}) {
+  const all = [];
+  for (let page = 1; page <= maxPages; page++) {
+    const pageItems = await gh(`${basePath}${basePath.includes("?") ? "&" : "?"}per_page=${perPage}&page=${page}`, token);
+    if (!Array.isArray(pageItems) || pageItems.length === 0) break;
+    all.push(...pageItems);
+    if (pageItems.length < perPage) break;
+  }
+  return all;
+}
+
 async function getProjects(username, token) {
-  const repos = await gh(`/users/${username}/repos?per_page=100`, token);
+  // If we have a token, try to include private repos owned by this user
+  let repos = [];
+  if (token) {
+    try {
+      const me = await gh('/user', token);
+      if (me?.login?.toLowerCase() === username.toLowerCase()) {
+        // Owned repos (public + private)
+        repos = await ghPaged('/user/repos?affiliation=owner', token);
+      }
+    } catch (e) {
+      // Fall back to public-only below
+      // console.warn('Auth check failed, falling back to public repos:', e?.message);
+    }
+  }
+  if (!repos.length) {
+    // Public repos only (no token or different user)
+    repos = await ghPaged(`/users/${username}/repos`, token);
+  }
   const filtered = repos
     .filter(r => !r.fork)
     .filter(r => !EXCLUDE.includes(r.name));
@@ -53,7 +83,10 @@ async function getProjects(username, token) {
 
   const header = `| Project | Tech | ⭐ | Updated | Description |\n|---------|------|----|---------|-------------|`;
   const rows = list.map(r => {
-    const name = `**[${r.name}](${r.html_url})**`;
+    // If private, show lock and avoid public link to prevent 404 for viewers
+    const name = r.private
+      ? `**${r.name}** (Private)`
+      : `**[${r.name}](${r.html_url})**`;
     const lang = r.language || '';
     const stars = r.stargazers_count ? String(r.stargazers_count) : '';
     const updated = r.pushed_at ? r.pushed_at.substring(0,10) : '';

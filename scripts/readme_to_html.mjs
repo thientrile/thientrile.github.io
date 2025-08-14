@@ -98,16 +98,22 @@ function transformProjects(html){
     const updated=cells[3];
     const desc=cells[4];
     const nameMatch=project.match(/\[(.*?)\]/); // fallback
-    const name=nameMatch?nameMatch[1]:project.replace(/<.*?>/g,'');
+    const rawName=nameMatch?nameMatch[1]:project.replace(/<.*?>/g,'');
     const linkMatch=project.match(/href="(.*?)"/);
     const href=linkMatch?linkMatch[1]:'';
+    const isPrivate = /\(\s*private\s*\)|🔒/i.test(project) || !href;
+    const displayName = rawName.replace(/\s*\(\s*private\s*\)\s*|🔒/ig,'').trim();
     const cleanDesc=desc.replace(/<.*?>/g,'');
     const langIcon = iconUrl(tech?.split(/[,/]|\s+/)[0]);
     const iconTag = langIcon ? `<img class=\"project-icon\" src=\"${langIcon}\" alt=\"${tech}\" loading=\"lazy\" width=\"20\" height=\"20\"/>` : '';
     // Only place one data-reveal attribute on outer card; inner h3 left clean to avoid duplication logic later
+    const titleInner = isPrivate
+      ? `${iconTag}<span>${displayName}</span>`
+      : `${iconTag}<a href="${href}" target="_blank" rel="noopener">${displayName}</a>`;
+    const privatePill = isPrivate ? `<span class="pill pill-private">Private</span>` : '';
     return `<div class="project-card" data-reveal>`+
-      `<h3 class="project-title">${iconTag}<a href="${href}" target="_blank" rel="noopener">${name}</a></h3>`+
-      `<div class="project-meta">${tech?`<span class="pill pill-lang">${tech}</span>`:''}${stars?`<span class="pill pill-star">★ ${stars}</span>`:''}${updated?`<span class="pill pill-date">${updated}</span>`:''}</div>`+
+      `<h3 class="project-title">${titleInner}</h3>`+
+      `<div class="project-meta">${privatePill}${tech?`<span class="pill pill-lang">${tech}</span>`:''}${stars?`<span class="pill pill-star">★ ${stars}</span>`:''}${updated?`<span class="pill pill-date">${updated}</span>`:''}</div>`+
       (cleanDesc?`<p class="project-desc">${cleanDesc}</p>`:'')+
     `</div>`;
   }).join('');
@@ -303,6 +309,8 @@ body.exporting .pill-date,body.exporting .tl-date{display:none !important}
 @media (prefers-color-scheme: dark){.pill{background:var(--badge-dark);color:var(--badge-dark-fg)}}
 .pill-star{background:#fcd34d;color:#78350f}
 @media (prefers-color-scheme: dark){.pill-star{background:#78350f;color:#fcd34d}}
+.pill-private{background:#e2e8f0;color:#0f172a}
+@media (prefers-color-scheme: dark){.pill-private{background:#334155;color:#e2e8f0}}
 .project-desc{margin:0;font-size:.8rem;line-height:1.3;opacity:.85}
 /* Project card hover overlay */
 .project-card{overflow:hidden}
