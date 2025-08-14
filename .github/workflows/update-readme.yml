@@ -10,6 +10,7 @@ on:
       - "README.md"
       - "scripts/**"
       - "case-studies/**"
+      - "scripts/readme_to_html.mjs"
 
 permissions:
   contents: write
@@ -24,12 +25,14 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: "20" }
 
+      - name: Install dependencies
+        run: npm ci || npm i --no-audit --no-fund
+
       - name: Run updater (Recent + Featured)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: thientrile
           FEATURED_MODE: updated
-          FEATURED_COUNT: 5
         run: node ./scripts/update_readme.mjs
 
       - name: Update Tech Toolbox
@@ -53,21 +56,24 @@ jobs:
           TIMELINE_LIMIT: "8"           # số item từ nguồn repos
           TIMELINE_EXCLUDE: ""          # ví dụ: "playground,old-demo"
         run: node ./scripts/update_timeline.mjs
+
+      - name: Build index.html from README
+        run: node ./scripts/readme_to_html.mjs
      
       - name: Show diff
         run: |
           git status
-          git --no-pager diff -- README.md || true
+          git --no-pager diff -- README.md index.html || true
 
-      - name: Commit & push if changed
+      - name: Commit & push if changed (README + index.html)
         id: direct-push
         continue-on-error: true
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [[ `git status --porcelain` ]]; then
-            git add README.md
-            git commit -m "chore: auto-update README (cases + stats) [skip ci]"
+            git add README.md index.html
+            git commit -m "chore: auto-update README & build index.html [skip ci]"
             git push origin HEAD:main
             echo "pushed=true" >> $GITHUB_OUTPUT
           else

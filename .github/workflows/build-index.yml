@@ -1,10 +1,5 @@
-name: Build index.html from README
+name: Build index.html from README (manual)
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - "README.md"
-      - "scripts/readme_to_html.mjs"
   workflow_dispatch:
 
 permissions:
