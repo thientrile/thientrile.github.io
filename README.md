@@ -62,8 +62,8 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-08-13 |  |
 | **[fontend](https://github.com/thientrile/fontend)** | HTML |  | 2025-08-12 |  |
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-08-12 |  |
 | **[ical](https://github.com/thientrile/ical)** | JavaScript |  | 2025-08-12 | enter ics file url and add to google calendar |
 | **[API_eCommerce-](https://github.com/thientrile/API_eCommerce-)** | JavaScript | 1 | 2025-08-12 | api e-commerce  |
 | **[photo_gallery](https://github.com/thientrile/photo_gallery)** | JavaScript |  | 2025-08-03 |  |
