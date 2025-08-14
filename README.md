@@ -21,7 +21,7 @@
 ---
 ## 🎓 Education
 
-- **College of Information Technology Ho Chi Minh City (HITC)**  
+- **College of Information Technology Ho Chi Minh City (ITC)**  
   📅 2021 – 2023 • 🎓 Graduated with Distinction – GPA: **8.43/10**  
   **Skills:** Teamwork, Project Management, SQL, Node.js, MongoDB, Angular, Vue.js, Laravel  
   **Knowledge:** Computer Architecture, Data Structures, Object-Oriented Programming, CMS Content Management
@@ -53,6 +53,7 @@
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue" title="Vue" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/php/php-original.svg" alt="PHP" title="PHP" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/css3/css3-original.svg" alt="CSS" title="CSS" />
 </p>
 <!--TECH_TOOLBOX:END-->
 
