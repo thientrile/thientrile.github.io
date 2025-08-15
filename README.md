@@ -64,9 +64,13 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
+| **[App_chat](https://github.com/thientrile/App_chat)** | JavaScript |  | 2025-08-15 |  |
 | **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-08-14 |  |
 | **[WooCommerce](https://github.com/thientrile/WooCommerce)** | PHP |  | 2025-08-14 |  |
 | **[website-sale](https://github.com/thientrile/website-sale)** | CSS |  | 2025-08-14 |  |
+| **[server](https://github.com/thientrile/server)** | JavaScript |  | 2025-08-12 |  |
+| **[pkg-node-express](https://github.com/thientrile/pkg-node-express)** | JavaScript |  | 2025-08-12 |  |
+| **[sisa-auth](https://github.com/thientrile/sisa-auth)** | JavaScript |  | 2025-08-12 |  |
 | **[fontend](https://github.com/thientrile/fontend)** | HTML |  | 2025-08-12 |  |
 | **[ical](https://github.com/thientrile/ical)** | JavaScript |  | 2025-08-12 | enter ics file url and add to google calendar |
 | **[API_eCommerce-](https://github.com/thientrile/API_eCommerce-)** | JavaScript | 1 | 2025-08-12 | api e-commerce  |
@@ -74,8 +78,6 @@
 | **[go-ecommerce-backend-api](https://github.com/thientrile/go-ecommerce-backend-api)** | Go |  | 2025-07-07 |  |
 | **[spamRegister](https://github.com/thientrile/spamRegister)** | JavaScript |  | 2025-05-30 |  |
 | **[DashboardAdmin](https://github.com/thientrile/DashboardAdmin)** | Vue |  | 2025-04-19 |  |
-| **[quack](https://github.com/thientrile/quack)** | JavaScript |  | 2024-09-05 |  |
-| **[WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES](https://github.com/thientrile/WEBSITE-DESIGN-THAT-SELLS-SMARTPHONES)** |  |  | 2023-10-29 | xây dựng giao diện website bán điện thoại thông minh với angula |
 | **[DACK_N2_CD21CT2](https://github.com/thientrile/DACK_N2_CD21CT2)** | HTML |  | 2023-10-29 |  |
 | **[Salesweb](https://github.com/thientrile/Salesweb)** | JavaScript |  | 2023-06-27 |  |
 | **[webphp](https://github.com/thientrile/webphp)** | PHP |  | 2022-12-27 | wedsite bán hàng bằng ngôn ngữ php với database |
