@@ -64,8 +64,9 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[App_chat](https://github.com/thientrile/App_chat)** | JavaScript |  | 2025-08-15 |  |
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-08-14 |  |
+| **[App_chat](https://github.com/thientrile/App_chat)** | JavaScript |  | 2025-08-16 |  |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-08-16 |  |
+| **[Salesweb](https://github.com/thientrile/Salesweb)** | JavaScript |  | 2025-08-15 |  |
 | **[WooCommerce](https://github.com/thientrile/WooCommerce)** | PHP |  | 2025-08-14 |  |
 | **[website-sale](https://github.com/thientrile/website-sale)** | CSS |  | 2025-08-14 |  |
 | **[server](https://github.com/thientrile/server)** | JavaScript |  | 2025-08-12 |  |
@@ -79,7 +80,6 @@
 | **[spamRegister](https://github.com/thientrile/spamRegister)** | JavaScript |  | 2025-05-30 |  |
 | **[DashboardAdmin](https://github.com/thientrile/DashboardAdmin)** | Vue |  | 2025-04-19 |  |
 | **[DACK_N2_CD21CT2](https://github.com/thientrile/DACK_N2_CD21CT2)** | HTML |  | 2023-10-29 |  |
-| **[Salesweb](https://github.com/thientrile/Salesweb)** | JavaScript |  | 2023-06-27 |  |
 | **[webphp](https://github.com/thientrile/webphp)** | PHP |  | 2022-12-27 | wedsite bán hàng bằng ngôn ngữ php với database |
 <!--FEATURED_PROJECTS:END-->
 
