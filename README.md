@@ -49,6 +49,7 @@
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" title="AWS" />
   <img height="28" src="https://cdn.simpleicons.org/cloudinary/3693F3" alt="Cloudinary" title="Cloudinary" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/go/go-original.svg" alt="Go" title="Go" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
@@ -64,7 +65,8 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[App_chat](https://github.com/thientrile/App_chat)** | JavaScript |  | 2025-08-16 |  |
+| **[App_chat](https://github.com/thientrile/App_chat)** | JavaScript |  | 2025-08-17 |  |
+| **[slider](https://github.com/thientrile/slider)** | TypeScript |  | 2025-08-16 |  |
 | **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-08-16 |  |
 | **[Salesweb](https://github.com/thientrile/Salesweb)** | JavaScript |  | 2025-08-15 |  |
 | **[WooCommerce](https://github.com/thientrile/WooCommerce)** | PHP |  | 2025-08-14 |  |
