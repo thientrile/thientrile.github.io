@@ -66,8 +66,8 @@
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
 | **[App_chat](https://github.com/thientrile/App_chat)** | JavaScript |  | 2025-08-17 |  |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-08-17 |  |
 | **[slider](https://github.com/thientrile/slider)** | TypeScript |  | 2025-08-16 |  |
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-08-16 |  |
 | **[Salesweb](https://github.com/thientrile/Salesweb)** | JavaScript |  | 2025-08-15 |  |
 | **[WooCommerce](https://github.com/thientrile/WooCommerce)** | PHP |  | 2025-08-14 |  |
 | **[website-sale](https://github.com/thientrile/website-sale)** | CSS |  | 2025-08-14 |  |
