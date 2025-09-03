@@ -66,7 +66,7 @@
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
 | **[App_chat](https://github.com/thientrile/App_chat)** | JavaScript |  | 2025-09-02 |  |
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-09-01 |  |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-09-02 |  |
 | **[photo_gallery](https://github.com/thientrile/photo_gallery)** | JavaScript |  | 2025-08-24 |  |
 | **[school-api](https://github.com/thientrile/school-api)** | TypeScript |  | 2025-08-18 |  |
 | **[slider](https://github.com/thientrile/slider)** | TypeScript |  | 2025-08-16 |  |
