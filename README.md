@@ -66,11 +66,10 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-09-20 |  |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-09-21 |  |
 | **[fmcgData](https://github.com/thientrile/fmcgData)** | Jupyter Notebook |  | 2025-09-17 |  |
 | **[App_chat](https://github.com/thientrile/App_chat)** | JavaScript |  | 2025-09-14 |  |
 | **[photo_gallery](https://github.com/thientrile/photo_gallery)** | JavaScript |  | 2025-09-10 |  |
-| **[school-api](https://github.com/thientrile/school-api)** | TypeScript |  | 2025-08-18 |  |
 | **[slider](https://github.com/thientrile/slider)** | TypeScript |  | 2025-08-16 |  |
 | **[Salesweb](https://github.com/thientrile/Salesweb)** | JavaScript |  | 2025-08-15 |  |
 | **[WooCommerce](https://github.com/thientrile/WooCommerce)** | PHP |  | 2025-08-14 |  |
