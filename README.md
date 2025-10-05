@@ -66,8 +66,8 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-10-04 |  |
 | **[fmcgData](https://github.com/thientrile/fmcgData)** | Jupyter Notebook |  | 2025-10-03 |  |
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-10-03 |  |
 | **[nest-news-api-crawl-tuoitre](https://github.com/thientrile/nest-news-api-crawl-tuoitre)** | TypeScript |  | 2025-10-01 |  |
 | **[App_chat](https://github.com/thientrile/App_chat)** | JavaScript |  | 2025-09-14 |  |
 | **[photo_gallery](https://github.com/thientrile/photo_gallery)** | JavaScript |  | 2025-09-10 |  |
