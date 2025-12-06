@@ -66,7 +66,7 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-12-04 |  |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-12-05 |  |
 | **[nest-vetautet-backend-api](https://github.com/thientrile/nest-vetautet-backend-api)** | TypeScript |  | 2025-10-08 |  |
 | **[fmcgData](https://github.com/thientrile/fmcgData)** | Jupyter Notebook |  | 2025-10-03 |  |
 | **[nest-news-api-crawl-tuoitre](https://github.com/thientrile/nest-news-api-crawl-tuoitre)** | TypeScript |  | 2025-10-01 |  |
@@ -86,7 +86,7 @@
 | **[spamRegister](https://github.com/thientrile/spamRegister)** | JavaScript |  | 2025-05-30 |  |
 | **[DashboardAdmin](https://github.com/thientrile/DashboardAdmin)** | Vue |  | 2025-04-19 |  |
 | **[DACK_N2_CD21CT2](https://github.com/thientrile/DACK_N2_CD21CT2)** | HTML |  | 2023-10-29 |  |
-| **[webphp](https://github.com/thientrile/webphp)** | PHP |  | 2022-12-27 | wedsite bán hàng bằng ngôn ngữ php với database |
+| **[webphp](https://github.com/thientrile/webphp)** | PHP | 1 | 2022-12-27 | wedsite bán hàng bằng ngôn ngữ php với database |
 <!--FEATURED_PROJECTS:END-->
 
 ---
