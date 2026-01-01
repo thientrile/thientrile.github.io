@@ -66,7 +66,7 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-12-30 |  |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2025-12-31 |  |
 | **[nest-vetautet-backend-api](https://github.com/thientrile/nest-vetautet-backend-api)** | TypeScript |  | 2025-10-08 |  |
 | **[fmcgData](https://github.com/thientrile/fmcgData)** | Jupyter Notebook |  | 2025-10-03 |  |
 | **[nest-news-api-crawl-tuoitre](https://github.com/thientrile/nest-news-api-crawl-tuoitre)** | TypeScript |  | 2025-10-01 |  |
@@ -100,7 +100,7 @@
 
 ## 🗓️ Timeline
 <!--TIMELINE:START-->
-### 2025
+### 2026
 - 🧩 **2024 – Now** — University – Bachelor in Information Technology
 
 ### 2024
