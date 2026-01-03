@@ -66,7 +66,8 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-01-01 |  |
+| **[ical](https://github.com/thientrile/ical)** | JavaScript |  | 2026-01-02 | enter ics file url and add to google calendar |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-01-02 |  |
 | **[nest-vetautet-backend-api](https://github.com/thientrile/nest-vetautet-backend-api)** | TypeScript |  | 2025-10-08 |  |
 | **[fmcgData](https://github.com/thientrile/fmcgData)** | Jupyter Notebook |  | 2025-10-03 |  |
 | **[nest-news-api-crawl-tuoitre](https://github.com/thientrile/nest-news-api-crawl-tuoitre)** | TypeScript |  | 2025-10-01 |  |
@@ -80,7 +81,6 @@
 | **[pkg-node-express](https://github.com/thientrile/pkg-node-express)** | JavaScript |  | 2025-08-12 |  |
 | **[sisa-auth](https://github.com/thientrile/sisa-auth)** | JavaScript |  | 2025-08-12 |  |
 | **[fontend](https://github.com/thientrile/fontend)** | HTML |  | 2025-08-12 |  |
-| **[ical](https://github.com/thientrile/ical)** | JavaScript |  | 2025-08-12 | enter ics file url and add to google calendar |
 | **[API_eCommerce-](https://github.com/thientrile/API_eCommerce-)** | JavaScript | 1 | 2025-08-12 | api e-commerce  |
 | **[go-ecommerce-backend-api](https://github.com/thientrile/go-ecommerce-backend-api)** | Go |  | 2025-07-07 |  |
 | **[spamRegister](https://github.com/thientrile/spamRegister)** | JavaScript |  | 2025-05-30 |  |
