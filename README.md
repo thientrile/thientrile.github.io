@@ -66,7 +66,8 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-07-03 |  |
+| **[liguni-agent](https://github.com/thientrile/liguni-agent)** | JavaScript |  | 2026-07-04 | ai-team — CLI orchestrator một-lead-nhiều-worker: Claude lead phân công specialist, Cod… |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-07-04 |  |
 | **[test](https://github.com/thientrile/test)** | JavaScript |  | 2026-06-06 |  |
 | **[liguni.io](https://github.com/thientrile/liguni.io)** | HTML |  | 2026-01-15 |  |
 | **[ical](https://github.com/thientrile/ical)** | JavaScript |  | 2026-01-02 | enter ics file url and add to google calendar |
