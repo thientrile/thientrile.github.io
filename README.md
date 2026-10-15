@@ -53,10 +53,7 @@
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/go/go-original.svg" alt="Go" title="Go" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
-  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue" title="Vue" />
-  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/php/php-original.svg" alt="PHP" title="PHP" />
-  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/css3/css3-original.svg" alt="CSS" title="CSS" />
 </p>
 <!--TECH_TOOLBOX:END-->
 
@@ -66,28 +63,16 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-10-13 |  |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-10-14 |  |
 | **[liguni-agent](https://github.com/thientrile/liguni-agent)** | JavaScript |  | 2026-07-04 | ai-team — CLI orchestrator một-lead-nhiều-worker: Claude lead phân công specialist, Cod… |
 | **[test](https://github.com/thientrile/test)** | JavaScript |  | 2026-06-06 |  |
 | **[liguni.io](https://github.com/thientrile/liguni.io)** | HTML |  | 2026-01-15 |  |
 | **[ical](https://github.com/thientrile/ical)** | JavaScript |  | 2026-01-02 | enter ics file url and add to google calendar |
-| **[nest-vetautet-backend-api](https://github.com/thientrile/nest-vetautet-backend-api)** | TypeScript |  | 2025-10-08 |  |
-| **[fmcgData](https://github.com/thientrile/fmcgData)** | Jupyter Notebook |  | 2025-10-03 |  |
 | **[nest-news-api-crawl-tuoitre](https://github.com/thientrile/nest-news-api-crawl-tuoitre)** | TypeScript |  | 2025-10-01 |  |
 | **[App_chat](https://github.com/thientrile/App_chat)** | JavaScript |  | 2025-09-14 |  |
 | **[photo_gallery](https://github.com/thientrile/photo_gallery)** | JavaScript |  | 2025-09-10 |  |
-| **[slider](https://github.com/thientrile/slider)** | TypeScript |  | 2025-08-16 |  |
-| **[Salesweb](https://github.com/thientrile/Salesweb)** | JavaScript |  | 2025-08-15 |  |
-| **[WooCommerce](https://github.com/thientrile/WooCommerce)** | PHP |  | 2025-08-14 |  |
-| **[website-sale](https://github.com/thientrile/website-sale)** | CSS |  | 2025-08-14 |  |
-| **[server](https://github.com/thientrile/server)** | JavaScript |  | 2025-08-12 |  |
-| **[pkg-node-express](https://github.com/thientrile/pkg-node-express)** | JavaScript |  | 2025-08-12 |  |
-| **[sisa-auth](https://github.com/thientrile/sisa-auth)** | JavaScript |  | 2025-08-12 |  |
-| **[fontend](https://github.com/thientrile/fontend)** | HTML |  | 2025-08-12 |  |
 | **[API_eCommerce-](https://github.com/thientrile/API_eCommerce-)** | JavaScript | 1 | 2025-08-12 | api e-commerce  |
 | **[go-ecommerce-backend-api](https://github.com/thientrile/go-ecommerce-backend-api)** | Go |  | 2025-07-07 |  |
-| **[spamRegister](https://github.com/thientrile/spamRegister)** | JavaScript |  | 2025-05-30 |  |
-| **[DashboardAdmin](https://github.com/thientrile/DashboardAdmin)** | Vue |  | 2025-04-19 |  |
 | **[DACK_N2_CD21CT2](https://github.com/thientrile/DACK_N2_CD21CT2)** | HTML |  | 2023-10-29 |  |
 | **[webphp](https://github.com/thientrile/webphp)** | PHP | 1 | 2022-12-27 | wedsite bán hàng bằng ngôn ngữ php với database |
 <!--FEATURED_PROJECTS:END-->
