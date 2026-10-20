@@ -53,6 +53,7 @@
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/go/go-original.svg" alt="Go" title="Go" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
+  <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python" />
   <img height="28" src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/php/php-original.svg" alt="PHP" title="PHP" />
 </p>
 <!--TECH_TOOLBOX:END-->
@@ -63,7 +64,9 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-10-18 |  |
+| **[herdr-gh-watch](https://github.com/thientrile/herdr-gh-watch)** | Python |  | 2026-10-19 | herdr plugin: GitHub webhooks (reviews, comments, CI, merges) notify the agent working … |
+| **[herdr-hjob](https://github.com/thientrile/herdr-hjob)** | Python |  | 2026-10-19 | herdr plugin: run long commands in the background, then notify and wake the agent pane |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-10-19 |  |
 | **[liguni-agent](https://github.com/thientrile/liguni-agent)** | JavaScript |  | 2026-07-04 | ai-team — CLI orchestrator một-lead-nhiều-worker: Claude lead phân công specialist, Cod… |
 | **[test](https://github.com/thientrile/test)** | JavaScript |  | 2026-06-06 |  |
 | **[liguni.io](https://github.com/thientrile/liguni.io)** | HTML |  | 2026-01-15 |  |
