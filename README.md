@@ -64,7 +64,7 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-10-27 |  |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-10-28 |  |
 | **[herdr-gh-watch](https://github.com/thientrile/herdr-gh-watch)** | Python |  | 2026-10-19 | herdr plugin: GitHub webhooks (reviews, comments, CI, merges) notify the agent working … |
 | **[herdr-hjob](https://github.com/thientrile/herdr-hjob)** | Python |  | 2026-10-19 | herdr plugin: run long commands in the background, then notify and wake the agent pane |
 | **[liguni-agent](https://github.com/thientrile/liguni-agent)** | JavaScript |  | 2026-07-04 | ai-team — CLI orchestrator một-lead-nhiều-worker: Claude lead phân công specialist, Cod… |
