@@ -64,10 +64,10 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[herdr-gh-watch](https://github.com/thientrile/herdr-gh-watch)** | Python |  | 2026-10-29 | herdr plugin: GitHub webhooks (reviews, comments, CI, merges) notify the agent working … |
+| **[herdr-gh-watch](https://github.com/thientrile/herdr-gh-watch)** | Python |  | 2026-10-30 | herdr plugin: GitHub webhooks (reviews, comments, CI, merges) notify the agent working … |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-10-30 |  |
 | **[herdr-wake](https://github.com/thientrile/herdr-wake)** | Python |  | 2026-10-29 | Durable wake-up queue and delivery worker for herdr agent panes |
 | **[herdr-hjob](https://github.com/thientrile/herdr-hjob)** | Python |  | 2026-10-29 | herdr plugin: run long commands in the background, then notify and wake the agent pane |
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-10-29 |  |
 | **[liguni-agent](https://github.com/thientrile/liguni-agent)** | JavaScript |  | 2026-07-04 | ai-team — CLI orchestrator một-lead-nhiều-worker: Claude lead phân công specialist, Cod… |
 | **[test](https://github.com/thientrile/test)** | JavaScript |  | 2026-06-06 |  |
 | **[liguni.io](https://github.com/thientrile/liguni.io)** | HTML |  | 2026-01-15 |  |
