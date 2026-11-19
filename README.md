@@ -64,7 +64,7 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-11-17 |  |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-11-18 |  |
 | **[exif-remover](https://github.com/thientrile/exif-remover)** | Python |  | 2026-11-17 | Offline metadata remover (EXIF/GPS/XMP/IPTC/C2PA) for images, video and PDF; Windows ap… |
 | **[herdr-wake](https://github.com/thientrile/herdr-wake)** | Python |  | 2026-11-13 | Durable wake-up queue and delivery worker for herdr agent panes |
 | **[herdr-gh-watch](https://github.com/thientrile/herdr-gh-watch)** | Python |  | 2026-11-02 | herdr plugin: GitHub webhooks (reviews, comments, CI, merges) notify the agent working … |
