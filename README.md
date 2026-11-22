@@ -64,11 +64,11 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-11-20 |  |
-| **[MasterDownloader](https://github.com/thientrile/MasterDownloader)** | Python |  | 2026-11-20 |  |
+| **[herdr-gh-watch](https://github.com/thientrile/herdr-gh-watch)** | Python |  | 2026-11-21 | herdr plugin: GitHub webhooks (reviews, comments, CI, merges) notify the agent working … |
+| **[MasterDownloader](https://github.com/thientrile/MasterDownloader)** | Python |  | 2026-11-21 |  |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-11-21 |  |
 | **[exif-remover](https://github.com/thientrile/exif-remover)** | Python |  | 2026-11-17 | Offline metadata remover (EXIF/GPS/XMP/IPTC/C2PA) for images, video and PDF; Windows ap… |
 | **[herdr-wake](https://github.com/thientrile/herdr-wake)** | Python |  | 2026-11-13 | Durable wake-up queue and delivery worker for herdr agent panes |
-| **[herdr-gh-watch](https://github.com/thientrile/herdr-gh-watch)** | Python |  | 2026-11-02 | herdr plugin: GitHub webhooks (reviews, comments, CI, merges) notify the agent working … |
 | **[herdr-hjob](https://github.com/thientrile/herdr-hjob)** | Python |  | 2026-10-29 | herdr plugin: run long commands in the background, then notify and wake the agent pane |
 | **[liguni-agent](https://github.com/thientrile/liguni-agent)** | JavaScript |  | 2026-07-04 | ai-team — CLI orchestrator một-lead-nhiều-worker: Claude lead phân công specialist, Cod… |
 | **[test](https://github.com/thientrile/test)** | JavaScript |  | 2026-06-06 |  |
