@@ -64,8 +64,8 @@
 <!--FEATURED_PROJECTS:START-->
 | Project | Tech | ⭐ | Updated | Description |
 |---------|------|----|---------|-------------|
-| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-11-24 |  |
-| **[MasterDownloader-releases](https://github.com/thientrile/MasterDownloader-releases)** | Python |  | 2026-11-24 | Bản phát hành Windows của MasterDownloader (mã nguồn private) |
+| **[MasterDownloader-releases](https://github.com/thientrile/MasterDownloader-releases)** | Python |  | 2026-11-25 | Bản phát hành Windows của MasterDownloader (mã nguồn private) |
+| **[thientrile.github.io](https://github.com/thientrile/thientrile.github.io)** | JavaScript |  | 2026-11-25 |  |
 | **[herdr-gh-watch](https://github.com/thientrile/herdr-gh-watch)** | Python |  | 2026-11-21 | herdr plugin: GitHub webhooks (reviews, comments, CI, merges) notify the agent working … |
 | **[exif-remover](https://github.com/thientrile/exif-remover)** | Python |  | 2026-11-17 | Offline metadata remover (EXIF/GPS/XMP/IPTC/C2PA) for images, video and PDF; Windows ap… |
 | **[herdr-wake](https://github.com/thientrile/herdr-wake)** | Python |  | 2026-11-13 | Durable wake-up queue and delivery worker for herdr agent panes |
